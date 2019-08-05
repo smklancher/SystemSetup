@@ -25,7 +25,7 @@ function executeScript {
 }
 
 # install git and clone the whole repo
-choco install -y git --package-parameters="""'/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration'"""
+executeScript "Git.ps1";
 refreshenv
 git clone https://github.com/smklancher/SystemSetup.git C:\Temp\SystemSetup
 
@@ -64,7 +64,6 @@ choco install -y irfanview
 
 choco install -y sql-server-management-studio
 choco install -y dotpeek
-choco install -y tortoisegit
 
 executeScript "VisualStudio.ps1";
 
