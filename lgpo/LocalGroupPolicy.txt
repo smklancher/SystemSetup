@@ -1,0 +1,19 @@
+; ----------------------------------------------------------------------
+; PARSING Computer POLICY
+; Source file:  .\ToBeParsed\Machine\registry.pol
+
+Computer
+Software\Policies\Microsoft\Windows\Server\ServerManager
+DoNotOpenAtLogon
+DWORD:1
+
+; PARSING COMPLETED.
+; ----------------------------------------------------------------------
+
+; ----------------------------------------------------------------------
+; PARSING User POLICY
+; Source file:  .\ToBeParsed\User\registry.pol
+
+; PARSING COMPLETED.
+; ----------------------------------------------------------------------
+

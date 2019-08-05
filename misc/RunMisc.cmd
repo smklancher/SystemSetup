@@ -1,0 +1,20 @@
+cd /d %~dp0
+
+REM Browser default and pin
+SetDefaultBrowser\SetDefaultBrowser chrome
+PinToTaskbar\syspin "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "Unpin from taskbar"
+PinToTaskbar\syspin "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "Pin to taskbar"
+
+REM Notepad++ plugins, associations, pin
+PinToTaskbar\syspin "C:\Program Files\Notepad++\notepad++.exe" "Unpin from taskbar"
+PinToTaskbar\syspin "C:\Program Files\Notepad++\notepad++.exe" "Pin to taskbar"
+ftype inifile="C:\Program Files\Notepad++\notepad++.exe" "%%1"      
+ftype inffile="C:\Program Files\Notepad++\notepad++.exe" "%%1"      
+ftype txtfile="C:\Program Files\Notepad++\notepad++.exe" "%%1"      
+ftype Microsoft.PowerShellScript.1="C:\Program Files\Notepad++\notepad++.exe" "%%1"      
+SetUserFTA\SetUserFTA .txt txtfile  
+SetUserFTA\SetUserFTA .log txtfile  
+REM SetUserFTA\SetUserFTA .ini txtfile  
+REM SetUserFTA\SetUserFTA .inf txtfile  
+SetUserFTA\SetUserFTA .config txtfile  
+SetUserFTA\SetUserFTA .xml txtfile  
