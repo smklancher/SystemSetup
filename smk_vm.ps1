@@ -25,7 +25,7 @@ function executeScript {
 }
 
 # install git and clone the whole repo
-choco install -y git --package-parameters='"/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration"'
+choco install -y git --package-parameters="'/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration'"
 refreshenv
 git clone https://github.com/smklancher/SystemSetup.git C:\Temp\SystemSetup
 
