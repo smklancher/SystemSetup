@@ -51,19 +51,19 @@ Start-Process -FilePath $lgpo -ArgumentList "/t",$lgpotxt -WorkingDirectory $lgp
 executeScript "Browsers.ps1";
 
 # install .NET 4.8 (remove --pre once package is updated): https://chocolatey.org/packages/dotnetfx
-choco install -y dotnetfx --pre
-choco install -y 7zip.install
-choco install -y sysinternals
-choco install -y notepadplusplus.install
-choco install -y sumatrapdf.install
-choco install -y spacesniffer
+choco install dotnetfx -y --pre 
+choco install 7zip.install -y
+choco install sysinternals -y
+choco install notepadplusplus.install -y
+choco install sumatrapdf.install -y
+choco install spacesniffer -y
 
-choco install -y silverlight
-choco install -y fiddler4
-choco install -y irfanview
+choco install silverlight -y
+choco install fiddler4 -y
+choco install irfanview -y
 
-choco install -y sql-server-management-studio
-choco install -y dotpeek
+choco install sql-server-management-studio -y
+choco install dotpeek -y
 
 executeScript "VisualStudio.ps1";
 

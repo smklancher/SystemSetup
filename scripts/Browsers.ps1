@@ -1,5 +1,5 @@
 #--- Browsers ---
-choco install -y googlechrome
+choco install googlechrome -y
 # useful to have ublock even on VMs where I'm not signing into chrome
-choco install -y ublockorigin-chrome
-choco install -y firefox
+choco install ublockorigin-chrome -y
+choco install firefox -y

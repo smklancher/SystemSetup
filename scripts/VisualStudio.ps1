@@ -3,11 +3,11 @@
 # https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community
 # https://docs.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio#list-of-workload-ids-and-component-id
 
-choco install -y visualstudio2019professional --package-parameters="'--passive --add Microsoft.VisualStudio.Component.Git --add Component.GitHub.VisualStudio'"
+choco install visualstudio2019professional -y --package-parameters="'--passive --add Microsoft.VisualStudio.Component.Git --add Component.GitHub.VisualStudio'"
 Update-SessionEnvironment #refreshing env due to Git install
 
 #--- 
-choco install -y visualstudio2019-workload-manageddesktop --package-parameters="'--passive --add Microsoft.VisualStudio.Component.NuGet'"
+choco install visualstudio2019-workload-manageddesktop -y --package-parameters="'--passive --add Microsoft.VisualStudio.Component.NuGet'"
 
 # Install-ChocolateyVsixPackage expects a registry setting that doesn't exist for VS2019
 #Set-ItemProperty -Path HKLM:\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\16.0 -Name InstallDir -Value "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE"

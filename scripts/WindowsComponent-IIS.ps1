@@ -1,5 +1,5 @@
-choco install -y IIS-WebServerRole -source windowsfeatures
-choco install -y NetFx3 -source windowsFeatures
-choco install -y WCF-HTTP-Activation45 -source windowsFeatures
-choco install -y WCF-HTTP-Activation -source windowsFeatures
-choco install -y IIS-WindowsAuthentication -source windowsFeatures
+choco install IIS-WebServerRole -y -source windowsfeatures
+choco install NetFx3 -y -source windowsFeatures
+choco install WCF-HTTP-Activation45 -y -source windowsFeatures
+choco install WCF-HTTP-Activation -y -source windowsFeatures
+choco install IIS-WindowsAuthentication -y -source windowsFeatures
