@@ -31,4 +31,4 @@ cinst myApp -source C:\Temp\TestPackage -y --package-parameters="""/DoubleEscape
 cinst myApp -source C:\Temp\TestPackage -y --package-parameters='"/SingleDouble /WindowsTerminal /NoShellIntegration"'
 cinst myApp -source C:\Temp\TestPackage -y --package-parameters='/Single /WindowsTerminal /NoShellIntegration'
 cinst myApp -source C:\Temp\TestPackage -y --package-parameters='''/SingleEscapedSingle /WindowsTerminal /NoShellIntegration'''
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters='`'/BacktickEscapedDouble /WindowsTerminal /NoShellIntegration`''
+#cinst myApp -source C:\Temp\TestPackage -y --package-parameters='`'/BacktickEscapedSingle /WindowsTerminal /NoShellIntegration`''
