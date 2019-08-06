@@ -23,7 +23,7 @@ function executeScript {
     write-host "executing $helperUri/$script ..."
 	iex ((new-object net.webclient).DownloadString("$helperUri/$script"))
 }
-
+choco uninstall myApp
 cinst myApp -source C:\Temp\TestPackage -y --package-parameters="/SimpleDoubleQuote /WindowsTerminal /NoShellIntegration"
 cinst myApp -source C:\Temp\TestPackage -y --package-parameters="'/DoubleSingle /WindowsTerminal /NoShellIntegration'"
 cinst myApp -source C:\Temp\TestPackage -y --package-parameters="`"/BacktickEscapedDouble /WindowsTerminal /NoShellIntegration`""
