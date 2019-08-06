@@ -24,11 +24,11 @@ function executeScript {
 	iex ((new-object net.webclient).DownloadString("$helperUri/$script"))
 }
 choco uninstall myApp
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters="/SimpleDoubleQuote /WindowsTerminal /NoShellIntegration"
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters="'/DoubleSingle /WindowsTerminal /NoShellIntegration'"
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters="`"/BacktickEscapedDouble /WindowsTerminal /NoShellIntegration`""
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters="""/DoubleEscapedDouble /WindowsTerminal /NoShellIntegration"""
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters='"/SingleDouble /WindowsTerminal /NoShellIntegration"'
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters='/Single /WindowsTerminal /NoShellIntegration'
-cinst myApp -source C:\Temp\TestPackage -y --package-parameters='''/SingleEscapedSingle /WindowsTerminal /NoShellIntegration'''
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters="/SimpleDoubleQuote /WindowsTerminal /NoShellIntegration" --force
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters="'/DoubleSingle /WindowsTerminal /NoShellIntegration'" --force
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters="`"/BacktickEscapedDouble /WindowsTerminal /NoShellIntegration`"" --force
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters="""/DoubleEscapedDouble /WindowsTerminal /NoShellIntegration""" --force
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters='"/SingleDouble /WindowsTerminal /NoShellIntegration"' --force
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters='/Single /WindowsTerminal /NoShellIntegration' --force
+cinst myApp -source C:\Temp\TestPackage -y --package-parameters='''/SingleEscapedSingle /WindowsTerminal /NoShellIntegration''' --force
 #cinst myApp -source C:\Temp\TestPackage -y --package-parameters='`'/BacktickEscapedSingle /WindowsTerminal /NoShellIntegration`''
