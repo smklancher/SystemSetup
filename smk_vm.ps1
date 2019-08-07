@@ -30,8 +30,8 @@ New-Item -Path $ChocoCachePath -ItemType directory -Force
 choco feature enable -n=useRememberedArgumentsForUpgrades
 
 # install git and clone the whole repo
-cinst git --package-parameters="/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration" -y –cacheLocation $ChocoCachePath
-choco install tortoisegit -y –cacheLocation $ChocoCachePath
+cinst git --package-parameters="/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration" -y --cacheLocation $ChocoCachePath
+choco install tortoisegit -y --cacheLocation $ChocoCachePath
 refreshenv
 git clone https://github.com/smklancher/SystemSetup.git C:\Temp\SystemSetup
 
@@ -57,19 +57,19 @@ Start-Process -FilePath $lgpo -ArgumentList "/t",$lgpotxt -WorkingDirectory $lgp
 executeScript "Browsers.ps1";
 
 # install .NET 4.8 (remove --pre once package is updated): https://chocolatey.org/packages/dotnetfx
-choco install dotnetfx --pre -y –cacheLocation $ChocoCachePath
-choco install 7zip.install -y –cacheLocation $ChocoCachePath
-choco install sysinternals -y –cacheLocation $ChocoCachePath
-choco install notepadplusplus.install -y –cacheLocation $ChocoCachePath
-choco install sumatrapdf.install -y –cacheLocation $ChocoCachePath
-choco install spacesniffer -y –cacheLocation $ChocoCachePath
+choco install dotnetfx --pre -y --cacheLocation $ChocoCachePath
+choco install 7zip.install -y --cacheLocation $ChocoCachePath
+choco install sysinternals -y --cacheLocation $ChocoCachePath
+choco install notepadplusplus.install -y --cacheLocation $ChocoCachePath
+choco install sumatrapdf.install -y --cacheLocation $ChocoCachePath
+choco install spacesniffer -y --cacheLocation $ChocoCachePath
 
-choco install silverlight -y –cacheLocation $ChocoCachePath
-choco install fiddler4 -y –cacheLocation $ChocoCachePath
-choco install irfanview -y –cacheLocation $ChocoCachePath
+choco install silverlight -y --cacheLocation $ChocoCachePath
+choco install fiddler4 -y --cacheLocation $ChocoCachePath
+choco install irfanview -y --cacheLocation $ChocoCachePath
 
-choco install sql-server-management-studio -y –cacheLocation $ChocoCachePath
-choco install dotpeek -y –cacheLocation $ChocoCachePath
+choco install sql-server-management-studio -y --cacheLocation $ChocoCachePath
+choco install dotpeek -y --cacheLocation $ChocoCachePath
 
 executeScript "VisualStudio.ps1";
 
@@ -87,7 +87,7 @@ Install-WindowsUpdate -acceptEula
 
 
 # agentransack requires manual input
-choco install -y agentransack –cacheLocation $ChocoCachePath
+choco install -y agentransack --cacheLocation $ChocoCachePath
 
 # classic shell only for Windows 2012
 # choco install -y classic-shell
