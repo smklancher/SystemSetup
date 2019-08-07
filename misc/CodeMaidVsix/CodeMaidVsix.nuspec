@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CodeMaidVsiz</id>
+    <version>11.0.183.20190806</version>
+    <title>CodeMaid extension for Visual Studio</title>
+    <authors>Steve Cadwallader</authors>
+    <owners>smknight</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://marketplace.visualstudio.com/items/SteveCadwallader.CodeMaid/license</licenseUrl>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid</projectUrl>
+    <iconUrl>https://stevecadwallader.gallerycdn.vsassets.io/extensions/stevecadwallader/codemaid/11.0.183/1553341607616/Microsoft.VisualStudio.Services.Icons.Default</iconUrl>
+    <description>CodeMaid</description>
+    <summary>CodeMaid</summary>
+    <releaseNotes>x</releaseNotes>
+    <tags>codemaid code maid visual studio extension vsix</tags>
+    <dependencies>
+      <dependency id="chocolatey-visualstudio.extension" version="1.7.0" />
+    </dependencies>
+    <projectSourceUrl>https://github.com/codecadwallader/codemaid</projectSourceUrl>
+    <packageSourceUrl>https://github.com/codecadwallader/codemaid</packageSourceUrl>
+    <docsUrl>https://github.com/codecadwallader/codemaid</docsUrl>
+    <bugTrackerUrl>https://github.com/codecadwallader/codemaid</bugTrackerUrl>
+  </metadata>
+</package>
