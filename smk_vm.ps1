@@ -24,13 +24,12 @@
     $ChocoCachePath = "C:\Temp\Chocolatey"
     New-Item -Path $ChocoCachePath -ItemType directory -Force
     choco feature enable -n=useRememberedArgumentsForUpgrades
-    choco feature enable -n allowGlobalConfirmation
 
     # install git and clone the whole repo
     cinst git --package-parameters="/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration" -y --cacheLocation $ChocoCachePath
     choco install tortoisegit -y --cacheLocation $ChocoCachePath
     refreshenv
-    git clone "$baseUri.git" $localPath
+    git clone "https://github.com/smklancher/SystemSetup.git" $localPath
 
     $localScripts = "$localPath\scripts"
     $localPackages = "$localPath\LocalPackages"
@@ -64,7 +63,6 @@ choco install firefox -y --cacheLocation $ChocoCachePath
 choco install dotnetfx -y --cacheLocation $ChocoCachePath
 choco install 7zip.install -y --cacheLocation $ChocoCachePath
 choco install sysinternals -y --cacheLocation $ChocoCachePath
-choco install nirlauncher -y --cacheLocation $ChocoCachePath
 choco install notepadplusplus.install -y --cacheLocation $ChocoCachePath
 choco install sumatrapdf.install -y --cacheLocation $ChocoCachePath
 choco install spacesniffer -y --cacheLocation $ChocoCachePath
@@ -97,6 +95,8 @@ choco install winhue -y --cacheLocation $ChocoCachePath
 
 #--- Gaming ---
 choco install steam -y --cacheLocation $ChocoCachePath
+# remove version once approved: https://chocolatey.org/packages/battle.net/1.16.3.2988
+#choco install -y battle.net --version 1.16.3.2988
 
 # Battle.Net / Hearthstone
 # Obstacles with Battle.Net package because reasons: 
