@@ -103,14 +103,15 @@ choco install steam -y --cacheLocation $ChocoCachePath
 # https://chocolatey.org/packages/battle.net/1.16.3.2988
 # https://github.com/chocolatey/choco/issues/1888
 # So, install from local package
+choco install autohotkey.install -y --cacheLocation $ChocoCachePath
 choco install battle.net -source "$localPackages\Battle.Net" -y --cacheLocation $ChocoCachePath --ignorechecksum
 # Then remove the package without uninstalling, because it will auto update anyway
 choco uninstall battle.net -n --skipautouninstaller
 # Then start Hearthstone install (example game names: https://us.battle.net/forums/en/bnet/topic/20752501530)
-"C:\Program Files (x86)\Battle.net\battle.net.exe --game=hs_beta --install"
-# HDT package is outdated but will offer to auto update, so remove package after install as well
-choco install hearthstone-deck-tracker -y --cacheLocation $ChocoCachePath
-choco uninstall hearthstone-deck-tracker -n --skipautouninstaller
+# Actually, can't install until after login
+#"C:\Program Files (x86)\Battle.net\battle.net.exe --game=hs_beta --install"
+# HDT package is outdated and looks like it fails to auto update from that version
+# choco install hearthstone-deck-tracker -y --cacheLocation $ChocoCachePath
 
 #--- Maybe ---
 #choco install -y auto-dark-mode
@@ -128,7 +129,7 @@ FinalSteps
 
 
 # agentransack requires manual input
-choco install -y agentransack --cacheLocation $ChocoCachePath
+#choco install agentransack -y --cacheLocation $ChocoCachePath
 
 # classic shell only for Windows 2012
 # choco install -y classic-shell

@@ -11,7 +11,7 @@ function Import-LocalGroupPolicy {
     $lgpodir="$localPath\LGPO"
     $lgpo="$lgpodir\lgpo.exe"
     $lgpotxt="$lgpodir\$Name.txt"
-    Start-Process -FilePath $lgpo -ArgumentList "/t",$lgpotxt -WorkingDirectory $lgpodir -RedirectStandardOutput "Output.txt" -RedirectStandardError "Error.txt"
+    Start-Process -FilePath $lgpo -ArgumentList "/t",$lgpotxt -WorkingDirectory $lgpodir -RedirectStandardOutput "$lgpodir\$Name-Output.txt" -RedirectStandardError "$lgpodir\$Name-Error.txt"
 }
 
 
@@ -20,7 +20,7 @@ function FinalSteps {
     xcopy "$localPath\copy\*" C:\ /E /C /H /R /Y
 
     # misc - file extensions, taskbar pins, etc
-    "$localPath\misc\RunMisc.cmd"
+    & "$localPath\misc\RunMisc.cmd"
 
     #--- reenabling critial items ---
     # Enable-UAC

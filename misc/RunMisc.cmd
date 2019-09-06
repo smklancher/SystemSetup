@@ -1,5 +1,8 @@
 cd /d %~dp0
 
+PinToTaskbar\syspin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe" "Unpin from taskbar"
+PinToTaskbar\syspin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe" "Pin to taskbar"
+
 REM Browser default and pin
 SetDefaultBrowser\SetDefaultBrowser chrome
 PinToTaskbar\syspin "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "Unpin from taskbar"
