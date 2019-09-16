@@ -7,7 +7,7 @@ DWORD:0
 Computer
 Software\Policies\Microsoft\Windows\WindowsUpdate\AU
 AUOptions
-DWORD:3
+DWORD:4
 
 Computer
 Software\Policies\Microsoft\Windows\WindowsUpdate\AU

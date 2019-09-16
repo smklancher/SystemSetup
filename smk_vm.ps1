@@ -66,6 +66,7 @@ choco install sysinternals -y --cacheLocation $ChocoCachePath
 choco install notepadplusplus.install -y --cacheLocation $ChocoCachePath
 choco install sumatrapdf.install -y --cacheLocation $ChocoCachePath
 choco install spacesniffer -y --cacheLocation $ChocoCachePath
+choco install processhacker.install -y --cacheLocation $ChocoCachePath
 
 choco install silverlight -y --cacheLocation $ChocoCachePath
 choco install fiddler4 -y --cacheLocation $ChocoCachePath
@@ -90,6 +91,7 @@ choco install google-backup-and-sync -y --cacheLocation $ChocoCachePath
 choco install filezilla -y --cacheLocation $ChocoCachePath
 choco install rescuetime -y --cacheLocation $ChocoCachePath
 choco install winhue -y --cacheLocation $ChocoCachePath
+choco install mpc-hc-clsid2 -y --cacheLocation $ChocoCachePath
 
 
 
@@ -112,6 +114,13 @@ choco uninstall battle.net -n --skipautouninstaller
 #"C:\Program Files (x86)\Battle.net\battle.net.exe --game=hs_beta --install"
 # HDT package is outdated and looks like it fails to auto update from that version
 # choco install hearthstone-deck-tracker -y --cacheLocation $ChocoCachePath
+
+# Download installers to be run manually where possible
+$toBeRun="$localPath\ManualInstalls"
+New-Item -Path $toBeRun -ItemType directory -Force
+
+Set-Location $toBeRun
+Get-LatestGithubReleaseUsingGlare -GitHubUser "HearthSim" -GitHubRepo "HDT-Releases" -AssetRegex "exe"
 
 #--- Maybe ---
 #choco install -y auto-dark-mode

@@ -15,8 +15,17 @@ ftype inifile="C:\Program Files\Notepad++\notepad++.exe" "%%1"
 ftype inffile="C:\Program Files\Notepad++\notepad++.exe" "%%1"
 ftype txtfile="C:\Program Files\Notepad++\notepad++.exe" "%%1"
 ftype xmlfile="C:\Program Files\Notepad++\notepad++.exe" "%%1"
-ftype Microsoft.PowerShellScript.1="C:\Program Files\Notepad++\notepad++.exe" "%%1"      
+ftype Microsoft.PowerShellScript.1="C:\Program Files\Notepad++\notepad++.exe" "%%1"
 SetUserFTA\SetUserFTA .txt txtfile  
 SetUserFTA\SetUserFTA .log txtfile  
 SetUserFTA\SetUserFTA .config txtfile  
 SetUserFTA\SetUserFTA .xml xmlfile  
+
+REM 7zip
+ftype 7zip="C:\Program Files\7-Zip\7zFM.exe" "%%1"
+SetUserFTA\SetUserFTA .zip 7zip
+SetUserFTA\SetUserFTA .7z 7zip
+SetUserFTA\SetUserFTA .rar 7zip
+SetUserFTA\SetUserFTA .cab 7zip
+SetUserFTA\SetUserFTA .iso 7zip
+SetUserFTA\SetUserFTA .001 7zip
