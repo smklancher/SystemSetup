@@ -29,3 +29,22 @@ SetUserFTA\SetUserFTA .rar 7zip
 SetUserFTA\SetUserFTA .cab 7zip
 SetUserFTA\SetUserFTA .iso 7zip
 SetUserFTA\SetUserFTA .001 7zip
+
+REM video
+ftype Video="C:\Program Files\MPC-HC\mpc-hc64.exe" "%%1"
+SetUserFTA\SetUserFTA .mp4 Video
+SetUserFTA\SetUserFTA .avi Video
+SetUserFTA\SetUserFTA .mp4 Video
+SetUserFTA\SetUserFTA .3gp Video
+SetUserFTA\SetUserFTA .mpeg Video
+SetUserFTA\SetUserFTA .mpg Video
+SetUserFTA\SetUserFTA .ogm Video
+SetUserFTA\SetUserFTA .webm Video
+SetUserFTA\SetUserFTA .wm Video
+SetUserFTA\SetUserFTA .wmv Video
+
+REM Remove folders
+reg import "Registry\Remove Certain Folders\This PC - Remove 3D Objects 64-bit.reg"
+reg import "Registry\Remove Certain Folders\This PC - Remove Desktop 64-bit.reg"
+reg import "Registry\Remove Certain Folders\This PC - Remove Music 64-bit.reg"
+reg import "Registry\Remove Certain Folders\This PC - Remove Videos 64-bit.reg"
