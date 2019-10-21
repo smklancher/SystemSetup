@@ -48,3 +48,4 @@ reg import "Registry\Remove Certain Folders\This PC - Remove 3D Objects 64-bit.r
 reg import "Registry\Remove Certain Folders\This PC - Remove Desktop 64-bit.reg"
 reg import "Registry\Remove Certain Folders\This PC - Remove Music 64-bit.reg"
 reg import "Registry\Remove Certain Folders\This PC - Remove Videos 64-bit.reg"
+reg import "Registry\Remove_User_Folder_from_Navigation_Pane.reg"

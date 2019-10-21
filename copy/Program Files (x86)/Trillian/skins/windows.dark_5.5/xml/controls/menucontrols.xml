@@ -1,0 +1,84 @@
+
+<!-- Context Menus -->
+
+<control name="contextmenus" type="menu">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<color name="hover-border" red="184" green="214" blue="251"/>
+	<color name="hover-back" red="237" green="244" blue="253" />
+	<color name="hover-fore" red="255" green="255" blue="255"/>
+	<color name="normal-back" red="-1" green="-1" blue="-1"/>
+	<color name="normal-fore" red="255"  green="255" blue="255" />
+
+	<color name="disabled-fore" red="174"  green="174" blue="174"/>
+
+	<color name="separator-back" red="-1" green="-1" blue="-1"/>
+	<color name="separator-fore" red="50"  green="50" blue="50"/>
+
+	<color name="popup-back" red="222" green="222" blue="222"/>
+	<color name="popup-fore" red="0"  green="0" blue="0"/>
+
+<!-- Menu Interior -->
+
+	<background name="slider" transparent="1" middle="1" visible="1" stretch="1">
+		<source name="skin-asset" left="310" top="71" right="320" bottom="121"/>
+		<slice left="320" top="77" right="320" bottom="115"/>
+	</background>
+
+	<settings name="defaultLeftMargin" value="31"/>
+	<settings name="defaultRightMargin" value="0"/>
+	<settings name="defaultLeftMarginSeparator" value="28"/>
+	<settings name="defaultRightMarginSeparator" value="0"/>
+	<settings name="defaultTextHeight" value="22"/>
+	<settings name="defaultLeftMarginIcon" value="0"/>
+
+	<icon    type="online" state= "normal"><source name="general16-asset-notheme" left="16" top="48" right="32" bottom="64"/></icon><icon    type="online" state= "hover"><source name="general16-asset-notheme" left="16" top="48" right="32" bottom="64"/></icon>
+	<icon    type="offline" state= "normal"><source name="general16-asset-notheme" left="16" top="64" right="32" bottom="80"/></icon><icon    type="offline" state= "hover"><source name="general16-asset-notheme" left="16" top="64" right="32" bottom="80"/></icon>
+	<icon    type="away" state= "normal"><source name="general16-asset-notheme" left="16" top="80" right="32" bottom="96"/></icon><icon    type="away" state= "hover"><source name="general16-asset-notheme" left="16" top="80" right="32" bottom="96"/></icon>
+	<icon    type="invisible" state= "normal"><source name="general16-asset-notheme" left="16" top="96" right="32" bottom="112"/></icon><icon    type="invisible" state= "hover"><source name="general16-asset-notheme" left="16" top="96" right="32" bottom="112"/></icon>
+	<icon    type="donotdisturb" state= "normal"><source name="general16-asset-notheme" left="64" top="80" right="80" bottom="96"/></icon><icon    type="donotdisturb" state= "hover"><source name="general16-asset-notheme" left="64" top="80" right="80" bottom="96"/></icon>
+
+	<icon type="popup" state="normal">
+		<source name="skin-asset" left="310" top="121" right="320" bottom="137"/>
+	</icon>
+	<icon type="popup" state="hover">
+		<source name="skin-asset" left="310" top="137" right="320" bottom="153"/>
+	</icon>
+	<icon type="check" state="normal">
+		<source name="skin-asset" left="320" top="121" right="338" bottom="139"/>
+	</icon>
+	<icon type="check" state="hover">
+		<source name="skin-asset" left="320" top="121" right="338" bottom="139"/>
+	</icon>
+	<icon type="pro" state="normal">
+		&icoPremiumCard;
+	</icon>
+	<icon type="pro" state="hover">
+		&icoPremiumCard;
+	</icon>
+	<icon type="thumb" state="normal">
+		<source name="skin-asset" left="328" top="75" right="347" bottom="86"/>
+	</icon>
+	<icon type="thumb" state="hover">
+		<source name="skin-asset" left="328" top="86" right="347" bottom="97"/>
+	</icon>
+&PLUGmenuIcons;
+
+<menu-item>
+
+	<!-- Hover Background -->
+	<background transparent="1" type="hover" stretch="1" middle="1">
+		<source name="skin-asset" left="327" top="0" right="460" bottom="22"/>
+		<slice left="330" top="3" right="457" bottom="19"/>
+	</background>
+   		
+	<!-- Push Background -->
+	<background transparent="1" type="push" stretch="1" middle="1">
+		<source name="skin-asset" left="327" top="0" right="460" bottom="22"/>
+		<slice left="330" top="3" right="457" bottom="19"/>
+	</background>
+
+</menu-item>
+
+</control>
+
+		

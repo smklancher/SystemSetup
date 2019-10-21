@@ -1,0 +1,711 @@
+
+<component name="contactlist" minx="175 + ((!%system.windows.vista.glass%) * 12) - ((!%window.has_taskbarentry% || %window.docked% || !%window.has_hideAvailable%) * 29)" miny="250" defaultx="236" defaulty="520">
+	<!-- Setting the Resize Zones -->
+	&resize;
+	&windowborder;
+
+	<borderregion>
+		<region type="rectangle">
+			<rect>
+				<top num="1" height="0"/>
+			</rect>
+		</region>
+	</borderregion>
+
+	<mainregion usebitmap="1" usedefaultcolors="1" />
+
+	<icontrol source="minimizebutton-standalone" name="minimize" visible="%window.has_taskbarentry% * !%window.has_hideAvailable% * !%window.docked%">
+		<rect>
+			<left num="32 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="hidebutton-standalone" name="hide" visible="%window.has_hideAvailable% * (!%window.has_taskbarentry% || %window.docked%) * !(%window.docked%*%system.windows.vista.glass%)">
+		<rect>
+			<left num="49 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="minimizebutton-combined" name="minimize" visible="%window.has_taskbarentry% * %window.has_hideAvailable% * !%window.docked%">
+		<rect>
+			<left num="78 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="47 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="hidebutton-combined" name="hide" visible="!(%system.windows.vista.glass%*%window.docked%) * %window.has_taskbarentry% * %window.has_hideAvailable% * !%window.docked%">
+		<rect>
+			<left num="47 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!%system.windows.vista.glass%) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="viewbutton-std" name="view-menu" visible="1">
+		<rect>
+			<left num="45 + ((!%window.docked% * %window.has_taskbarentry% * %window.has_hideAvailable%) * 81) + (%window.has_hideAvailable% * ((!%window.has_taskbarentry%)||%window.docked%) * 52) + (!%window.docked% * %window.has_taskbarentry% * (!%window.has_hideAvailable%) * 35) + ((!%system.windows.vista.glass%) * 6) - (%window.docked%*33*%system.windows.vista.glass%) + (%window.docked%*%system.windows.vista.glass%*!%window.has_hideAvailable%*52)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="((!%window.docked% * %window.has_taskbarentry% * %window.has_hideAvailable%) * 81) + (%window.has_hideAvailable% * ((!%window.has_taskbarentry%)||%window.docked%) * 52) + (!%window.docked% * %window.has_taskbarentry% * (!%window.has_hideAvailable%) * 35) + ((!%system.windows.vista.glass%) * 6) - (%window.docked%*33*%system.windows.vista.glass%) + (%window.docked%*%system.windows.vista.glass%*!%window.has_hideAvailable%*52)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="trillianbutton" name="trillian-button" visible="1">
+		<rect>
+			<left num="0 + ((!%system.windows.vista.glass%) * 6)" width="0"/>
+			<top num="1" height="0"/>
+			<right num="((%window.width% &gt;= (219 + ((!%system.windows.vista.glass%) * 12) - ((!%window.has_taskbarentry% || %window.docked% || !%window.has_hideAvailable%) * 29))) * 88) + ((%window.width% &lt; (219 + ((!%system.windows.vista.glass%) * 12) - ((!%window.has_taskbarentry% || %window.docked% || !%window.has_hideAvailable%) * 29))) * 45) + ((!%system.windows.vista.glass%) * 6)" width="0"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol> 
+
+	<icontrol source="trillian-topic" name="trillian-topic" visible="(%window.width% &gt;= (219 + ((!%system.windows.vista.glass%) * 12) - ((!%window.has_taskbarentry% || %window.docked% || !%window.has_hideAvailable%) * 29)))">
+		<rect>
+			<left num="25 + ((!%system.windows.vista.glass%) * 6)" width="0"/>
+			<top num="0" height="0"/>
+			<right num="89 + ((!%system.windows.vista.glass%) * 6)" width="0"/>
+			<bottom num="20" height="0"/>
+		</rect>
+	</icontrol> 
+
+	<!-- The inside of the window - with variables to change the locations slightly based on whether we're in glass mode or minimal/docked mode -->
+	<frame source="contactlist-body" name="contactlist-body" visible="1">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="30 * (!%system.windows.vista.glass%)" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+
+	
+</component>
+
+
+<component name="contactlist-body" minx="187" miny="156" defaultx="187" defaulty="268">
+
+	<!-- Laying down the background white -->
+	<color red="0" green="0" blue="0" visible="1">
+		<rect>
+			<top num="(%system.windows.border.top% + 1)" height="0"/>
+		</rect>
+	</color>
+
+	<frame source="top-section" name="top-section" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="(%system.windows.vista.glass% * (%system.windows.border.top% + 1)) + 0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" orientation="above" source="top-list-join"/>
+		</rect>
+	</frame>
+
+	<color red="0" green="0" blue="0" visible="%window.wizard%">
+		<rect>
+			<top num="0" orientation="below" source="top-list-join"/>
+			<bottom num="1" orientation="below" source="top-list-join"/>
+		</rect>
+	</color>
+
+	<!-- Welcome Bubble -->
+	
+	<frame source="welcome-frame" visible="%window.wizard%">
+		<rect>
+			<top num="0" orientation="below" source="top-list-join"/>
+		</rect>
+	</frame>
+
+	<!-- List Area -->
+
+	<frame source="alert-box" name="alert-box" visible="%status.hasText%*!%window.wizard%">
+		<rect>
+			<left num="1" width="0"/>
+			<top num="0" orientation="below" source="top-list-join"/>
+			<right num="1" width="1"/>
+			<bottom num="0 + (30 + max(22,%status.desired_height% + 8))" orientation="below" source="top-list-join"/>
+		</rect>
+	</frame>
+
+	<!-- Joining the top to the bottom -->
+	<anchor name="top-list-join" type="northsouth" saveable="yes">
+		<location type="default" num="(%system.windows.vista.glass% * (%system.windows.border.top% + 1)) + 
+		((!%away-edit.editing%) * ((%window.large% * 72) + (%window.medium% * 55) + (%window.small% * 47) + (%window.tiny% * 46) + (%window.minimal% * 30))) +
+		(%away-edit.editing% * ((5 + max(min(%away-edit.desired_height% + 6,(3 * 15) + 6),32 + 6)) + 61))" height="0"/>
+ 	</anchor>
+
+	<!-- Contact List -->
+	<frame source="list-area" name="list-area" visible="!%window.wizard%">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0 + (%status.hasText% * (30 + (max(22,%status.desired_height% + 8))))" orientation="below" source="top-list-join"/>
+			<right num="0" width="1"/>
+			<bottom num="((&ShowSearch;*!%window.minimal%)||(%search-edit.hastext%)) * 34" height="1"/>
+		</rect>
+	</frame>
+
+	<frame source="bottom-area" name="bottom-area" visible="!%window.wizard%*((&ShowSearch;*(%window.large%||%window.medium%||%window.small%||%window.tiny%))||(%search-edit.hastext%))">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="34" height="1"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame>
+
+</component>
+
+<component name="top-section">
+
+
+	<!-- Identity Box shown when not in search mode -->
+	<frame source="infobox-profile" visible="!%search-edit.hastext%||%window.wizard%">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame>
+
+	<!-- Search title shown when in search mode -->
+	<frame source="infobox-searchresults" visible="%search-edit.hastext%*!%window.wizard%">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+
+<component name="list-area">
+	<!-- Contact List -->
+	<icontrol source="buddy-list" name="list" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0 + %list.scrollbar_needed% * 16*&Scrollbar;" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+
+	<color red="0" green="0" blue="0">
+		<rect>
+			<left num="17" width="1"/>
+			<bottom num="1" height="0"/>
+		</rect>
+	</color>
+	
+	<!-- Scroll bar background -->
+	<background transparent="1" middle="1" stretch="1" visible="%list.scrollbar_needed%*&Scrollbar;">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/>
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="17" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="scrollup" name="scrollup" visible="%list.scrollbar_needed%*&Scrollbar;">
+		<rect>
+			<left num="1 + (%list.scrollbar_needed% * 15*&Scrollbar;)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="17" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollbar -->
+	<icontrol source="scroll" name="scrollbar" visible="1">
+		<rect>
+			<left num="%list.scrollbar_needed% * 16*&Scrollbar;" width="1"/>
+			<top num="18" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="18" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="scrolldown" name="scrolldown" visible="%list.scrollbar_needed%*&Scrollbar;">
+		<rect>
+			<left num="%list.scrollbar_needed% * 16*&Scrollbar;" width="1"/>
+			<top num="17" height="1"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+
+
+
+<!-- The actual search icontrol -->
+<component name="searchtextframe">
+	<!-- Search text edit box -->
+	<icontrol source="searchtext" name="search-edit" visible="1"/>
+</component>
+
+<!-- The away edit icontrol -->
+<component name="awayeditframe">
+	<!-- Status edit control -->
+	<icontrol source="editawaymessage" name="away-edit" visible="1"/>
+</component>
+
+<!-- A focus effect - in it's own component so it can be overlayed via frames -->
+<component name="awayeditframe-focus">
+	<background transparent="1" stretch="1" middle="1" visible="(%away-edit.editing%)">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/>
+		<slice left="3" top="63" right="157" bottom="79"/>
+	</background>
+</component>
+
+
+<!-- The actual infobox identity box -->
+<component name="infobox-profile">
+	<!-- The background images -->
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="0" right="59" bottom="62"/> <!-- theme -->
+		<slice left="0" top="0" right="59" bottom="62"/>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="!%away-edit.editing%*!%window.minimal%"> 
+		<source name="skin-asset" left="0" top="63" right="52" bottom="115"/>
+		<slice left="2" top="65" right="50" bottom="113"/>
+		<rect>
+			<left num="19" width="0"/>
+			<top num="10" height="0"/>
+			<right num="(%window.large% * 71) + (%window.medium% * 55) + (%window.small% * 47) + (%window.tiny% * 39)" width="0"/>
+			<bottom num="(%window.large% * 62) + (%window.medium% * 46) + (%window.small% * 38) + (%window.tiny% * 30)" height="0"/>
+		</rect>
+	</background>
+
+	<!-- User avatar - sits in the frame -->
+	<icontrol source="yourbuddyicon" name="local-avatar" visible="!%away-edit.editing%*!%window.minimal%">
+		<rect>
+			<left num="21" width="0"/>
+			<top num="12" height="0"/>
+			<right num="(%window.large% * 69) + (%window.medium% * 53) + (%window.small% * 45) + (%window.tiny% * 37)" width="0"/>
+			<bottom num="(%window.large% * 60) + (%window.medium% * 44) + (%window.small% * 36) + (%window.tiny% * 28)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Helper text -->
+	<icontrol source="setavatartooltip" name="setavatartooltip" visible="%window.wizard%*!%window.minimal%*!%window.tiny%*!%away-editing%*!%local-avatar.on%">
+		<rect>
+			<left num="21" width="0"/>
+			<top num="11" height="0"/>
+			<right num="(%window.large% * 69) + (%window.medium% * 53) + (%window.small% * 45) + (%window.tiny% * 37)" width="0"/>
+			<bottom num="(%window.large% * 60) + (%window.medium% * 44) + (%window.small% * 36) + (%window.tiny% * 28)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Normal mode Profile editor button -->
+	<icontrol source="profilenameeditbutton" name="profilenameeditbutton" visible="(!%window.wizard% || !%window.wizard.displayname%) * !%profile-name.focus% * !%away-edit.editing% * !%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42)" width="0"/>
+			<top num="(%window.large% * 9) + (%window.medium% * 11) + (%window.small% * 8) + (%window.tiny% * 7)" height="0"/>
+			<right num="min(
+				(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) + (%profilenameeditbutton.text.desired_width% + 8),
+				%window.width% - 10 - (!%window.wizard% * !%window.large% * min(%iconholder.desired_width%,59)) - ((!%system.windows.vista.glass%) * 16))" width="0"/>
+			<bottom num="(%window.large% * 27) + (%window.medium% * 29) + (%window.small% * 26) + (%window.tiny% * 25)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="profilenameeditwizardbutton" name="profilenameeditwizardbutton" visible="%window.wizard% * %window.wizard.displayname% * !%profile-name.focus% * !%away-edit.editing% * !%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42)" width="0"/>
+			<top num="(%window.large% * 9) + (%window.medium% * 11) + (%window.small% * 8) + (%window.tiny% * 7)" height="0"/>
+			<right num="min(
+				(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) + (%profilenameeditwizardbutton.text.desired_width% + 8),
+				%window.width% - 10 - (!%window.wizard% * !%window.large% * min(%iconholder.desired_width%,59)) - ((!%system.windows.vista.glass%) * 16))" width="0"/>
+			<bottom num="(%window.large% * 27) + (%window.medium% * 29) + (%window.small% * 26) + (%window.tiny% * 25)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Profile name focus/edit effect (this is the border) -->
+	<frame source="profilenameedit-focus" name="profilenameedit-focus" visible="%profile-name.focus% * !%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42)" width="0"/>
+			<top num="(%window.large% * 9) + (%window.medium% * 11) + (%window.small% * 8) + (%window.tiny% * 7) - 1" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="(%window.large% * 27) + (%window.medium% * 29) + (%window.small% * 26) + (%window.tiny% * 25)" height="0"/>
+		</rect>
+	</frame>
+
+	<!-- Profile name (your name) -->
+	<frame source="profilenameedit" name="profilenameedit" visible="%profile-name.focus% * !%away-edit.editing% * !%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) + 4" width="0"/>
+			<top num="(%window.large% * 9) + (%window.medium% * 11) + (%window.small% * 8) + (%window.tiny% * 7) + 1" height="0"/>
+			<right num="14" width="1"/>
+			<bottom num="(%window.large% * 27) + (%window.medium% * 29) + (%window.small% * 26) + (%window.tiny% * 25) + 1" height="0"/>
+		</rect>
+	</frame>
+
+	<icontrol source="statusbutton2" name="status-menu" visible="!%away-edit.editing% * !%event-button.on% * %window.minimal%">
+		<rect>
+			<left num="3" width="0"/>
+			<top num="5" height="0"/>
+			<right num="23" width="0"/>
+			<bottom num="25" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- %event.pending%-->
+	<icontrol source="eventbutton" name="event-button" visible="%event.pending% * !%away-edit.editing%">
+		<rect>
+			<left num="(%window.large% * 58) + (%window.medium% * 42) + (%window.small% * 32) + (%window.tiny% * 26) + (%window.minimal% * 25)" width="0"/>
+			<top num="(%window.large% * 47) + (%window.medium% * 30) + (%window.small% * 22) + (%window.tiny% * 16) + (%window.minimal% * 7)" height="0"/>
+			<right num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 48) + (%window.tiny% * 42) + (%window.minimal% * 41)" width="0"/>
+			<bottom num="(%window.large% * 63) + (%window.medium% * 46) + (%window.small% * 38) + (%window.tiny% * 32) + (%window.minimal% * 23)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="statusbutton3" name="status-button" visible="!%away-edit.editing%*!%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42)" width="0"/>
+			<top num="(%window.large% * 26) + (%window.medium% * 27) + (%window.small% * 23) + (%window.tiny% * 21)" height="0"/>
+			<right num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) + (%status-button.text.desired_width% + 8)" width="0"/>
+			<bottom num="(%window.large% * 44) + (%window.medium% * 45) + (%window.small% * 41) + (%window.tiny% * 39)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="bar-frame-black" name="bar-frame-black" visible="!%away-edit.editing%*!%status-button.hover%*!%away-edit-button.hover%*!%trillian.status.invisible%*!%trillian.status.offline%*!%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) +  (%status-button.text.desired_width% + 8)" width="0"/>
+			<top num="(%window.large% * 24) + (%window.medium% * 25) + (%window.small% * 21) + (%window.tiny% * 19) + 11" height="0"/>
+			<right num="(%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) +  (%status-button.text.desired_width% + 8) + 4" width="0"/>
+			<bottom num="(%window.large% * 24) + (%window.medium% * 25) + (%window.small% * 21) + (%window.tiny% * 19) + 12" height="0"/>
+		</rect>
+	</frame>
+
+	<!-- Away Edit button - normal size -->
+	<icontrol source="awayeditbutton" name="away-edit-button" visible="!%away-edit.editing%*(%window.minimal%||(!%trillian.status.invisible%*!%trillian.status.offline%))">
+		<rect>
+			<left num="(%window.large% * 56) + (%window.medium% * 40) + (%window.small% * 32) + (%window.tiny% * 24) + (%window.minimal% * (16 + %event.pending%*22)) + !%window.minimal%*(%status-button.text.desired_width% + 24) + 6" width="0"/> 
+			<top num="(%window.large% * 26) + (%window.medium% * 27) + (%window.small% * 23) + (%window.tiny% * 21) + (%window.minimal% * 7)" height="0"/> 
+			<right num="min(
+				(%window.large% * 56) + (%window.medium% * 40) + (%window.small% * 32) + (%window.tiny% * 24) + (%window.minimal% * (16 + %event.pending%*22)) + !%window.minimal%*(%status-button.text.desired_width% + 24) + 6 + max(30,(%away-edit-button.text.desired_width% + 8)),
+				%window.width% - 7 - (%window.minimal% * min(%iconholder.desired_width%,59)) - ((!%system.windows.vista.glass%) * 16))" width="0"/>
+
+			<bottom num="(%window.large% * 44) + (%window.medium% * 45) + (%window.small% * 41) + (%window.tiny% * 39) + (%window.minimal% * 25)" height="0"/>
+		</rect> 
+	</icontrol>
+
+	<icontrol source="awayeditinstructions" name="awayeditinstructions" visible="%away-edit.editing%">
+		<rect>
+			<left num="10" width="0"/>
+			<top num="9" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="30" height="0"/> 
+		</rect>
+	</icontrol>
+
+	<icontrol source="awaysource" name="away-source" visible="%away-edit.editing%">
+		<rect>
+			<left num="10 + %awayeditinstructions.desired_width%" width="0"/>
+			<top num="6" height="0"/>
+			<right num="min(%window.width%-5-((!%system.windows.vista.glass%) * 16),10 + %awayeditinstructions.desired_width% + %away-source.text.desired_width% + 25)" width="0"/>
+			<bottom num="26" height="0"/> 
+		</rect>
+	</icontrol>
+
+	<!-- awayedit focus effect -->
+	<frame source="awayeditframe-focus" name="awayeditframe-focus" visible="%away-edit.editing%">
+		<rect>
+			<left num="5" width="0"/>
+			<top num="33" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="33 + max(min(%away-edit.desired_height% + 6,(3 * 15) + 6),32 + 6)" height="0"/> <!-- 15 = height of 1 line of text -->
+		</rect>
+	</frame>
+
+	<!-- actual status/away edit -->
+	<frame source="awayeditframe" name="awayeditframe" visible="%away-edit.editing%">
+		<rect> 
+			<left num="9" width="0"/>
+			<top num="36" height="0"/> 
+			<right num="9" width="1"/>
+			<bottom num="36 + max(min(%away-edit.desired_height%,3 * 15),32)" height="0"/> 
+		</rect>
+	</frame>
+
+	<!-- Set button -->
+	<icontrol source="setbutton" name="away-set" visible="(%away-edit.editing%)">
+		<rect>
+			<left num="97" width="1"/>
+			<top num="(5 + max(min(%away-edit.desired_height% + 6,(45) + 6),32 + 6)) + 32" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="(5 + max(min(%away-edit.desired_height% + 6,(3 * 15) + 6),32 + 6)) + 32 + 24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- cancel button -->
+	<icontrol source="statuscancelbutton" name="away-cancel" visible="(%away-edit.editing%)">
+		<rect>
+			<left num="5" width="0"/>
+			<top num="(5 + max(min(%away-edit.desired_height% + 6,(3 * 15) + 6),32 + 6)) + 32" height="0"/>
+			<right num="30" width="0"/>
+			<bottom num="(5 + max(min(%away-edit.desired_height% + 6,(45) + 6),32 + 6)) + 32 + 24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Medium Iconholder -->
+	<icontrol source="icon-holder" name="iconholder" visible="!%window.wizard%*(!%away-edit.editing%)*((!%profile-name.focus%)||(%window.large%))">
+		<rect>
+			<left num="(%window.large% * 76) 
+				+ (!%window.large%) * min(
+					max(
+						(!%window.minimal%)*((%window.large% * 74) + (%window.medium% * 58) + (%window.small% * 50) + (%window.tiny% * 42) + (%window.minimal% * 42) + (%profilenameeditwizardbutton.text.desired_width%*(%window.wizard.displayname%*%window.wizard%) + (!%window.wizard.displayname% || !%window.wizard%)*%profilenameeditbutton.text.desired_width% + 8)) +
+						(%window.minimal%)*((16 + %event.pending%*22) + %away-edit-button.text.desired_width% + 8 + 10),
+						%window.width% - 10 - (%iconholder.desired_width%) - ((!%system.windows.vista.glass%) * 16)),
+				%window.width% - 10 - min(%iconholder.desired_width%,59) - ((!%system.windows.vista.glass%) * 16))" width="0"/>
+			<top num="(%window.large% * 43) + (%window.medium% * 8) + (%window.small% * 5) + (%window.tiny% * 4) + (%window.minimal% * 5)" height="0"/>
+			<right num="7" width="1"/>
+			<bottom num="(%window.large% * 63) + (%window.medium% * 28) + (%window.small% * 25) + (%window.tiny% * 24) + (%window.minimal% * 25)" height="0"/>
+
+		</rect>
+	</icontrol>
+</component>
+
+<!-- Your Name display and edit components -->
+<component name="profilenameedit">
+	<!-- Profile name (your name) -->
+	<icontrol source="yourname" name="profile-name" visible="1">
+	</icontrol>
+</component>
+
+<component name="profilenameedit-focus">
+	<background transparent="1" stretch="1" middle="1" visible="(%profile-name.focus%)">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/>
+		<slice left="3" top="63" right="157" bottom="79"/>
+	</background>
+</component>
+
+<!-- Search results info box -->
+<component name="infobox-searchresults">
+	<!-- The background images -->
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="0" right="59" bottom="62"/>
+		<slice left="0" top="0" right="59" bottom="62"/>
+	</background>
+
+	<!-- Magnifying glass image - large -->
+	<background transparent="1" middle="1" stretch="1" visible="%window.large%">
+		<source name="skin-asset" left="59" top="0" right="107" bottom="48"/>
+		<slice left="59" top="0" right="107" bottom="48"/>
+		<rect>
+			<left num="21" width="0"/>
+			<top num="12" height="0"/>
+			<right num="69" width="0"/>
+			<bottom num="60" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Magnifying glass image - medium -->
+	<background transparent="1" middle="1" stretch="1" visible="%window.medium%">
+		<source name="skin-asset" left="59" top="48" right="91" bottom="80"/>
+		<slice left="59" top="48" right="91" bottom="80"/>
+		<rect>
+			<left num="21" width="0"/>
+			<top num="12" height="0"/>
+			<right num="53" width="0"/>
+			<bottom num="44" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Magnifying glass image - small -->
+	<background transparent="1" middle="1" stretch="1" visible="%window.small%">
+		<source name="skin-asset" left="59" top="80" right="83" bottom="104"/>
+		<slice left="59" top="80" right="83" bottom="104"/>
+		<rect>
+			<left num="21" width="0"/>
+			<top num="12" height="0"/>
+			<right num="45" width="0"/>
+			<bottom num="36" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Magnifying glass image - tiny -->
+	<background transparent="1" middle="1" stretch="1" visible="%window.tiny%||%window.minimal%">
+		<source name="skin-asset" left="83" top="88" right="99" bottom="104"/>
+		<slice left="83" top="88" right="99" bottom="104"/>
+		<rect>
+			<left num="%window.tiny%*21 + %window.minimal%*10" width="0"/> 
+			<top num="%window.tiny%*12 + %window.minimal%*7" height="0"/>
+			<right num="%window.tiny%*37 + %window.minimal%*26" width="0"/>
+			<bottom num="%window.tiny%*28 + %window.minimal%*23" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Search Title -->
+	<icontrol source="searchtitle" name="searchtitle" visible="!%window.minimal%">
+		<rect>
+			<left num="(%window.large% * 78) + (%window.medium% * 62) + (%window.small% * 54) + (%window.tiny% * 46) + (%window.minimal% * 46)" width="0"/>
+			<top num="(%window.large% * 9) + (%window.medium% * 11) + (%window.small% * 8) + (%window.tiny% * 7) + (%window.minimal% * 7)" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="(%window.large% * 27) + (%window.medium% * 29) + (%window.small% * 26) + (%window.tiny% * 25) + (%window.minimal% * 25)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Search results -->
+	<icontrol source="searchresults" name="search-edit-results" visible="1"> <!-- search-edit-results -->
+		<rect>
+			<left num="(%window.large% * 78) + (%window.medium% * 62) + (%window.small% * 54) + (%window.tiny% * 46) + (%window.minimal% * 36)" width="0"/>
+			<top num="(%window.large% * 26) + (%window.medium% * 28) + (%window.small% * 25) + (%window.tiny% * 21) + (%window.minimal% * 6)" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="(%window.large% * 44) + (%window.medium% * 46) + (%window.small% * 43) + (%window.tiny% * 39) + (%window.minimal% * 24)" height="0"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<!-- Alert area for the contact list -->
+<component name="alert-box">
+	<color red="30" green="30" blue="30">
+		<rect>
+			<bottom num="1" height="0"/>
+		</rect>
+	</color>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="baralerts-asset-notheme" left="1" top="0" right="102" bottom="32"/>
+		<slice left="0" top="0" right="102" bottom="32"/>
+		<rect>
+			<top num="1" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="notice-status-switcher" name="status-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+ 			<!-- checking if text is on one line, and moving the icon relative to this -->
+			<top num="7" height="0"/>
+			<right num="23" width="0"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="status-text" name="status">
+		<rect>
+			<left num="29" width="0"/>
+			<top num="7" height="0"/>
+			<right num="7" width="1"/>
+			<bottom num="31" height="1"/>
+		</rect>
+	</icontrol>
+	<icontrol source="reconnectbutton" name="troubleshoot">
+		<rect>
+			<left num="9 + %troubleshoot.text.desired_width% + 20" width="1"/>
+			<top num="29" height="1"/>
+			<right num="9" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="welcome-frame">
+	<background transparent="1" stretch="1" middle="1" visible="1">
+		<source name="skin-asset" left="107" top="0" right="216" bottom="113"/>
+		<slice left="151" top="14" right="209" bottom="106"/>
+		<rect>
+			<left num="8" width="0"/>
+			<top num="3" height="0"/>
+			<right num="8" width="1"/>
+			<bottom num="96 + %introtooltip.desired_height%" height="0"/> 
+		</rect>
+	</background>
+
+	<icontrol source="welcometopic" name="welcometopic">
+		<rect> 
+			<left num="24" width="0"/>
+			<top num="23" height="0"/>
+			<right num="24" width="1"/>
+			<bottom num="52" height="0"/> 
+		</rect>
+	</icontrol>
+
+	<icontrol source="introtooltip" name="introtooltip">
+		<rect> 
+			<left num="24" width="0"/>
+			<top num="50" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="200" height="0"/> 
+		</rect>
+	</icontrol>
+
+	<icontrol source="welcomeclose" name="welcomeclose">
+		<rect> 
+			<left num="122" width="1"/>
+			<top num="57 + %introtooltip.desired_height%" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="82 + %introtooltip.desired_height%" height="0"/> 
+		</rect>
+	</icontrol>
+</component>
+
+<component name="bottom-area">
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="baralerts-asset" left="0" top="35" right="102" bottom="75"/>
+		<slice left="2" top="60" right="100" bottom="73"/>
+	</background>
+
+	<!-- Search box graphics -->
+	<background transparent="1" middle="1" stretch="0" visible="(!%window.minimal%)||(%search-edit.hastext%)">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/>
+		<slice left="6" top="82" right="155" bottom="83"/>
+		<rect>
+			<left num="4" width="0"/>
+			<top num="7" height="0"/>
+			<right num="4" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</background>
+
+	<!-- Search bar frame - needs a frame otherwise doesn't work  -->
+	<frame source="searchtextframe" visible="!%window.minimal%||(%search-edit.hastext%)">
+		<rect>
+			<left num="14" width="0"/>
+			<top num="10" height="0"/>
+			<right num="26" width="1"/>
+			<bottom num="9" height="1"/> 
+		</rect>
+	</frame>
+
+	<!-- Button to clear the search field -->
+	<icontrol source="clearsearch" name="clearsearch" visible="%search-edit.hastext%">
+		<rect>
+			<left num="24" width="1"/>
+			<top num="9" height="0"/>
+			<right num="6" width="1"/>
+			<bottom num="7" height="1"/>
+		</rect>
+	</icontrol> 
+
+	<icontrol source="small-search-icon" name="small-search-icon" visible="!%search-edit.hastext%">
+		<rect>
+			<left num="23" width="1"/>
+			<top num="10" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="6" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="bar-frame-black">
+	<color red="100" green="100" blue="100" visible="1"/>
+</component>
+

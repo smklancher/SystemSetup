@@ -1,0 +1,428 @@
+<component name="social-tooltip" minx="465" maxx="465" miny="588" maxy="588">
+	&windowborder;
+
+	&hidemindetachaero;
+
+	<borderregion>
+		<region type="rectangle">
+			<rect>
+				<top num="1" height="0"/>
+			</rect>
+		</region>
+	</borderregion>
+
+	<mainregion usebitmap="1" usedefaultcolors="1" />
+
+	<!-- The inside of the window - with variables to change the locations slightly based on whether we're in glass mode or minimal/docked mode -->
+	<frame source="social-body" name="social-body" visible="1">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="30 * (!%system.windows.vista.glass%) + %system.windows.vista.glass%*(%system.windows.border.top% + 1)" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="social" defaultx="465" minx="365" maxx="565" miny="250" defaulty="588">
+	<!-- Setting the Resize Zones -->
+	&resize;
+	&windowborder;
+
+	&hidemindetachaero;
+
+	<borderregion>
+		<region type="rectangle">
+			<rect>
+				<top num="1" height="0"/>
+			</rect>
+		</region>
+	</borderregion>
+
+	<mainregion usebitmap="1" usedefaultcolors="1" />
+
+	<!-- The inside of the window - with variables to change the locations slightly based on whether we're in glass mode or minimal/docked mode -->
+	<frame source="social-body" name="social-body" visible="1">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="30 * (!%system.windows.vista.glass%) + %system.windows.vista.glass%*(%system.windows.border.top% + 1)" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+
+<component name="social-body">
+	<!-- Laying down the background white -->
+	<color red="0" green="0" blue="0" visible="1">
+			<rect>
+				<top num="(%system.windows.border.top% + 1)" height="0"/>
+			</rect>
+	</color>
+
+	<frame source="social-groups" name="social-groups" visible="1">
+		<rect>
+			<top num="48" height="0"/>
+			<right num="135" width="0"/>
+			<bottom num="32*%social.more.capable%" height="1"/>
+		</rect>
+	</frame>
+
+	<icontrol source="socialmore" name="more-menu" visible="%social.more.capable%">
+		<rect>
+			<left num="5" width="0"/>
+			<top num="27" height="1"/>
+			<right num="127" width="0"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="baralerts-asset" left="0" top="159" right="134" bottom="200"/>
+		<slice left="134" top="159" right="134" bottom="200"/>
+		<rect>
+			<right num="134" width="0"/>
+		</rect>
+	</background>
+
+	<frame source="social-top" name="social-top" visible="1">
+		<rect>
+			<left num="134" width="0"/>
+			<bottom num="70" height="0"/>
+		</rect>
+	</frame>
+
+	<frame source="social-menu" name="social-menu" visible="%social.edit.capable% || %menu.desired_height%">
+		<rect>
+			<left num="135" width="0"/>
+			<top num="70" height="0"/>
+			<bottom num="70+((24 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),%edit.editing%*15 + 15 + 6) + (%edit.editing%)*(4 + 25))+(!%edit.editing%*%menu.desired_height%))" height="0"/>
+		</rect>
+	</frame>
+
+	<frame source="social-web" name="social-web" visible="%social.web.capable%">
+		<rect>
+			<left num="139" width="0"/>
+			<right num="6" width="1"/>
+			<top num="70+(((%social.edit.capable% || %menu.desired_height%)*19 + 5 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),%edit.editing%*15 + 15 + 6) + (%edit.editing%)*(4 + 25))+(!%edit.editing%*%menu.desired_height%))" height="0"/>
+			<bottom num="70+(((%social.edit.capable% || %menu.desired_height%)*19 + 5 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),%edit.editing%*15 + 15 + 6) + (%edit.editing%)*(4 + 25))+(!%edit.editing%*%menu.desired_height%))+160" height="0"/>
+		</rect>
+	</frame>
+
+	<frame source="social-list" name="social-list" visible="%items.desired_height%">
+		<rect>
+			<left num="139" width="0"/>
+			<top num="70+(((%social.edit.capable% || %menu.desired_height%)*24 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),%edit.editing%*15 + 15 + 6) + (%edit.editing%)*(4 + 25))+(!%edit.editing%*%menu.desired_height%))+(%social.web.capable%)*165" height="0"/>
+			<right num="6" width="1"/>
+			<bottom num="%status.hasText% * (14 + max(30,%status.desired_height%)) + (34 * %search-edit.hastext%)" height="1"/>
+		</rect>
+	</frame>
+
+	<icontrol source="social-loading" name="empty-list" visible="!%items.desired_height%">
+		<rect>
+			<left num="139" width="0"/>
+			<top num="70+(((%social.edit.capable% || %menu.desired_height%)*24 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),%edit.editing%*15 + 15 + 6) + (%edit.editing%)*(4 + 25))+(!%edit.editing%*%menu.desired_height%))+(%social.web.capable%)*165" height="0"/>
+			<right num="6" width="1"/>
+		</rect>
+	</icontrol>
+
+	<frame source="social-status" name="social-status" visible="%status.hasText%">
+		<rect>
+			<left num="134" width="0"/>
+			<top num="(14 + max(30,%status.desired_height%)) + (34 * %search-edit.hastext%)" height="1"/>
+			<right num="0" width="1"/>
+			<bottom num="34 * %search-edit.hastext%" height="1"/>
+		</rect>
+	</frame>
+
+	<frame source="bottom-area" name="bottom-area" visible="%search-edit.hastext%">
+		<rect>
+			<left num="134" width="0"/>
+			<top num="34" height="1"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame>
+
+</component>
+
+<component name="social-status">
+	<color red="0" green="0" blue="0">
+		<rect>
+			<bottom num="1" height="0"/>
+		</rect>
+	</color>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="baralerts-asset-notheme" left="0" top="0" right="102" bottom="33"/> <!-- no theme -->
+		<slice left="1" top="0" right="101" bottom="32"/>
+		<rect>
+			<left num="1" width="0"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="notice-status-switcher" name="status-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+ 			<!-- checking if text is on one line, and moving the icon relative to this -->
+			<top num="(((%status.desired_height%) &lt;= 20) * 14) + (((%status.desired_height%) &gt; 20) * 7)" height="0"/>
+			<right num="23" width="0"/>
+			<bottom num="(((%status.desired_height%) &lt;= 20) * 30) + (((%status.desired_height%) &gt; 20) * 23)" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="status-text" name="status">
+		<rect>
+			<left num="29" width="0"/>
+			<top num="7" height="0"/>
+			<right num="100" width="1"/>
+			<bottom num="7" height="1"/>
+		</rect>
+	</icontrol>
+	<icontrol source="reconnectbutton" name="troubleshoot">
+		<rect>
+			<left num="96" width="1"/>
+			<top num="9" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="33" height="0"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="social-groups">
+	<icontrol source="social-group-scrollup" name="groups-scrollup" visible="%groups.scrollbar_needed%"> <!-- %groups.scrollbar_needed% -->
+		<rect>
+			<left num="2" width="0"/> <!-- 60 -->
+			<top num="1" height="0"/>
+			<right num="5" width="1"/> <!-- 75 - 0 -->
+			<bottom num="17" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="social-group-list" name="groups" visible="1">
+		<rect>
+			<top num="17" height="0"/> <!-- %groups.scrollbar_needed% * -->
+			<bottom num="17" height="1"/> <!-- %groups.scrollbar_needed% * -->
+		</rect>
+	</icontrol>
+
+	<icontrol source="social-group-scrolldown" name="groups-scrolldown" visible="%groups.scrollbar_needed%"> <!-- %groups.scrollbar_needed% -->
+		<rect>
+			<left num="2" width="0"/> <!-- 60 -->
+			<top num="17" height="1"/>
+			<right num="5" width="1"/> <!-- 75 - 0 -->
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="social-top">
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="0" right="59" bottom="62"/> <!-- theme -->
+		<slice left="0" top="0" right="59" bottom="62"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="63" right="52" bottom="115"/> <!-- no theme -->
+		<slice left="2" top="65" right="50" bottom="113"/>
+		<rect>
+			<left num="6" width="0"/>
+			<top num="8" height="0"/>
+			<right num="58" width="0"/>
+			<bottom num="60" height="0"/>
+		</rect>
+	</background>
+
+	<color red="106" green="109" blue="113">
+		<rect>
+			<top num="1" height="1"/>
+		</rect>
+	</color>
+
+	<icontrol source="avatar-switcher" name="avatar" visible="1">
+		<rect>
+			<left num="21-13" width="0"/>
+			<top num="12-2" height="0"/>
+			<right num="69-13" width="0"/>
+			<bottom num="60-2" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Search Title -->
+	<icontrol source="social-title" name="title" visible="1">
+		<rect>
+			<left num="78-12" width="0"/>
+			<top num="9+8" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="27+8" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Search results -->
+	<icontrol source="social-subtitle" name="subtitle" visible="1">
+		<rect>
+			<left num="78-12" width="0"/>
+			<top num="26+8" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="44+8" height="0"/>
+		</rect>
+	</icontrol>
+</component>
+
+
+<component name="social-menu">
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="baralerts-asset" left="0" top="200" right="135" bottom="233"/> <!-- theme -->
+		<slice left="2" top="207" right="133" bottom="230"/>
+		<rect>
+			<left num="4" width="0"/>
+			<top num="6" height="0"/>
+			<right num="6" width="1"/>
+			<bottom num="6" height="1"/>
+		</rect>
+	</background>
+
+	<!-- Post -->
+	<background transparent="1" stretch="1" middle="1" visible="%social.edit.capable%">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+		<slice left="3" top="63" right="157" bottom="79"/>
+		<rect>
+			<left num="10" width="0"/>
+			<top num="12" height="0"/>
+			<right num="12" width="1"/>
+			<bottom num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),%edit.editing%*15 + 15 + 6)" height="0"/>
+		</rect>
+	</background>
+
+	<!-- actual status/post edit -->
+	<icontrol source="social-edit" name="edit" visible="%social.edit.capable%">
+		<rect> 
+			<left num="14" width="0"/>
+			<top num="15" height="0"/> 
+			<right num="16" width="1"/>
+			<bottom num="15 + max(min(%edit.desired_height%,7 * 15),15)" height="0"/> 
+		</rect>
+	</icontrol>
+
+	<icontrol source="socialbutton" name="post" visible="(%edit.editing%)">
+		<rect>
+			<left num="12 + max(85,%post.text.desired_width%+20)" width="1"/>
+			<top num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + 4" height="0"/>
+			<right num="12" width="1"/>
+			<bottom num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + 4 + 25" height="0"/>
+		</rect>
+	</icontrol>
+	
+	<icontrol source="socialmore" name="insert" visible="(%edit.editing%*%social.insert.capable%)">
+		<rect>
+			<left num="12 + max(85,%post.text.desired_width%+20) + 10 + max(85,%insert.text.desired_width%+20)" width="1"/>
+			<top num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + 4" height="0"/>
+			<right num="12 + max(85,%post.text.desired_width%+20) + 10" width="1"/>
+			<bottom num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + 4 + 25" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="statuscancelbutton" name="post-cancel" visible="(%edit.editing%)">
+		<rect>
+			<left num="10" width="0"/>
+			<top num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + 4" height="0"/>
+			<right num="35" width="0"/>
+			<bottom num="12 + max(min(%edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + 4 + 25" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="socialmenu" name="menu" visible="!(%edit.editing%)">
+		<rect>
+			<left num="10" width="0"/>
+			<top num="14 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),15 + 6)" height="0"/>
+			<right num="12" width="1"/>
+			<bottom num="14 + %social.edit.capable%*max(min(%edit.desired_height% + 6,(7 * 15) + 6),15 + 6) + %menu.desired_height%" height="0"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="social-web">
+	<color red="106" green="109" blue="113"/>
+	<icontrol source="social-web" name="web">
+		<rect>
+			<left num="1" width="0"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="social-list">
+	<!-- Contact List -->
+	<icontrol source="social-item-list" name="items">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="16*%items.scrollbar_needed%" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="floating-scrollup" name="items-scrollup" visible="%items.scrollbar_needed%">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="17" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollbar -->
+	<icontrol source="floating-scrollbar" name="items-scrollbar" visible="%items.scrollbar_needed%">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="18" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="18" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="floating-scrolldown" name="items-scrolldown" visible="%items.scrollbar_needed%">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="17" height="1"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="social-comment" defaultx="465" minx="365" maxx="565" miny="100" defaulty="365">
+	<!-- Setting the Resize Zones -->
+	&resize;
+	&windowborder;
+	&minclose;
+
+	<mainregion usebitmap="1" usedefaultcolors="1" />
+
+	<frame source="social-comment-body" name="social-comment-body" visible="1">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="29 * (!%system.windows.vista.glass%)" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="social-comment-body">
+	<color red="0" green="0" blue="0" visible="1"/>
+
+	<frame source="social-list" name="social-list" visible="%items.desired_height%"/>
+	<icontrol source="social-loading" name="empty-list" visible="!%items.desired_height%"/>
+</component>

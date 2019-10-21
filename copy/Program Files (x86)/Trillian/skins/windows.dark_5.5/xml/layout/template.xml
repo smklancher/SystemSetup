@@ -1,0 +1,40 @@
+<!-- Template window -->
+<component name="template" >
+	&resize;
+	&windowborder;
+	&minmaxclosehide;
+
+	<icontrol source="templateTopic" name="windowName" visible="!%system.windows.vista.glass%">
+		<rect>
+			<left num="8" width="0"/>
+			<top num="7" height="0"/>
+			<bottom num="22" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="template-body" name="template-body">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+
+</component>
+
+<component name="template-body">
+
+	<color red="0" green="0" blue="0"/>
+
+	<icontrol source="boundary" name="boundary" visible="1"> 
+		<rect>
+			<left num="5" width="0"/>
+			<top num="5" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+

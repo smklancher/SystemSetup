@@ -1,0 +1,198 @@
+
+	<control name="add-name-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value=""/>
+	</control>
+
+	<control name="add-display-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Display Name:"/>
+	</control>
+
+	<control name="example-text" type="tooltip">
+		<font source="segoeui" type="Segoe UI" size="9" italic="1"/>
+		<forecolor red="136" green="136" blue="136" />
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="line-spacing" value="5"/>
+	</control>
+
+	<control name="optional-text" type="tooltip">
+		<font source="segoeui" type="Segoe UI" size="9" italic="1"/>
+		<forecolor red="136" green="136" blue="136" />
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="line-spacing" value="5"/>
+		<settings name="default-text" value="Optional"/>
+	</control>
+
+	<control name="add-service-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Account:"/>
+	</control>
+
+	<control name="add-service-button" type="resizeable-button"> 
+		&standardbutton;
+
+		<icontrol source="downarrow" name="arrow" visible="1">
+			<rect>
+				<left num="14" width="1"/>
+				<top num="3" height="0"/>
+				<right num="1" width="1"/>
+				<bottom num="19" height="0"/>
+			</rect>
+		</icontrol>
+
+		<icontrol source="medium-16" name="icon">
+			<rect>
+				<left num="4" width="0"/>
+				<right num="20" width="0"/>
+				<top num="2" height="0"/>
+				<bottom num="18" height="0"/>
+			</rect>
+		</icontrol>
+
+		<icontrol source="add-service-txt" name="text">
+			<rect>
+				<left num="24" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+		<settings name="menu-width" value="276"/>
+	</control>
+
+	<control name="editNormal" type="chat-edit">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<color name="normal-fore" red="255" green="255" blue="255" />
+		<color name="default-fore" red="255" green="255" blue="255" />
+		<color name="select-fore" red="255" green="255" blue="255" />
+		<color name="select-back" red="51" green="153" blue="255" />
+	</control>
+
+	<control name="add-service-txt" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8" bold="0" italic="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="add-group-txt" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9"	bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Group:"/>
+	</control>
+
+	<control name="add-group-button" type="resizeable-button">
+		&standardbutton;
+
+		<icontrol source="downarrow" name="arrow" visible="1">
+			<rect>
+				<left num="14" width="1"/>
+				<top num="3" height="0"/>
+				<right num="1" width="1"/>
+				<bottom num="19" height="0"/>
+			</rect>
+		</icontrol>
+
+		<icontrol source="add-service-txt" name="text">
+			<rect>
+				<left num="4" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+		<settings name="menu-width" value="276"/>
+	</control>
+
+	<control name="add-servicetype-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Type"/>
+	</control>
+
+	<control name="reason-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Reason:"/>
+	</control>
+
+	<control name="add-type-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Contact Type:"/>
+	</control>
+
+	<control name="add-type-button" type="resizeable-button">
+		&standardbutton;
+
+		<icontrol source="downarrow" name="arrow" visible="1">
+			<rect>
+				<left num="14" width="1"/>
+				<top num="3" height="0"/>
+				<right num="1" width="1"/>
+				<bottom num="19" height="0"/>
+			</rect>
+		</icontrol>
+
+		<icontrol source="add-service-txt" name="text">
+			<rect>
+				<left num="4" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+		<settings name="menu-width" value="276"/>
+	</control>
+
+	<control name="ok-cancel-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0" allcaps="0"/>
+		<color name="normal-fore" red="255" green="255" blue="255" />
+		<color name="over-fore" red="255" green="255" blue="255" />
+		<color name="push-fore" red="255" green="255" blue="255" />
+		<color name="disabled-fore" red="131" green="131" blue="131" />
+		<settings name="alignment" value="center"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="auto-scroll" value="no"/>
+	</control>
+
+	<control name="ok-cancel-button" type="resizeable-button">
+		&standardbutton;
+		<icontrol source="ok-cancel-label" name="text"></icontrol>
+	</control>

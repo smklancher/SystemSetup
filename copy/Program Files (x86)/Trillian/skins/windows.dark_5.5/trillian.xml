@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE test SYSTEM "trillian.dtd">
+
+<trillian version="4.00"> <!-- Gotta have this for correctly layered frames -->
+	<skindesc name="windows.dark" author="Scream81"/>
+	&ICONS;
+<!-- Define all the windows -->
+	&contactlist;
+	&alerts;
+	&files;
+	&groupinvite;
+	&messagewindow;
+	&messagewindowuntabbed;
+	&container;
+	&channel;
+	&channeluntabbed;
+	&transfer;
+	&transfermore;
+	&template;
+	&console;
+	&consoleuntabbed;
+	&console-irc;
+	&console-irc-untabbed;
+	&add;
+	&panels;
+	&tooltips;
+	&menus;
+	&Emoticons;
+	&Sounds;
+	&social;
+	&video;
+
+<!-- Define all the controls -->
+	<prefs>
+		&globalcontrols;
+		&fontcontrols;
+		&clistcontrols;
+		&channelcontrols;
+		&containercontrols;
+		&messagecontrols;
+		&alertscontrols;
+		&transfercontrols;
+		&templatecontrols;
+		&menucontrols;
+		&panelcontrols;
+		&addcontrols;
+		&tooltipcontrols;
+		&socialcontrols;
+		&videocontrols;
+	</prefs>
+
+<!-- Contact List Assignment -->
+
+	<window type="Contact List" layout="no" source="contactlist" phase="default" alpha="no" border="%system.windows.vista.glass%" border_title="no" taskbar="icoTrilly" tabbed="no" container_taskbar="Trillian">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%window.wizard%" value="1"/>
+			<action name="setPersistentVariable" variable="%window.wizard.displayname%" value="1"/>
+		</event>
+	</window>
+	
+	<window type="Contact List" layout="no" source="contactlist-body" phase="default" alpha="no" taskbar="icoTrilly" tabbed="yes" container_taskbar="Trillian">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%window.wizard%" value="1"/>
+			<action name="setPersistentVariable" variable="%window.wizard.displayname%" value="1"/>
+		</event>
+	</window>
+	
+<!-- Panel Assignments -->
+
+	<panel type="Default" name="panelDefault" source="genericpanel" phase="default" description="My Panel"/>
+	<panel type="Default" name="panelDefault" source="genericpanel-rolled" phase="RollUp" description="My Panel"/>
+
+	<panel type="Contacts" name="panelContacts" source="contactspanel" phase="default" description="My Contacts"/>
+	<panel type="Contacts" name="panelContacts" source="contactspanel-rolled" phase="RollUp" description="My Contacts"/>
+
+	<panel type="Mail" name="panelMail" source="mailpanel" phase="default" description="My Mail"/>
+	<panel type="Mail" name="panelMail" source="mailpanel-rolled" phase="RollUp" description="My Mail"/>
+
+	<panel type="Video" name="panelvideo" source="contactspanel" phase="default" description="Video"/>
+	<panel type="Video" name="panelvideobroadcast" source="contactspanel" phase="default" description="Video"/>
+
+	<panel type="Widget" name="panelwidget" source="widgetspanel" phase="default" description="Widgets"/>
+	<panel type="Widget" name="panelwidget" source="widgetspanel-rolled" phase="RollUp" description="Widgets"/>
+
+	<panel type="WidgetShelf" name="panelwidgetshelf" source="widgetspanelshelf" phase="default" description="Widgets"/>
+	<panel type="WidgetShelf" name="panelwidgetshelf" source="widgetspanelshelf-rolled" phase="RollUp" description="Widgets"/>
+
+	<panel type="Web" name="panelweb" source="genericpanel" phase="default" description="Web"/>
+	<panel type="Web" name="panelweb" source="genericpanel-rolled" phase="RollUp" description="Web"/>
+
+	<panel type="Webcam" name="webcam" source="contactspanel" phase="default" description="Webcam"/>
+
+	<window type="Tooltip" name="default" source="tooltipbody" phase="default" alpha="yes"/>
+	<window type="Tooltip" name="Armed" source="tooltipbody" phase="default" alpha="yes"/>
+	<window type="Tooltip" name="Edit Card" source="tooltipbody" phase="default" alpha="yes"/>
+
+	<window type="Social" name="" source="social" phase="default" alpha="no" border="%system.windows.vista.glass%" border_title="no"/>
+	<window type="Social" name="tooltip" source="social-tooltip" phase="default" border="%system.windows.vista.glass%" border_title="no"/>
+	<window type="Social" name="comment" source="social-comment" phase="default" alpha="no" border="%system.windows.vista.glass%" border_title="no"/>
+	
+<!-- Message Styles -->
+	<message-display source="display-minimal" />
+	<message-display source="display-bubbles" 			description="Bubbles"				preview="chatview-preview" default="yes"/>
+	<message-display source="display-text" 				description="Simple"/>
+	<message-display source="display-minimal-notyping" 	description="Minimal-NoTyping" /> 
+	<message-display source="display-playscript"		description="Playscript" 			preview="bmpDisplayViewPreview-playscript"/>
+	<message-display source="display-easyview"			description="EasyView" 				preview="bmpDisplayViewPreview-easyview"/>
+	<message-display source="display-avion"				description="Avion"					preview="bmpDisplayViewPreview-Avion"/>
+	<message-display source="display-bigbubbles"		description="BigBubbles"			preview="bmpDisplayViewPreview-bigbubbles"/>
+	<message-display source="display-macbubbles" 		description="MacBubbles" 			preview="bmpDisplayViewPreview-macbubbles" />
+	<message-display source="display-compact"			description="Compact" 				preview="bmpDisplayViewPreview-compact"/> 
+	<message-display source="display-matte"				description="Trillian Matte"		preview="bmpDisplayViewPreview-matte"/>
+	<message-display source="display-sticker"			description="Sticker"				preview="bmpDisplayViewPreview-Sticker"/>
+	<message-display source="display-satin"				description="Satin"					preview="bmpDisplayViewPreview-satin"/>
+	<message-display source="display-win8-bubbles" 		description="Win8 Bubbles" 			preview="bmpDisplayViewPreview-win8bubbles" />
+	<message-display source="display-win8" 				description="Win8Chat" 				preview="bmpDisplayViewPreview-win8chat" />
+	
+<!-- Container Assignment container-icon -->
+
+	<window type="container" source="container" taskbar="icoContainer" container_taskbar="container" border="%system.windows.vista.glass%" alpha="no" phase="default" border_title="no" tabbed="yes"/>
+	<window type="container" source="container" taskbar="icoContainer" container_taskbar="container" border="%system.windows.vista.glass%" alpha="no" phase="default" border_title="no" tabbed="no"/>
+	
+	<window type="video" name="all" source="video-window"	border="%system.windows.vista.glass%"/>
+
+<!-- Systray Notification Assignment -->
+	<window type="notifier" name="default" source="systray-tooltip-multiple" phase="default" alpha="yes"/>
+	<window type="notifier" name="add-request" source="systray-tooltip-multiple" phase="default" alpha="yes"/>
+	<window type="notifier" name="audio-invite" source="systray-tooltip-multiple"	phase="default"	alpha="yes"/>
+	<window type="notifier" name="video-invite" source="systray-tooltip-multiple"	phase="default"	alpha="yes"/>
+	<window type="notifier" name="file" source="systray-tooltip-multiple"	phase="default"	alpha="yes"/>
+	<window type="notifier" name="conference-invite" source="systray-tooltip-multiple" phase="default" alpha="yes"/>
+	<window type="notifier"	name="multiple" source="systray-tooltip-multiple"	phase="default"	alpha="yes"/>
+	<window type="notifier"	name="chat" source="systray-tooltip-chat"	phase="default"	alpha="yes"/>
+
+<!-- Group Chat -->
+	<window type="Group Invite" source="groupinvite" phase="default" alpha="no" taskbar="icoAdd" container_taskbar="main" border="%system.windows.vista.glass%"/>
+
+	<window type="Chat Room Browser" source="chatroombrowser" phase="default" alpha="no" taskbar="icoTrilly" container_taskbar="main" description="" border="%system.windows.vista.glass%"/>
+    
+<!-- Message Window Assignment -->
+	<window name="all" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoMessageWindow" container_taskbar="trillian" tabbed="yes" />
+	<window name="all" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoMessageWindow" container_taskbar="trillian" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="aim" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoAIM" container_taskbar="AIM" tabbed="yes" />
+	<window name="aim" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoAIM" container_taskbar="AIM" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="google" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoGOOGLE" container_taskbar="GOOGLE" tabbed="yes" />
+	<window name="google" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoGOOGLE" container_taskbar="GOOGLE" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="myspace" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoMYSPACE" container_taskbar="MYSPACE" tabbed="yes" />
+	<window name="myspace" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoMYSPACE" container_taskbar="MYSPACE" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="rendezvous" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoRENDEZVOUS" container_taskbar="RENDEZVOUS" tabbed="yes" />
+	<window name="rendezvous" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoRENDEZVOUS" container_taskbar="RENDEZVOUS" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="msn" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoMSN" container_taskbar="msn" tabbed="yes" />
+	<window name="msn" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoMSN" container_taskbar="msn" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="irc" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoIRC" container_taskbar="irc" tabbed="yes" />
+	<window name="irc" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoIRC" container_taskbar="irc" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="icq" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoICQ" container_taskbar="icq" tabbed="yes" />
+	<window name="icq" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoICQ" container_taskbar="icq" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="jabber" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoJabber" container_taskbar="jabber" tabbed="yes" />
+	<window name="jabber" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoJabber" container_taskbar="jabber" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="yahoo" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoYahoo" container_taskbar="yahoo" tabbed="yes" />
+	<window name="yahoo" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoYahoo" container_taskbar="yahoo" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="astra" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoAstra" container_taskbar="astra" tabbed="yes"/>
+	<window name="astra" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoAstra" container_taskbar="astra" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="facebook" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoFACEBOOK" container_taskbar="FACEBOOK" tabbed="yes" />
+	<window name="facebook" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoFACEBOOK" container_taskbar="FACEBOOK" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="twitter" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoTWITTER" container_taskbar="TWITTER" tabbed="yes" />
+	<window name="twitter" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoTWITTER" container_taskbar="TWITTER" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="foursquare" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoFOURSQUARE" container_taskbar="FOURSQUARE" tabbed="yes" />
+	<window name="foursquare" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoFOURSQUARE" container_taskbar="FOURSQUARE" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="linkedin" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoLINKEDIN" container_taskbar="LINKEDIN" tabbed="yes" />
+	<window name="linkedin" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoLINKEDIN" container_taskbar="LINKEDIN" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="skype" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoSKYPE" container_taskbar="SKYPE" tabbed="yes" />
+	<window name="skype" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoSKYPE" container_taskbar="SKYPE" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="vz" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoVZ" container_taskbar="VZ" tabbed="yes" />
+	<window name="vz" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoVZ" container_taskbar="VZ" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="schuelervz" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoSCHUELERVZ" container_taskbar="SCHUELERVZ" tabbed="yes" />
+	<window name="schuelervz" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoSCHUELERVZ" container_taskbar="SCHUELERVZ" tabbed="no" border="%system.windows.vista.glass%"/>
+	<window name="multiple" type="privmsg" source="message" alpha="no" phase="default" taskbar="icoMessageWindow" container_taskbar="trillian" tabbed="yes" />
+	<window name="multiple" type="privmsg" source="message-untabbed" alpha="no" phase="default" taskbar="icoMessageWindow" container_taskbar="trillian" tabbed="no" border="%system.windows.vista.glass%"/>
+
+<!-- Template Assignment -->
+	<window name="all" type="template" source="template" alpha="no" taskbar="icoTrilly" container_taskbar="trillian" border="%system.windows.vista.glass%"/>
+	<window name="all" type="template" source="template-body" alpha="no" taskbar="icoTrilly" container_taskbar="trillian" tabbed="yes"/>
+
+	<window type="Add" source="add-card" phase="default" alpha="yes" taskbar="icoAdd" border="%system.windows.vista.glass%" container_taskbar="main" description="" />
+
+<!-- Channel Window -->
+
+	<window name="all" type="channel" source="channel-untabbed" alpha="no" taskbar="icoChannel" container_taskbar="trillian" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="all" type="channel" source="channel" alpha="no" taskbar="icoChannel" container_taskbar="trillian" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+
+	<window name="msn" type="channel" source="channel-untabbed" alpha="no" taskbar="icoMSN" container_taskbar="MSN" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="0"/>
+		</event>
+	</window>
+	<window name="msn" type="channel" source="channel" alpha="no" taskbar="icoMSN" container_taskbar="MSN" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="0"/>
+		</event>
+	</window>
+  
+	<window name="aim" type="channel" source="channel-untabbed" alpha="no" taskbar="icoAIM" container_taskbar="AIM" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="aim" type="channel" source="channel" alpha="no" taskbar="icoAIM" container_taskbar="AIM" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+  
+	<window name="irc" type="channel" source="channel-untabbed" alpha="no" taskbar="icoIRC" container_taskbar="IRC" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="irc" type="channel" source="channel" alpha="no" taskbar="icoIRC" container_taskbar="IRC" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+
+	<window name="icq" type="channel" source="channel-untabbed" alpha="no" taskbar="icoICQ" container_taskbar="ICQ" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="icq" type="channel" source="channel" alpha="no" taskbar="icoICQ" container_taskbar="ICQ" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+
+	<window name="jabber" type="channel" source="channel-untabbed" alpha="no" taskbar="icoJABBER" container_taskbar="JABBER" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="jabber" type="channel" source="channel" alpha="no" taskbar="icoJABBER" container_taskbar="JABBER" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+  
+	<window name="yahoo" type="channel" source="channel-untabbed" alpha="no" taskbar="icoYAHOO" container_taskbar="YAHOO" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="yahoo" type="channel" source="channel" alpha="no" taskbar="icoYAHOO" container_taskbar="YAHOO" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+
+	<window name="astra" type="channel" source="channel-untabbed" alpha="no" taskbar="icoASTRA" container_taskbar="ASTRA" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+	<window name="astra" type="channel" source="channel" alpha="no" taskbar="icoASTRA" container_taskbar="ASTRA" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="1"/>
+		</event>
+	</window>
+
+	<window name="skype" type="channel" source="channel-untabbed" alpha="no" taskbar="icoSKYPE" container_taskbar="SKYPE" border_title="no" border="%system.windows.vista.glass%">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="0"/>
+		</event>
+	</window>
+	<window name="skype" type="channel" source="channel" alpha="no" taskbar="icoSKYPE" container_taskbar="SKYPE" tabbed="yes">
+		<event name="onLoad">
+			<action name="setPersistentVariable" variable="%userlist.visible%" value="0"/>
+		</event>
+	</window>
+
+<!-- Console Assignment -->
+	<window name="all" type="console" source="consoleuntabbed" alpha="no" taskbar="icoastra" container_taskbar="trillian" border="%system.windows.vista.glass%"/>
+	<window name="all" type="console" source="console-body" alpha="no" taskbar="icoastra" container_taskbar="trillian" tabbed="yes"/>
+
+	<window name="icq" type="console" source="consoleuntabbed" alpha="no" taskbar="icoicq" container_taskbar="icq" border="%system.windows.vista.glass%"/>
+	<window name="icq" type="console" source="console-body" alpha="no" taskbar="icoicq" container_taskbar="icq" tabbed="yes"/>
+
+	<window name="msn" type="console" source="consoleuntabbed" alpha="no" taskbar="icoMSN" container_taskbar="msn" border="%system.windows.vista.glass%"/>
+	<window name="msn" type="console" source="console-body" alpha="no" taskbar="icoMSN" container_taskbar="msn" tabbed="yes"/>
+
+	<window name="aim" type="console" source="consoleuntabbed" alpha="no" taskbar="icoAIM" container_taskbar="AIM" border="%system.windows.vista.glass%"/>
+	<window name="aim" type="console" source="console-body" alpha="no" taskbar="icoAIM" container_taskbar="AIM" tabbed="yes"/>
+
+	<window name="yahoo" type="console" source="consoleuntabbed" alpha="no" taskbar="icoYahoo" container_taskbar="yahoo" border="%system.windows.vista.glass%"/>
+	<window name="yahoo" type="console" source="console-body" alpha="no" taskbar="icoYahoo" container_taskbar="yahoo" tabbed="yes"/>
+
+	<window name="irc" type="console" source="consoleircuntabbed" alpha="no" taskbar="icoIRC" container_taskbar="irc" border="%system.windows.vista.glass%"/>
+	<window name="irc" type="console" source="connectionconsole-irc" alpha="no" taskbar="icoIRC" container_taskbar="irc" tabbed="yes"/>
+
+	<window name="jabber" type="console" source="consoleuntabbed" alpha="no" taskbar="icoJabber" container_taskbar="jabber" border="%system.windows.vista.glass%"/>
+	<window name="jabber" type="console" source="console-body" alpha="no" taskbar="icoJabber" container_taskbar="jabber" tabbed="yes"/>
+
+	<window name="google" type="console" source="consoleuntabbed" alpha="no" taskbar="icoGOOGLE" container_taskbar="GOOGLE" border="%system.windows.vista.glass%"/>
+	<window name="google" type="console" source="console-body" alpha="no" taskbar="icoGOOGLE" container_taskbar="GOOGLE" tabbed="yes"/>
+
+	<window name="myspace" type="console" source="consoleuntabbed" alpha="no" taskbar="icoMYSPACE" container_taskbar="MYSPACE" border="%system.windows.vista.glass%"/>
+	<window name="myspace" type="console" source="console-body" alpha="no" taskbar="icoMYSPACE" container_taskbar="MYSPACE" tabbed="yes"/>
+
+	<window name="rendezvous" type="console" source="consoleuntabbed" alpha="no" taskbar="icoRENDEZVOUS" container_taskbar="RENDEZVOUS" border="%system.windows.vista.glass%"/>
+	<window name="rendezvous" type="console" source="console-body" alpha="no" taskbar="icoRENDEZVOUS" container_taskbar="RENDEZVOUS" tabbed="yes"/>
+
+	<window name="astra" type="console" source="consoleuntabbed" alpha="no" taskbar="icoAstra" container_taskbar="astra" border="%system.windows.vista.glass%"/>
+	<window name="astra" type="console" source="console-body" alpha="no" taskbar="icoAstra" container_taskbar="astra" tabbed="yes"/>
+
+	<window name="facebook" type="console" source="consoleuntabbed" alpha="no" taskbar="icoFACEBOOK" container_taskbar="FACEBOOK" border="%system.windows.vista.glass%"/>
+	<window name="facebook" type="console" source="console-body" alpha="no" taskbar="icoFACEBOOK" container_taskbar="FACEBOOK" tabbed="yes"/>
+
+	<window name="twitter" type="console" source="consoleuntabbed" alpha="no" taskbar="icoTWITTER" container_taskbar="TWITTER" border="%system.windows.vista.glass%"/>
+	<window name="twitter" type="console" source="console-body" alpha="no" taskbar="icoTWITTER" container_taskbar="TWITTER" tabbed="yes"/>
+
+	<window name="skype" type="console" source="consoleuntabbed" alpha="no" taskbar="icoSKYPE" container_taskbar="SKYPE" border="%system.windows.vista.glass%"/>
+	<window name="skype" type="console" source="console-body" alpha="no" taskbar="icoSKYPE" container_taskbar="SKYPE" tabbed="yes"/>
+
+	<window name="foursquare" type="console" source="consoleuntabbed" alpha="no" taskbar="icoFOURSQUARE" container_taskbar="FOURSQUARE" border="%system.windows.vista.glass%"/>
+	<window name="foursquare" type="console" source="console-body" alpha="no" taskbar="icoFOURSQUARE" container_taskbar="FOURSQUARE" tabbed="yes"/>
+
+	<window name="linkedin" type="console" source="consoleuntabbed" alpha="no" taskbar="icoLINKEDIN" container_taskbar="LINKEDIN" border="%system.windows.vista.glass%"/>
+	<window name="linkedin" type="console" source="console-body" alpha="no" taskbar="icoLINKEDIN" container_taskbar="LINKEDIN" tabbed="yes"/>
+
+	<window name="multiple" type="console" source="consoleuntabbed" alpha="no" taskbar="icoMessageWindow" container_taskbar="trillian" border="%system.windows.vista.glass%"/>
+	<window name="multiple" type="console" source="console-body" alpha="no" taskbar="icoMessageWindow" container_taskbar="trillian" tabbed="yes"/>
+
+
+
+<!-- File Transfer Assignment -->
+
+	<window name="all" type="File Transfer Inbound"  source="filetransfer" phase="default" alpha="no" taskbar="icoFileDown" container_taskbar="file-in" border="%system.windows.vista.glass%"/>
+
+ 	<window name="all" type="File Transfer Outbound" source="filetransfer" phase="default" alpha="no" taskbar="icoFileUp" container_taskbar="file-out" border="%system.windows.vista.glass%"/>
+
+
+ 	<window name="all" type="autocomplete" source="autocomplete-window"/>
+</trillian>

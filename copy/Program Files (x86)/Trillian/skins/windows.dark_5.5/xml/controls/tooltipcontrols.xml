@@ -1,0 +1,96 @@
+	<control name="swcMediumIcon" type="switcher">
+		&iclSwitcherServices16;
+		<background name="trillian">
+			&icoTrillian;
+		</background>
+		<background name="main">
+			&icoContactListWindow;
+		</background>
+		<background name="file-in">
+			&icoFileInWindow;
+		</background>
+		<background name="file-out">
+			&icoFileOutWindow;
+		</background>
+		<background name="container">
+			&icoContainerWindow;
+		</background>
+	</control>
+
+	<control name="infolist-framebar" type="framebar">
+		<include-frame source="infolist-header" template="header"/>
+		<include-frame source="infolist-typevalue" template="type_value"/>
+
+		<settings name="vertical" value="1"/>
+		<settings name="alignment" value="top"/>
+		<settings name="overflow" value="scroll"/>
+	</control>
+
+<!-- ICON CARD ITEM ICONS -->
+	<control name="swcInfoList" type="switcher">
+		&iclSwitcherServices16;
+		<background name="mail">
+			&icoMail;
+		</background>
+		<background name="poke">
+			&icoPoke;
+		</background>
+		<background name="new_share">
+			&icoShare;
+		</background>
+		<background name="group_invite">
+			&icoGroup;
+		</background>
+		<background name="event_invite">
+			&icoEvent;
+		</background>
+		<background name="friend_request">
+			&icoAddRequest;
+		</background>
+		<background name="status_msg_update">
+			&icoStatusUpdate;
+		</background>
+		<background name="profile_update">
+			&icoInfoUpdate;
+		</background>
+		<background name="wall_post">
+			&icoPublMsg;
+		</background>
+		<background name="friend_note">
+			&icoNote;
+		</background>
+		<background name="birthday">
+			&icoBirthday;
+		</background>
+		<background name="photo_album_update">
+			&icoPhoto;
+		</background>
+		<background name="photo_tagged">
+			&icoPhotoUpdate;
+		</background>
+	</control>
+
+	<control name="tooltipmenu" type="menu">
+		<color name="separator-fore" red="160" green="160" blue="180" filter_source="hueshift"/>
+		<color name="normal-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="hover-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="hover-back" red="193" green="210" blue="228" filter_source="hueshift"/>
+		<color name="hover-border" red="167" green="184" blue="202" filter_source="hueshift"/>
+		<font type="Segoe UI" size="9"/>
+		<settings name="defaultLeftMargin" value="23"/>
+		<settings name="defaultRightMargin" value="5"/>
+		<settings name="defaultTextHeight" value="24"/>
+		<settings name="defaultLeftMarginIcon" value="2"/>
+		<settings name="max-lines" value="2"/>
+		<menu-item>
+			<background middle="1" stretch="1" type="push">
+				<source name="buttons-asset" left="55" top="40" right="105" bottom="62"/> <!-- theme -->
+				<slice left="60" top="45" right="100" bottom="57"/>
+			</background>
+			<background middle="1" stretch="1" type="hover">
+				<source name="buttons-asset" left="55" top="62" right="105" bottom="84"/> <!-- theme -->
+				<slice left="60" top="67" right="100" bottom="79"/>
+			</background>
+		</menu-item>
+	</control>
+	

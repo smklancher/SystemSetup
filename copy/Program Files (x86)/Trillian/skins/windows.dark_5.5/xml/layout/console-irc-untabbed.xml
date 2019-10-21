@@ -1,0 +1,18 @@
+<!-- Console Window -->
+<component name="consoleircuntabbed" minx="180" miny="180" defaultx="415" defaulty="520">
+
+	&resize;
+	&windowborder;
+	&minmaxhide;
+
+	<frame source="connectionconsole-irc" name="console-body">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+
+</component>
+

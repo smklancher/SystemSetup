@@ -1,0 +1,234 @@
+	<control name="thumbswitcher" type="switcher"/>
+
+	<control name="troubleshoot-topic" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" underline="1"/>
+		<forecolor red="255" green="255" blue="255"	/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="center"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+	<control name="troubleshoot-button" type="resizeable-button">
+		<icontrol source="troubleshoot-topic" name="text"/>
+		<cursor name="focus" type="link"/>
+	</control>
+
+<control name="moredetailsbutton" type="resizeable-button">
+	<!-- Flat -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="flat">
+		<source name="buttons-asset" left="105" top="19" right="124" bottom="38"/> <!-- theme -->
+		<slice left="105" top="19" right="124" bottom="38"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="124" top="19" right="143" bottom="38"/> <!-- theme -->
+		<slice left="124" top="19" right="143" bottom="38"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="143" top="19" right="162" bottom="38"/> <!-- theme -->
+		<slice left="143" top="19" right="162" bottom="38"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="moredetailsbutton-topic" name="moredetailsbutton-topic">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="0" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+
+	<action name="setVariable" variable="%ft.details%" value="1"/>
+</control>
+
+<control name="moredetailsbutton-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="More details"/>
+</control>
+
+<control name="lessdetailsbutton" type="resizeable-button">
+	<!-- Flat -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="flat">
+		<source name="buttons-asset" left="105" top="0" right="124" bottom="19"/> <!-- theme -->
+		<slice left="105" top="0" right="124" bottom="19"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="124" top="0" right="143" bottom="19"/> <!-- theme -->
+		<slice left="124" top="0" right="143" bottom="19"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="143" top="0" right="162" bottom="19"/> <!-- theme -->
+		<slice left="143" top="0" right="162" bottom="19"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="lessdetailsbutton-topic" name="moredetailsbutton-topic">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="0" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+	<action name="setVariable" variable="%ft.details%" value="0"/>
+</control>
+
+<control name="lessdetailsbutton-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Less details"/>
+</control>
+
+<control name="statustext" type="tooltip">
+	<font source="segoeui" type="Segoe UI" size="12"/>
+	<forecolor red="200" green="200" blue="200" filter_source="hueshift"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<control name="status-transfer-text" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+</control>
+
+<control name="label-transfer-name" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="default-text" value="Name:"/>
+</control>
+
+<control name="label-transfer-from" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="default-text" value="From:"/>
+</control>
+
+<control name="label-transfer-to" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="default-text" value="To:"/>
+</control>
+
+<control name="label-transfer-time" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="default-text" value="Time remaining:"/>
+</control>
+
+<control name="label-transfer-bytes" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="default-text" value="Progress:"/>
+</control>
+
+<control name="label-transfer-speed" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="default-text" value="Speed:"/>
+</control>
+
+<control name="progressbar" type="progress"> 
+	<background name="background">
+		<source name="transfer-asset" left="0" top="15" right="356" bottom="30"/> <!-- no theme -->
+	</background>
+	<background name="100">
+		<source name="transfer-asset" left="0" top="0" right="356" bottom="15"/> <!-- no theme -->
+	</background>
+</control>
+
+<control name="genericbutton" type="resizeable-button">
+	&standardbutton;
+
+	<settings name="transparent" value="yes"/>
+	<icontrol source="genericbuttontext" name="text"/>
+</control>
+
+<control name="genericdefaultbutton" type="resizeable-button">
+	&defaultbutton;
+
+	<settings name="transparent" value="yes"/>
+	<icontrol source="genericbuttontext" name="text"/>
+</control>
+
+<control name="genericbuttontext" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="131" green="131" blue="131" />
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+

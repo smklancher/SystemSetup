@@ -1,0 +1,247 @@
+<component name="tooltipbody" 
+	width="254 + ((%items.desired_height%&gt;0)*100)" 
+	maxy="%screen.height%/2 + 11 + 85 + (%menu.has_items%*(%menu.desired_height% + 18))" 
+	height="96 + (%menu.has_items%*(%menu.desired_height% + 18)) + min(max(%info-list.desired_height%+12,%items.desired_height%),%screen.height%/2)" 
+	left="((%screen.width%-(%parent.window.left%+%parent.window.width%)) &gt;= (250 +  ((%items.desired_height%&gt;0)*100))) * (%parent.window.left%+%parent.window.width%-2) + ((%screen.width%-(%parent.window.left%+%parent.window.width%)) &lt; (250 + ((%items.desired_height%&gt;0)*100))) * (%parent.window.left% - 248 -  ((%items.desired_height%&gt;0)*100))" 
+	top="(((%screen.height% - %parent.window.top% - %list-item.top%) &lt; min(max(%info-list.desired_height%+12,%items.desired_height%),%screen.height%/2)) * (%screen.height% - (96 + min(max(%info-list.desired_height%+12,%items.desired_height%),%screen.height%/2)))) + (((%parent.window.top% + %list-item.top%) &gt;= 85) * ((%screen.height% - %parent.window.top% - %list-item.top%) &gt;= min(max(%info-list.desired_height%+12,%items.desired_height%),%screen.height%/2)) * (%parent.window.top% + %list-item.top% - 85))">
+
+	<mainregion usebitmap="1" usedefaultcolors="1"/>
+	<background transparent="1" middle="1" visible="%window.alpha%" stretch="0">
+		<source name="bitmap-window-notifier" left="0" top="0" right="270" bottom="91"/>
+		<slice left="11" top="12" right="259" bottom="80"/>
+	</background>
+
+	<background transparent="1" middle="1" visible="!%window.alpha%" stretch="0">
+		<source name="bitmap-window-notifier-non-alpha" left="0" top="0" right="270" bottom="91"/>
+		<slice left="11" top="12" right="259" bottom="80"/>
+	</background>
+
+<!-- ICONTROLS -->
+
+	<!-- Background for the name/info area -->
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="0" right="59" bottom="63"/> <!-- theme -->
+		<slice left="0" top="0" right="59" bottom="62"/>
+		<rect>
+			<left num="11" width="0"/>
+			<top num="12" height="0"/>
+			<right num="11" width="1"/>
+			<bottom num="85" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Avatar frame background image -->
+	<background transparent="1" middle="1" stretch="1" visible="(!%away-edit.editing%)"> 
+		<source name="skin-asset" left="0" top="115" right="36" bottom="151"/> <!-- no theme -->
+		<slice left="4" top="119" right="32" bottom="147"/>
+		<rect>
+			<left num="21" width="0"/>
+			<top num="22" height="0"/>
+			<right num="73" width="0"/>
+			<bottom num="74" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="theirbuddyicon" name="icon" visible="1">
+		<rect>
+			<left num="23" width="0"/>
+			<top num="24" height="0"/>
+			<right num="71" width="0"/>
+			<bottom num="72" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="theirname" name="title">
+		<rect>
+			<left num="78" width="0"/>
+			<top num="31 + (!%subtitle.hasText%*8)" height="0"/>
+			<right num="20" width="1"/>
+			<bottom num="51 + (!%subtitle.hasText%*8)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="theirstatus" name="subtitle">
+		<rect>
+			<left num="79" width="0"/>
+			<top num="49" height="0"/>
+			<right num="20" width="1"/>
+			<bottom num="64" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="tooltipmenu" name="menu">
+		<rect>
+			<top num="84" height="0"/>
+			<bottom num="84 + %menu.desired_height%" height="0"/>
+			<left num="21" width="0"/>
+			<right num="21" width="1"/>
+		</rect>
+	</icontrol>
+
+	<background middle="1" stretch="1" visible="%menu.has_items%">
+		<source name="baralerts-asset" left="0" top="200" right="135" bottom="233"/> <!-- theme -->
+		<slice left="2" top="207" right="133" bottom="230"/>
+		<rect>
+			<top num="81" height="0"/>
+			<bottom num="87 + %menu.desired_height%" height="0"/>
+			<left num="17" width="0"/>
+			<right num="17" width="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="infolist-framebar" name="info-list">
+		<rect>
+			<top num="90 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+			<left num="11" width="0"/>
+			<right num="29" width="1"/>
+			<bottom num="11" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="social-item-list" name="items" visible="%items.desired_height%&gt;0">
+		<rect>
+			<top num="85 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+			<left num="11" width="0"/>
+			<right num="29" width="1"/>
+			<bottom num="11" height="1"/>
+		</rect>
+	</icontrol>
+	
+	<!-- The Scrollup Button -->
+	<icontrol source="floating-scrollup" name="info-list-scrollup" visible="%info-list.scrollbar_needed%"> 
+		<rect>
+			<left num="1+(1*15)+12" width="1"/>
+			<top num="85 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+			<right num="1+12" width="1"/>
+			<bottom num="101 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollbar -->
+	<icontrol source="floating-scrollbar" name="info-list-scrollbar" visible="%info-list.scrollbar_needed%">
+		<rect>
+			<left num="1*16+12" width="1"/>
+			<top num="102 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+			<right num="1+12" width="1"/>
+			<bottom num="22+6" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="floating-scrolldown" name="info-list-scrolldown" visible="%info-list.scrollbar_needed%">
+		<rect>
+			<left num="1*16+12" width="1"/>
+			<top num="21+6" height="1"/>
+			<right num="1+12" width="1"/>
+			<bottom num="5+6" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="floating-scrollup" name="items-scrollup" visible="%items.scrollbar_needed%"> 
+		<rect>
+			<left num="1+(1*15)+12" width="1"/>
+			<top num="85 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+			<right num="1+12" width="1"/>
+			<bottom num="101 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollbar -->
+	<icontrol source="floating-scrollbar" name="items-scrollbar" visible="%items.scrollbar_needed%">
+		<rect>
+			<left num="1*16+12" width="1"/>
+			<top num="102 + (%menu.has_items%*(%menu.desired_height% + 18))" height="0"/>
+			<right num="1+12" width="1"/>
+			<bottom num="22+6" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="floating-scrolldown" name="items-scrolldown" visible="%items.scrollbar_needed%">
+		<rect>
+			<left num="1*16+12" width="1"/>
+			<top num="21+6" height="1"/>
+			<right num="1+12" width="1"/>
+			<bottom num="5+6" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="infolist-header" defaulty="22">
+	<icontrol source="tooltipinfolistheader" name="header">
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="infolist-typevalue" defaulty="4 + max(%this.type.desired_height%, %this.value.desired_height%+(%this.line2.hasText%*(2+%this.line2.desired_height%)))">
+	<icontrol source="topicinfolistheader" name="type"> <!-- Last Tweets -->
+		<rect>
+			<left num="6" width="0"/>
+			<right num="61" width="0"/>
+			<top num="3" height="0"/>
+			<bottom num="3+%this.type.desired_height%" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="tooltipinfolistvalue" name="value"> <!-- the actual data -->
+		<rect>
+			<left num="6 + (61*%this.type.hasText%)" width="0"/>
+			<right num="10" width="1"/>
+			<top num="2" height="0"/>
+			<bottom num="2+%this.value.desired_height%" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="topicSubtitle" name="line2"> <!-- when it was tweeted -->
+		<rect>
+			<left num="6 + (61*%this.type.hasText%)" width="0"/>
+			<top num="2 + %this.line2.desired_height%" height="1"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="infolist-longtypevalue" defaulty="4 + (%this.type.hasText% * (2+%this.type.desired_height%)) + (%this.value.hasText% * (2+%this.value.desired_height%)) + ((%this.line2.desired_height% + 2) * %this.line2.hasText%)">
+
+<!-- header that appears once maybe? -->
+	<icontrol source="tooltipinfolistheader-long" name="type">
+		<rect>
+			<left num="10" width="0"/>
+			<right num="10" width="1"/>
+			<top num="2" height="0"/>
+			<bottom num="2+%this.type.desired_height%" height="0"/>
+		</rect>
+	</icontrol>
+
+<!-- message icon -->
+	<icontrol source="swcInfoList" name="item-icon">
+		<rect>
+			<left num="5" width="0"/>
+			<top num="6 + %this.type.hasText% * (2+%this.type.desired_height%)" height="0"/>
+			<right num="5+ %this.item-icon.desired_width%" width="0"/>
+			<bottom num="6 + %this.type.hasText% * (2+%this.type.desired_height%) + %this.item-icon.desired_height%" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- actual info -->
+	<icontrol source="tooltipinfolistvalue" name="value"> <!-- The actual tweet -->
+		<rect>
+			<left num="5 + %this.item-icon.desired_width% + 5" width="0"/>
+			<right num="10" width="1"/>
+			<top num="2+%this.type.desired_height%+2" height="0"/>
+			<bottom num="2+%this.line2.desired_height%+2" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- the date at the bottom -->
+	<icontrol source="topicSubtitle" name="line2"> <!-- when it was tweeted -->
+		<rect>
+			<left num="5 + %this.item-icon.desired_width% + 5" width="0"/>
+			<top num="2 + %this.line2.desired_height%" height="1"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+

@@ -1,0 +1,21 @@
+<mainregion usebitmap="1" usedefaultcolors="1" />
+<background transparent="1" middle="1" stretch="1" visible="(!(%window.docked%||%window.maximized%)) * (!%system.windows.vista.glass%) * (%window.active%)">
+	<source name="bitmap-window" left="0" top="0" right="217" bottom="127"/>
+	<slice left="9" top="32" right="207" bottom="118"/>
+</background>
+
+<background transparent="1" middle="1" stretch="1" visible="(!(%window.docked%||%window.maximized%)) * (!%system.windows.vista.glass%) * (!%window.active%)">
+	<source name="bitmap-window" left="0" top="127" right="217" bottom="254"/>
+	<slice left="9" top="159" right="207" bottom="245"/>
+</background>
+
+
+<background transparent="1" middle="1" stretch="1" visible="(%window.docked%||%window.maximized%) * (!%system.windows.vista.glass%) * %window.active%">
+	<source name="bitmap-window" left="217" top="0" right="434" bottom="127"/>
+	<slice left="226" top="32" right="424" bottom="118"/>
+</background>
+
+<background transparent="1" middle="1" stretch="1" visible="(%window.docked%||%window.maximized%) * (!%system.windows.vista.glass%) * (!%window.active%)">
+	<source name="bitmap-window" left="217" top="127" right="434" bottom="254"/>
+	<slice left="226" top="159" right="424" bottom="245"/>
+</background>

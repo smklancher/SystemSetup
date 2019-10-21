@@ -1,0 +1,351 @@
+	<control name="alert-reply" type="resizeable-button"> 
+		<!-- Flat -->
+
+		<!-- Hover Background -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+			<source name="buttons-asset" left="55" top="62" right="105" bottom="84"/> <!-- theme -->
+			<slice left="60" top="67" right="100" bottom="79"/>
+		</background>
+
+		<!-- Push -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+			<source name="buttons-asset" left="55" top="40" right="105" bottom="62"/> <!-- theme -->
+			<slice left="60" top="45" right="100" bottom="57"/>
+		</background>
+
+		<icontrol source="alert-reply-text" name="text">
+			<rect>
+				<left num="59" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+	</control>
+
+	<control name="alert-reply-text" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+		<forecolor red="190" green="190" blue="190" filter_source="hueshift"/> 
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Reply"/>
+	</control>
+
+
+	<control name="alert-quickreply" type="resizeable-button"> 
+		<!-- Flat -->
+
+		<!-- Hover Background -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+			<source name="buttons-asset" left="55" top="62" right="105" bottom="84"/> <!-- theme -->
+			<slice left="60" top="67" right="100" bottom="79"/>
+		</background>
+
+		<!-- Push -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+			<source name="buttons-asset" left="55" top="40" right="105" bottom="62"/> <!-- theme -->
+			<slice left="60" top="45" right="100" bottom="57"/>
+		</background>
+
+		<icontrol source="alert-quickreply-text" name="text">
+			<rect>
+				<left num="59" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+		<event name="onClick">
+			<action name="setVariable" variable="%quickreply%" value="1"/>
+			<action name="setFocus" icontrol="edit"/>
+		</event>
+	</control>
+
+	<control name="alert-quickreply-text" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+		<forecolor red="190" green="190" blue="190" filter_source="hueshift"/> 
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Quick Reply..."/>
+	</control>
+
+	<control name="alert-next" type="resizeable-button"> 
+		<!-- Flat -->
+
+		<!-- Hover Background -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+			<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+			<slice left="58" top="87" right="102" bottom="103"/>
+		</background>
+
+		<!-- Push -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+			<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+			<slice left="58" top="109" right="102" bottom="125"/>
+		</background>
+
+		<icontrol source="alert-next-text" name="text">
+			<rect>
+				<left num="22" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+	</control>
+
+	<control name="alert-next-text" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<color name="normal-fore" red="255" green="255" blue="255" />
+		<color name="over-fore" red="255" green="255" blue="255" />
+		<color name="push-fore" red="255" green="255" blue="255" />
+		<color name="disabled-fore" red="140" green="140" blue="140" />
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Next Item"/>
+	</control>
+
+	<control name="alert-previous" type="resizeable-button"> 
+		<!-- Flat -->
+
+		<!-- Hover Background -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+			<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+			<slice left="58" top="87" right="102" bottom="103"/>
+		</background>
+
+		<!-- Push -->
+		<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+			<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+			<slice left="58" top="109" right="102" bottom="125"/>
+		</background>
+
+		<icontrol source="alert-previous-text" name="text">
+			<rect>
+				<left num="22" width="0"/>
+				<right num="24" width="1"/>
+				<top num="4" height="0"/>
+				<bottom num="4" height="1"/>
+			</rect>
+		</icontrol>
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+	</control>
+
+	<control name="alert-previous-text" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+		<forecolor red="255" green="255" blue="255" />
+		<color name="normal-fore" red="255" green="255" blue="255" />
+		<color name="over-fore" red="255" green="255" blue="255" />
+		<color name="push-fore" red="255" green="255" blue="255" />
+		<color name="disabled-fore" red="140" green="140" blue="140" />
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Previous Item"/>
+	</control>
+
+	<control name="alert-header" type="tooltip"> 
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="top"/>
+		<font source="segoeui" type="Segoe UI" size="10"/>
+		<forecolor red="255" green="255" blue="255" />
+		<color name="normal-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="hover-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="push-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="disabled-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	</control>
+
+	<control name="alert-text" type="tooltip"> 
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="top"/>
+		<settings name="max-lines" value="30"/>
+		<font source="segoeui" type="Segoe UI" size="9"/>
+		<forecolor red="255" green="255" blue="255" />
+		<color name="normal-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="hover-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="push-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="disabled-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+		<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	</control>
+
+	<control name="alert-text-line2" type="tooltip"> 
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="top"/>
+		<settings name="line-spacing" value="-1"/>
+		<settings name="max-lines" value="30"/>
+		<font source="segoeui" type="Segoe UI" size="9"/>
+		<forecolor red="255" green="255" blue="255" />
+		<color name="normal-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="hover-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="push-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="disabled-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	</control>
+
+	<control name="alert-text-bold" type="tooltip"> 
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="top"/>
+		<font source="segoeui" type="Segoe UI" size="9" bold="1"/>
+		<forecolor red="170" green="170" blue="170" filter_source="hueshift"/> 
+		<color name="normal-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="hover-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="push-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="disabled-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	</control>
+
+	<control name="alert-text-bold-single" type="tooltip"> 
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="top"/>
+		<settings name="max-lines" value="1"/>
+		<font source="segoeui" type="Segoe UI" size="9" bold="1"/>
+		<forecolor red="170" green="170" blue="170" filter_source="hueshift"/> 
+		<color name="normal-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="hover-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="push-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="disabled-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+		<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	</control>
+
+	<control name="avatar-switcher" type="switcher">
+		<background name="empty">
+			<source name="head48" left="0" top="0" right="48" bottom="48"/>
+		</background>
+		<background name="groupchat-alert">
+			<source name="groupchat48" left="0" top="0" right="48" bottom="48"/>
+		</background>
+		<background name="groupchat">
+			<source name="groupchat16" left="0" top="0" right="16" bottom="16"/>
+		</background>
+		<settings name="default" value="empty"/>
+	</control>
+
+	<control name="alert-icon-switcher" type="switcher">
+		&iclNotifierIcons48;
+		&iclNotifierServices48;
+		&iclSwitcherServices48;
+		<settings name="stretch" value="1"/>
+	</control>
+
+	<control name="alert-overlay-switcher" type="switcher">
+		<background name="contact-addrequest">
+			&icoAddRequest-Overlay-Large;
+		</background>
+		<background name="audio-invite">
+			&icoAudioRequest-Overlay-Large;
+		</background>
+		<background name="video-invite">
+			&icoVideoRequest-Overlay-Large;
+		</background>
+		<background name="file-incoming">
+			&icoFileRequest-Overlay-Large;
+		</background>
+	</control>
+
+	<control name="systray-closebutton" type="button">
+		<background name="flat">
+			<source name="windowbuttons-asset" left="132" top="0" right="146" bottom="14"/>
+		</background>
+		<background name="over">
+			<source name="windowbuttons-asset" left="146" top="0" right="160" bottom="14"/>
+		</background>
+		<background name="push">
+			<source name="windowbuttons-asset" left="160" top="0" right="174" bottom="14"/>
+		</background>
+	</control>
+
+	<control name="systray-settingsbutton" type="button">
+		<background name="flat">
+			<source name="windowbuttons-asset" left="132" top="14" right="146" bottom="28"/>
+		</background>
+		<background name="over">
+			<source name="windowbuttons-asset" left="146" top="14" right="160" bottom="28"/>
+		</background>
+		<background name="push">
+			<source name="windowbuttons-asset" left="160" top="14" right="174" bottom="28"/>
+		</background>
+
+		<settings name="menu-direction" value="down"/>
+		<settings name="menu-align" value="right"/>
+	</control>
+
+	<control name="replytext" type="chat-edit"> 
+		<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="1"/>
+		<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+		<color name="default-fore" red="110" green="110" blue="110"/>
+		<color name="normal-fore" red="255" green="255" blue="255"/>
+		<settings name="default-text" value="Quick Reply..."/>
+		<cursor name="blur" type="link"/>
+		<cursor name="focus" type="ibeam"/> 
+	</control>
+
+	<control name="alertmenu" type="menu">
+		<color name="separator-fore" red="160" green="160" blue="180"/>
+		<color name="normal-fore" red="205" green="205" blue="205" filter_source="hueshift"/>
+		<color name="hover-fore" red="205" green="205" blue="205" filter_source="hueshift"/>
+		<color name="hover-back" red="193" green="210" blue="228" filter_source="hueshift"/>
+		<color name="hover-border" red="167" green="184" blue="202" filter_source="hueshift"/>
+		<font type="Segoe UI" size="9"/>
+		<settings name="defaultLeftMargin" value="58"/>
+		<settings name="defaultRightMargin" value="5"/>
+		<settings name="defaultTextHeight" value="24"/>
+		<settings name="defaultLeftMarginIcon" value="2"/>
+		<settings name="max-lines" value="2"/>
+		<menu-item>
+			<background middle="1" stretch="1" type="hover">
+				<source name="buttons-asset" left="55" top="62" right="105" bottom="84"/> 
+				<slice left="60" top="67" right="100" bottom="79"/>
+			</background>
+			<background middle="1" stretch="1" type="push">
+				<source name="buttons-asset" left="55" top="40" right="105" bottom="62"/> 
+				<slice left="60" top="45" right="100" bottom="57"/>
+			</background>
+		</menu-item>
+	</control>
+
+	<control name="notification-previous" type="button">
+		<background name="flat">
+			<source name="scrollbars-asset" left="0" top="96" right="16" bottom="110"/> <!-- theme -->
+		</background>
+		<background name="over">
+			<source name="scrollbars-asset" left="16" top="96" right="32" bottom="110"/> <!-- theme -->
+		</background>
+		<background name="push">
+			<source name="scrollbars-asset" left="32" top="96" right="48" bottom="110"/> <!-- theme -->
+		</background>
+	</control>
+
+	<control name="notification-next" type="button">
+		<background name="flat">
+			<source name="scrollbars-asset" left="0" top="110" right="16" bottom="124"/> <!-- theme -->
+		</background>
+		<background name="over">
+			<source name="scrollbars-asset" left="16" top="110" right="32" bottom="124"/> <!-- theme -->
+		</background>
+		<background name="push">
+			<source name="scrollbars-asset" left="32" top="110" right="48" bottom="124"/> <!-- theme -->
+		</background>
+	</control>
+
+	<control name="alertactionbutton" type="resizeable-button">
+		<background middle="1" stretch="1" type="over">
+			<source name="buttons-asset" left="55" top="62" right="105" bottom="84"/> 
+			<slice left="60" top="67" right="100" bottom="79"/>
+		</background>
+		<background middle="1" stretch="1" type="push">
+			<source name="buttons-asset" left="55" top="40" right="105" bottom="62"/> 
+			<slice left="60" top="45" right="100" bottom="57"/>
+		</background>
+	</control>

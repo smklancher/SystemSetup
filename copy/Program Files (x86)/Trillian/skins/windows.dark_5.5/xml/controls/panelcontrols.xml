@@ -1,0 +1,61 @@
+<!-- ************ Contact List Panel Controls ************ -->
+
+<!-- Panel content space (contact list) -->
+<control name="panelcontent" type="section">
+</control>
+
+<control name="mail-icon" type="switcher">
+	<background name="flat">
+		<source name="general12-asset" left="0" top="48" right="12" bottom="60"/> <!--theme -->
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+
+<control name="news-icon" type="switcher">
+	<background name="flat">
+		<source name="general12-asset" left="0" top="36" right="12" bottom="48"/> <!--theme -->
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+
+<control name="contacts-icon" type="switcher">
+	<background name="flat">
+		<source name="general12-asset" left="0" top="60" right="12" bottom="72"/> <!--theme -->
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+
+
+<!-- Panel Rollup (contact list) -->
+<control name="panel-menu" type="resizeable-button">
+	<background transparent="1" middle="1" visible="1" type="flat">
+		<source name="sectionbutton" left="0" top="0" right="15" bottom="23"/> 
+		<slice left="15" top="23" right="15" bottom="23"/>
+	</background>
+
+	<background transparent="1" middle="1" visible="1" type="over">
+		<source name="sectionbutton" left="0" top="23" right="15" bottom="46"/>
+		<slice left="15" top="46" right="15" bottom="46"/>
+	</background>
+
+	<background transparent="1" middle="1" visible="1" type="push">
+		<source name="sectionbutton" left="0" top="23" right="15" bottom="46"/> 
+		<slice left="15" top="46" right="15" bottom="46"/>
+	</background>
+
+	<settings name="menu-align" value="right"/>
+	<settings name="menu-direction" value="down"/>
+</control>
+
+
+<control name="dc-panel-rollup" type="resizeable-button">
+	<action name="setPhase" value="RollUp"/>
+	<settings name="cursor" value="link"/>
+</control> 
+
+<control name="dc-panel-rolldown" type="resizeable-button">
+	<action name="setPhase" value="default"/>
+	<settings name="cursor" value="link"/>
+</control> 
+
+

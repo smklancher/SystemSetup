@@ -1,0 +1,51 @@
+<!-- Template Controls ########################################################### -->
+<control name="templateEditMultiLine" type="edit-multiline">
+	<font source="segoeui" type="Segoe UI" size="8"/>
+	<forecolor red="255" blue="255" green="255" />
+</control>
+
+<control name="templateEdit" type="edit">
+	<font source="segoeui" type="Segoe UI" size="8"/>
+	<forecolor red="255" blue="255" green="255" />
+</control>
+
+<control name="templateTopic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="8"/>
+	<forecolor red="255" blue="255" green="255" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+</control>
+
+<control name="templateTopicCentered" type="topic">
+	<font source="segoeui" type="Segoe UI" size="8"/>
+	<forecolor red="255" blue="255" green="255" />
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+</control>		
+
+<!-- Messagewindow Menu -->
+<control name="templateMenubar" type="menubar">
+	<settings name="transparent" value="yes" />
+	<settings name="button-type" value="templateButton"/> 
+	<settings name="button-spacing-x" value="5"/> 
+	<settings name="button-spacing-y" value="0"/> 
+</control> 
+
+<control name="templateButton" type="resizeable-button">
+	&standardbutton;
+
+	<icontrol source="templatebuttonfont" name="text" visible="1">
+	</icontrol>
+</control>
+
+<control name="templateicon" type="button">
+	<background name="flat">
+		<source name="idbuttons" left="77" top="0" right="93" bottom="16"/>
+	</background>
+	<background name="over">
+		<source name="idbuttons" left="77" top="0" right="93" bottom="16"/>
+	</background>
+	<background name="push">
+		<source name="idbuttons" left="77" top="0" right="93" bottom="16"/>
+	</background>
+</control>

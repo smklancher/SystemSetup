@@ -1,0 +1,782 @@
+
+<component name="groupinvite" minx="397 + ((!%system.windows.vista.glass%) * 16)" 
+				miny="70
+						+ (%message.conference.name.capable%*30)
+						+ (%message.conference.server.capable%*30)
+						+ (%message.conference.nickname.capable%*30)
+						+ (%message.conference.password.capable%*30)
+						+ (%message.conference.invitees.capable%*140)
+						+ (%message.conference.invitees.capable%*50)
+						+ (%message.conference.invite.warning.capable%*40)
+						+ (%message.conference.flags.capable%*122)
+						+ ((!%system.windows.vista.glass%) * 37)"
+				defaulty="70
+						+ (%message.conference.name.capable%*30)
+						+ (%message.conference.server.capable%*30)
+						+ (%message.conference.nickname.capable%*30)
+						+ (%message.conference.password.capable%*30)
+						+ (%message.conference.invitees.capable%*140)
+						+ (%message.conference.invitees.capable%*50)
+						+ (%message.conference.invite.warning.capable%*40)
+						+ (%message.conference.flags.capable%*122)
+						+ ((!%system.windows.vista.glass%) * 37)">
+	
+	&resize;
+	&windowborder;
+	&minclose;
+
+	<frame source="groupinvite-body" name="groupinvite-body" visible="1">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="groupinvite-body">
+
+	<color red="0" green="0" blue="0"/>
+
+	<icontrol source="groupinviteframebar" name="groupinviteframebar">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="15" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="45+(%message.conference.invitees.capable%*100)+(%message.conference.invitees.capable%*100)" height="1"/>
+		</rect>
+	</icontrol>
+
+	<frame source="groupinviteinvitees" visible="%message.conference.invitees.capable%">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="15 + (%message.conference.name.capable%*30) + (%message.conference.server.capable%*30) + (%message.conference.nickname.capable%*30) + (%message.conference.password.capable%*30) + (%message.conference.flags.capable%*122)" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="105+(%message.conference.invite.warning.capable%*40)" height="1"/>
+		</rect>
+	</frame>
+
+	<frame source="groupinviteinvited" visible="%message.conference.invitees.capable%">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="105+(%message.conference.invite.warning.capable%*40)" height="1"/>
+			<right num="15" width="1"/>
+			<bottom num="55+(%message.conference.invite.warning.capable%*40)" height="1"/>
+		</rect>
+	</frame>
+
+	<frame source="groupinvitewarning" visible="%message.conference.invite.warning.capable%">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="95" height="1"/>
+			<right num="15" width="1"/>
+			<bottom num="55" height="1"/>
+		</rect>
+	</frame>
+
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="skin-asset" left="216" top="0" right="247" bottom="39"/> 
+		<slice left="216" top="2" right="247" bottom="39"/>
+		<rect>
+			<top num="40" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="genericdefaultbutton" name="invite" visible="1">
+		<rect>
+			<left num="183" width="1"/>
+			<top num="32" height="1"/>
+			<right num="99" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+	<icontrol source="genericbutton" name="cancel" visible="1" >
+		<rect>
+			<left num="95" width="1"/>
+			<top num="32" height="1"/>
+			<right num="11" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+
+
+<prefs>
+	<control name="groupinvite-checkbox" type="resizeable-button">
+		<background name="upperleft" type="push">
+			<source name="general16-asset" left="49" top="97" right="62" bottom="110"/> 
+			<rect>
+				<left num="0" width="0"/>
+				<top num="0" height="0"/>
+				<right num="16" width="0"/>
+				<bottom num="16" height="0"/>
+			</rect>
+		</background>
+
+		<background name="upperleft" type="over">
+			<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+			<rect>
+				<left num="0" width="0"/>
+				<top num="0" height="0"/>
+				<right num="16" width="0"/>
+				<bottom num="16" height="0"/>
+			</rect>
+		</background>
+
+		<background name="upperleft" type="flat">
+			<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+			<rect>
+				<left num="0" width="0"/>
+				<top num="0" height="0"/>
+				<right num="16" width="0"/>
+				<bottom num="16" height="0"/>
+			</rect>
+		</background>
+
+		<icontrol source="groupinvitename-label" name="text">
+			<rect>
+				<left num="18" width="0"/>
+				<top num="0" height="0"/>
+				<right num="1" width="1"/>
+				<bottom num="13" height="0"/>
+			</rect>
+		</icontrol>
+	</control>
+
+	<control name="groupinviteframebar" type="framebar">
+		<include-frame source="groupinvitename" visible="%message.conference.name.capable%"/>
+
+		<include-frame source="groupinviteserver" visible="%message.conference.server.capable%"/>
+
+		<include-frame source="groupinvitenickname" visible="%message.conference.nickname.capable%"/>
+
+		<include-frame source="groupinvitepassword" visible="%message.conference.password.capable%"/>
+
+		<include-frame source="groupinviteflags" visible="%message.conference.flags.capable%"/>
+
+		<settings name="alignment" value="top"/>
+		<settings name="vertical" value="1"/>
+		<settings name="nowrap" value="1"/>
+	</control>
+
+	<control name="groupinvitename-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="Room Title:"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinvitewarning-label" type="tooltip">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="New users added to this chat will have full access to all previous messages."/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="top"/>
+	</control>
+
+	<control name="groupinviteserver-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="Server:"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinvitenickname-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="Nickname:"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinvitepassword-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="Password:"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinviteinvitees-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="Invite:"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinviteinvited-label" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8"/>
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="default-text" value="Invited:"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="alignment" value="left"/>
+		<settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinvite-edit" type="chat-edit">
+		<font name="default" source="segoeui" type="Segoe UI" size="9" italic="0"/>
+	   <font name="normal" source="segoeui" type="Segoe UI" size="9" italic="0"/>
+		<color name="default-fore" red="255" green="255" blue="255" /> 
+		<color name="normal-fore" red="255" green="255" blue="255" /> 
+		<color name="default-back" red="-1" green="-1" blue="-1"/> 
+		<color name="normal-back" red="-1" green="-1" blue="-1" /> 
+
+		<settings name="alignment" value="center"/>
+	    <settings name="vertical-alignment" value="center"/>
+	</control>
+
+	<control name="groupinvitewarning-switcher" type="switcher">
+	<background name="flat">
+		&icoWarn;
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+</prefs>
+
+<component name="groupinvitespacer" defaulty="5">
+</component>
+
+<component name="groupinvitewarning" defaulty="30">
+	<icontrol source="groupinvitewarning-switcher" name="warning">
+		<rect>
+			<left num="100" width="0"/>
+			<right num="116" width="0"/>
+			<top num="7" height="0"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="groupinvitewarning-label" name="groupinvitewarning-label">
+		<rect>
+			<left num="121" width="0"/>
+			<right num="5" width="1"/>
+			<top num="8" height="0"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="groupinvitename" defaulty="30">
+	<icontrol source="groupinvitename-label" name="groupinvitename-label">
+		<rect>
+			<left num="5" width="0"/>
+			<right num="95" width="0"/>
+			<top num="5" height="0"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="5" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="groupinvite-edit" name="name-edit">
+		<rect>
+			<left num="105" width="0"/>
+			<top num="7" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="groupinviteserver" defaulty="30">
+	<icontrol source="groupinviteserver-label" name="groupinviteserver-label">
+		<rect>
+			<left num="5" width="0"/>
+			<right num="95" width="0"/>
+			<top num="5" height="0"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="5" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="groupinvite-edit" name="server-edit">
+		<rect>
+			<left num="105" width="0"/>
+			<top num="7" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="groupinvitenickname" defaulty="30">
+	<icontrol source="groupinvitenickname-label" name="groupinvitenickname-label">
+		<rect>
+			<left num="5" width="0"/>
+			<right num="95" width="0"/>
+			<top num="5" height="0"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="5" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="groupinvite-edit" name="nickname-edit">
+		<rect>
+			<left num="105" width="0"/>
+			<top num="7" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="groupinvitepassword" defaulty="30">
+	<icontrol source="groupinvitepassword-label" name="groupinvitepassword-label">
+		<rect>
+			<left num="5" width="0"/>
+			<right num="95" width="0"/>
+			<top num="5" height="0"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="5" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="groupinvite-edit" name="password-edit">
+		<rect>
+			<left num="105" width="0"/>
+			<top num="7" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="groupinviteflags" defaulty="122">
+	<icontrol source="groupinvite-checkbox" name="flag-disable-display-name-set">
+		<rect>
+			<left num="101" width="0"/>
+			<right num="1" width="1"/>
+			<top num="1" height="0"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="groupinvite-checkbox" name="flag-disable-member-add">
+		<rect>
+			<left num="101" width="0"/>
+			<right num="1" width="1"/>
+			<top num="21" height="0"/>
+			<bottom num="41" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="groupinvite-checkbox" name="flag-disable-member-remove">
+		<rect>
+			<left num="101" width="0"/>
+			<right num="1" width="1"/>
+			<top num="41" height="0"/>
+			<bottom num="61" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="groupinvite-checkbox" name="flag-disable-list" visible="%message.conference.flags.list.capable%">
+		<rect>
+			<left num="101" width="0"/>
+			<right num="1" width="1"/>
+			<top num="61" height="0"/>
+			<bottom num="81" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="groupinvite-checkbox" name="flag-disable-message-send">
+		<rect>
+			<left num="101" width="0"/>
+			<right num="1" width="1"/>
+			<top num="61 + %message.conference.flags.list.capable%*20" height="0"/>
+			<bottom num="81 + %message.conference.flags.list.capable%*20" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="groupinvite-checkbox" name="flag-disable-topic-set">
+		<rect>
+			<left num="101" width="0"/>
+			<right num="1" width="1"/>
+			<top num="81 + %message.conference.flags.list.capable%*20" height="0"/>
+			<bottom num="101 + %message.conference.flags.list.capable%*20" height="0"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="groupinviteinvitees" miny="100" defaulty="100">
+	<icontrol source="groupinviteinvitees-label" name="invitees-label">
+		<rect>
+			<left num="5" width="0"/>
+			<right num="95" width="0"/>
+			<top num="5" height="0"/>
+			<bottom num="26" height="0"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="5" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="35" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="invitelist" name="list">
+		<rect>
+			<left num="103" width="0"/>
+			<top num="7" height="0"/>
+			<right num="21" width="1"/>
+			<bottom num="37" height="1"/>
+		</rect>
+	</icontrol>
+
+	
+	<background transparent="1" middle="1" stretch="1" visible="%list.scrollbar_needed%">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/> 
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="19" width="1"/>
+			<top num="7" height="0"/>
+			<right num="2" width="1"/>
+			<bottom num="37" height="1"/>
+		</rect>
+	</background>
+
+	
+	<icontrol source="scroll" name="scrollbar" visible="%list.scrollbar_needed%">
+		<rect>
+			<left num="18" width="1"/>
+			<top num="23" height="0"/>
+			<right num="2" width="1"/>
+			<bottom num="53" height="1"/>
+		</rect>
+	</icontrol>
+
+	
+	<icontrol source="scrollup" name="scrollup" visible="%list.scrollbar_needed%">
+		<rect>
+			<left num="18" width="1"/>
+			<top num="7" height="0"/>
+			<right num="2" width="1"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+
+	
+	<icontrol source="scrolldown" name="scrolldown" visible="%list.scrollbar_needed%">
+		<rect>
+			<left num="18" width="1"/>
+			<top num="53" height="1"/>
+			<right num="2" width="1"/>
+			<bottom num="37" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="28" height="1"/>
+			<right num="1" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="searchtext" name="search-edit" visible="1">
+		<rect>
+			<left num="110" width="0"/>
+			<top num="24" height="1"/>
+			<right num="11" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="groupinviteinvited" miny="100" defaulty="100"> 
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> 
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="101" width="0"/>
+			<top num="5" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</background>
+	<icontrol source="groupinviteinvited-label" name="invited-label">
+		<rect>
+			<left num="5" width="0"/>
+			<right num="95" width="0"/>
+			<top num="2" height="0"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+	<frame source="invited" name="invited" visible="1" >
+		<rect>
+			<left num="100" width="0"/>
+			<top num="5" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="5" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="invited">
+	<icontrol source="editinvited" name="results">
+		<rect>
+			<left num="4" width="0"/>
+			<top num="2" height="0"/>
+			<right num="4" width="1"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<prefs>
+
+	<control name="groupinvitetitle" type="topic">
+		<font source="segoeui" type="Segoe UI" size="9" bold="1" italic="0" />
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Invite Contacts to Chat"/>
+	</control>
+
+	<control name="inviteablelist" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8" bold="0" italic="0" />
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Available Contacts"/>
+	</control>
+
+	<control name="invitedlist" type="topic">
+		<font source="segoeui" type="Segoe UI" size="8" bold="0" italic="0" />
+		<forecolor red="255" green="255" blue="255" />
+		<settings name="alignment" value="left"/>
+		<settings name="auto-scroll" value="no"/>
+		<settings name="vertical-alignment" value="center"/>
+		<settings name="default-text" value="Contacts to be Invited"/>
+	</control>
+</prefs>
+
+
+<!-- CHAT ROOM BROWSER WINDOW -->
+<component name="chatroombrowser" minx="250 + ((!%system.windows.vista.glass%) * 16)" miny="300 + ((!%system.windows.vista.glass%) * 40)" defaultx="350 + ((!%system.windows.vista.glass%) * 16)" defaulty="450 + ((!%system.windows.vista.glass%) * 40)">
+
+	&resize;
+	&windowborder;
+	&minclose;
+
+	<frame source="chatroombrowserbody" name="chatroombrowserbody" visible="1">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+
+</component>
+
+<component name="chatroombrowserbody" minx="250" miny="300" defaultx="350" defaulty="450">
+	<color red="0" green="0" blue="0"/>
+
+	<background transparent="1" middle="1" stretch="0" visible="%message.conference.server.capable%">
+		<source name="baralerts-asset" left="0" top="75" right="102" bottom="113"/> 
+		<slice left="2" top="92" right="100" bottom="104"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="37" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="0" visible="%message.conference.server.capable%">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="15" width="0"/>
+			<top num="5" height="0"/>
+			<right num="15" width="1"/> 
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="servermenubutton" name="server-menu" visible="%message.conference.server.capable%">
+		<rect>
+			<left num="35" width="1"/>
+			<top num="6" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="servertextframe" name="server-text-frame" visible="%message.conference.server.capable%">
+		<rect>
+			<left num="19" width="0"/>
+			<top num="7" height="0"/>
+			<right num="36" width="1"/>
+			<bottom num="22" height="0"/>
+		</rect>
+	</frame> 
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="15" width="0"/>
+			<top num="17 + (%message.conference.server.capable% * 30)" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="56" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="chatroomlist" name="list">
+		<rect>
+			<left num="19" width="0"/>
+			<top num="19 + (%message.conference.server.capable% * 30)" height="0"/>
+			<right num="19+(%list.scrollbar_needed%*17)" width="1"/>
+			<bottom num="59" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="loadingtopic" name="loadingtopic" visible="%list.desired_height%&lt;=0">
+		<rect>
+			<left num="19" width="0"/>
+			<top num="19 + (%message.conference.server.capable% * 30)" height="0"/>
+			<right num="19+(%list.scrollbar_needed%*17)" width="1"/>
+			<bottom num="59" height="1"/>
+		</rect>
+	</icontrol>
+	
+	<!-- Scroll bar background -->
+	<background transparent="1" middle="1" stretch="1" visible="%list.scrollbar_needed%">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/> <!-- no theme -->
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="33" width="1"/>
+			<top num="18 + (%message.conference.server.capable% * 30)" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="58" height="1"/>
+		</rect>
+	</background>
+
+	<!-- The Scrollbar -->
+	<icontrol source="scroll" name="scrollbar" visible="%list.scrollbar_needed%">
+		<rect>
+			<left num="16+(%list.scrollbar_needed%*16)" width="1"/>
+			<top num="36 + (%message.conference.server.capable% * 30)" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="76" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="scrollup" name="scrollup" visible="%list.scrollbar_needed%">
+		<rect>
+			<left num="16+(%list.scrollbar_needed%*16)" width="1"/>
+			<top num="19 + (%message.conference.server.capable% * 30)" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="35 + (%message.conference.server.capable% * 30)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="scrolldown" name="scrolldown" visible="%list.scrollbar_needed%">
+		<rect>
+			<left num="16+(%list.scrollbar_needed%*16)" width="1"/>
+			<top num="75" height="1"/>
+			<right num="16" width="1"/>
+			<bottom num="59" height="1"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="skin-asset" left="216" top="0" right="247" bottom="39"/> <!-- no theme -->
+		<slice left="216" top="2" right="247" bottom="39"/>
+		<rect>
+			<top num="41" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="genericdefaultbutton" name="join" visible="1">
+		<rect>
+			<left num="183" width="1"/>
+			<top num="32" height="1"/>
+			<right num="99" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="genericbutton" name="cancel">
+		<rect>
+			<left num="95" width="1"/>
+			<top num="32" height="1"/>
+			<right num="11" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="genericbutton" name="add">
+		<rect>
+			<left num="11" width="0"/>
+			<top num="32" height="1"/>
+			<right num="95" width="0"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<!-- The actual search icontrol -->
+<component name="servertextframe">
+	<!-- Search text edit box -->
+	<icontrol source="servertext" name="server-edit" visible="1"/>
+</component>

@@ -1,0 +1,307 @@
+<!-- Global Controls ########################################################### -->
+
+
+
+
+<!-- Close Button -->
+<control name="closebutton-combined" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="89" top="160" right="138" bottom="180"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="89" top="180" right="138" bottom="200"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="89" top="200" right="138" bottom="220"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="89" top="220" right="138" bottom="240"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Maximize Button -->
+<control name="maximizebutton-combined" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="60" top="160" right="89" bottom="180"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="60" top="180" right="89" bottom="200"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="60" top="200" right="89" bottom="220"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="60" top="220" right="89" bottom="240"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Maximized Button -->
+<control name="maximizedbutton-combined" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="31" top="240" right="60" bottom="260"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="31" top="260" right="60" bottom="280"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="31" top="280" right="60" bottom="300"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="31" top="300" right="60" bottom="320"/> <!-- no theme -->
+	</background>
+</control>
+
+
+<!-- Minimize Button -->
+<control name="minimizebutton-combined-middle" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="31" top="160" right="60" bottom="180"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="31" top="180" right="60" bottom="200"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="31" top="200" right="60" bottom="220"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="31" top="220" right="60" bottom="240"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Hide Button -->
+<control name="hidebutton-combined-left" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="0" top="160" right="31" bottom="180"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="0" top="180" right="31" bottom="200"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="0" top="200" right="31" bottom="220"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="0" top="220" right="31" bottom="240"/> <!-- no theme -->
+	</background>
+</control>
+
+<control name="minimizebutton-standalone" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="127" top="80" right="159" bottom="100"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="127" top="100" right="159" bottom="120"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="127" top="120" right="159" bottom="140"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="127" top="140" right="159" bottom="160"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Hide Button -->
+<control name="hidebutton-standalone" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="78" top="80" right="127" bottom="100"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="78" top="100" right="127" bottom="120"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="78" top="120" right="127" bottom="140"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="78" top="140" right="127" bottom="160"/> <!-- no theme -->
+	</background>
+</control>
+
+<control name="minimizebutton-combined" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="0" top="80" right="31" bottom="100"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="0" top="100" right="31" bottom="120"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="0" top="120" right="31" bottom="140"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="0" top="140" right="31" bottom="160"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Hide Button -->
+<control name="hidebutton-combined" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="31" top="80" right="78" bottom="100"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="31" top="100" right="78" bottom="120"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="31" top="120" right="78" bottom="140"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="31" top="140" right="78" bottom="160"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Detach Button -->
+<control name="detachbutton-standalone" type="button">
+	<background name="outoffocus">
+		<source name="windowbuttons-asset" left="61" top="240" right="93" bottom="260"/> <!-- no theme -->
+	</background>
+	<background name="flat">
+		<source name="windowbuttons-asset" left="61" top="260" right="648" bottom="280"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="61" top="280" right="648" bottom="300"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="61" top="300" right="648" bottom="320"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Scroll Bar (contact list, message window) -->
+<control name="scroll" type="scrollbar">
+
+	<background name="top_thumb_flat">
+		<source name="scrollbars-asset" left="0" top="32" right="15" bottom="42"/> <!-- theme -->
+	</background>
+	<background name="top_thumb_over">
+		<source name="scrollbars-asset" left="15" top="32" right="30" bottom="42"/> <!-- theme -->
+	</background>
+	<background name="top_thumb_push">
+		<source name="scrollbars-asset" left="15" top="32" right="30" bottom="42"/> <!-- theme -->
+	</background>
+
+	<background name="mid_thumb_flat">
+		<source name="scrollbars-asset" left="0" top="42" right="15" bottom="86"/> <!-- theme -->
+	</background>
+	<background name="mid_thumb_over">
+		<source name="scrollbars-asset" left="15" top="42" right="30" bottom="86"/> <!-- theme -->
+	</background>
+	<background name="mid_thumb_push">
+		<source name="scrollbars-asset" left="15" top="42" right="30" bottom="86"/> <!-- theme -->
+	</background>
+ 
+	<background name="bot_thumb_flat">
+		<source name="scrollbars-asset" left="0" top="86" right="15" bottom="96"/> <!-- theme -->
+	</background>
+	<background name="bot_thumb_over">
+		<source name="scrollbars-asset" left="15" top="86" right="30" bottom="96"/> <!-- theme -->
+	</background>
+	<background name="bot_thumb_push">
+		<source name="scrollbars-asset" left="15" top="86" right="30" bottom="96"/> <!-- theme -->
+	</background>
+
+
+
+	<background name="center_thumb_flat">
+		<source name="scrollbars-asset" left="30" top="32" right="45" bottom="42"/> <!-- theme -->
+	</background>
+	<background name="center_thumb_over">
+		<source name="scrollbars-asset" left="30" top="42" right="45" bottom="52"/> <!-- theme -->
+	</background>
+	<background name="center_thumb_push">
+		<source name="scrollbars-asset" left="30" top="52" right="45" bottom="62"/> <!-- theme -->
+	</background>
+
+</control>
+
+<!-- Boundary - used in container and template -->
+<control name="boundary" type="boundary">
+</control>
+
+<!-- Medium Status thing for top left of untabbed windows -->
+<control name="medium-status" type="switcher">
+	&iclSwitcherServices16;
+</control>
+
+<control name="medium-16" type="switcher">
+	&iclToolbarServicesTiny;
+</control>
+
+<control name="medium-12" type="switcher">
+	&iclToolbarServicesMini;
+</control>
+
+<control name="colors" type="colors">
+	<colors file="xml/controls/colors.ini"/>
+</control>
+
+<!-- Your Buddy Icon -->
+<control name="yourbuddyicon" type="switcher">
+</control>
+
+<!-- Their Buddy Icon -->
+<control name="theirbuddyicon" type="switcher">
+	<background name="empty">
+		<source name="head48" left="0" top="0" right="48" bottom="48"/>
+	</background>
+	<background name="groupchat">
+		<source name="groupchat48" left="0" top="0" right="48" bottom="48"/>
+	</background>
+	<settings name="default" value="empty"/>
+</control>
+
+
+<!-- Scroll Up button -->
+<control name="floating-scrollup" type="button">
+	<background name="flat">
+		<source name="scrollbars-asset" left="63" top="0" right="78" bottom="16"/> <!-- theme -->
+	</background>
+	<background name="over">
+		<source name="scrollbars-asset" left="80" top="0" right="95" bottom="16"/> <!-- theme -->
+	</background>
+	<background name="push">
+		<source name="scrollbars-asset" left="97" top="0" right="112" bottom="16"/> <!-- theme -->
+	</background>
+</control>
+
+<!-- Scroll Bar (contact list, message window) -->
+<control name="floating-scrollbar" type="scrollbar">
+
+	<background name="top_thumb_flat">
+		<source name="scrollbars-asset" left="63" top="17" right="78" bottom="27"/> <!-- theme -->
+	</background>
+	<background name="top_thumb_over">
+		<source name="scrollbars-asset" left="80" top="17" right="95" bottom="27"/> <!-- theme -->
+	</background>
+	<background name="top_thumb_push">
+		<source name="scrollbars-asset" left="97" top="17" right="112" bottom="27"/> <!-- theme -->
+	</background>
+
+	<background name="mid_thumb_flat">
+		<source name="scrollbars-asset" left="63" top="26" right="78" bottom="57"/> <!-- theme -->
+	</background>
+	<background name="mid_thumb_over">
+		<source name="scrollbars-asset" left="80" top="26" right="95" bottom="57"/> <!-- theme -->
+	</background>
+	<background name="mid_thumb_push">
+		<source name="scrollbars-asset" left="97" top="26" right="112" bottom="57"/> <!-- theme -->
+	</background>
+ 
+	<background name="bot_thumb_flat">
+		<source name="scrollbars-asset" left="63" top="57" right="78" bottom="67"/> <!-- theme -->
+	</background>
+	<background name="bot_thumb_over">
+		<source name="scrollbars-asset" left="80" top="57" right="95" bottom="67"/> <!-- theme -->
+	</background>
+	<background name="bot_thumb_push">
+		<source name="scrollbars-asset" left="97" top="57" right="112" bottom="67"/> <!-- theme -->
+	</background>
+</control>
+
+<!-- Scrolldown button -->
+<control name="floating-scrolldown" type="button">
+	<background name="flat">
+		<source name="scrollbars-asset" left="63" top="68" right="78" bottom="84"/> <!-- theme -->
+	</background>
+	<background name="over">
+		<source name="scrollbars-asset" left="80" top="68" right="95" bottom="84"/> <!-- theme -->
+	</background>
+	<background name="push">
+		<source name="scrollbars-asset" left="97" top="68" right="112" bottom="84"/> <!-- theme -->
+	</background>
+</control>

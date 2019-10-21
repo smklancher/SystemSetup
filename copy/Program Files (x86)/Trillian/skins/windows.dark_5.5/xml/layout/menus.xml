@@ -1,0 +1,20 @@
+<!-- ** Main Context Menu window ** -->
+
+<component name="context-menu">
+
+<!-- Define the menu bg -->
+	<background transparent="1" middle="1" visible="1" stretch="1">
+		<source name="skin-asset" left="216" top="39" right="310" bottom="116"/> <!-- no theme -->
+		<slice left="248" top="43" right="306" bottom="111"/>
+	</background>
+
+<!-- Define the area where the actual menu items are shown -->
+	<icontrol source="contextmenus" name="menu" visible="1">
+		<rect>
+			<left num="3" width="0"/>
+			<top num="3" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="3" height="1"/>
+		</rect>
+	</icontrol>
+</component>

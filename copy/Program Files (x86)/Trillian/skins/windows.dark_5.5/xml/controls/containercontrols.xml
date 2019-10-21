@@ -1,0 +1,296 @@
+<control name="taskbar" type="taskbar">
+	<settings name="button-type" value="taskbar-button"/>
+	<settings name="button-extra-type" value="taskbar-button-extra"/>
+	<settings name="button-minx" value="50"/>
+	<settings name="button-miny" value="29"/>
+	<settings name="button-maxx" value="200"/>
+	<settings name="button-maxy" value="29"/>
+	<settings name="button-extra-minx" value="20"/>
+	<settings name="button-extra-maxx" value="20"/>
+	<settings name="button-spacing" value="0"/>
+	<settings name="vertical" value="0"/>
+	<settings name="overflow" value="menu"/>
+</control>
+
+<control name="taskbar-icons" type="switcher">
+	&iclSwitcherServices16;
+	<background name="trillian">&icoTrillian-Small;</background>
+	<background name="main">&icoContactList-Small;</background>
+	<settings name="stretch" value="1"/>
+</control>
+
+<control name="tab-status" type="topic">
+	<font source="segoeui" type="Segoe UI" size="8" bold="0"/>
+	<forecolor red="100" green="100" blue="100" />
+	<color name="normal-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+	<color name="over-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+	<color name="push-fore" red="170" green="170" blue="170" filter_source="hueshift"/>
+	<color name="flash" red="0" green="255" blue="0" />
+	<color name="typing" red="255" green="0" blue="0" />
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/> 
+</control>
+
+<control name="taskbar-button" type="resizeable-button">
+	<!-- Current tab -->
+	<background transparent="1" type="push" stretch="1">
+		<source name="tabs-theme" left="208" top="102" right="312" bottom="152"/>
+		<slice left="211" top="105" right="309" bottom="133"/>
+	</background>
+
+	<!-- Unselected tab -->
+	<background transparent="1" type="flat" stretch="1" visible="!%this.flash%*!%this.typing%*!%this.push%">
+		<source name="tabs-theme" left="0" top="102" right="104" bottom="153"/>
+		<slice left="3" top="105" right="101" bottom="150"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="flat-flash" stretch="1" visible="%this.flash%*!%this.typing%*%this.flat%*!%this.push%">
+		<source name="tabs" left="0" top="51" right="104" bottom="102"/>
+		<slice left="3" top="54" right="101" bottom="99"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="flat-typing" stretch="1" visible="%this.typing%*%this.flat%*!%this.push%">
+		<source name="tabs" left="0" top="0" right="104" bottom="51"/>
+		<slice left="3" top="3" right="101" bottom="48"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<!-- Unselected Hover tab -->
+	<background transparent="1" type="over" stretch="1" visible="!%this.flash%*!%this.typing%*!%this.push%">
+		<source name="tabs-theme" left="104" top="102" right="208" bottom="153"/>
+		<slice left="107" top="105" right="205" bottom="150"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="over-flash" stretch="1" visible="%this.flash%*!%this.typing%*%this.hover%*!%this.push%">
+		<source name="tabs" left="104" top="51" right="208" bottom="102"/>
+		<slice left="107" top="54" right="205" bottom="99"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="over-typing" stretch="1" visible="%this.typing%*%this.hover%*!%this.push%">
+		<source name="tabs" left="104" top="0" right="208" bottom="51"/>
+		<slice left="107" top="3" right="205" bottom="48"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<!-- Name in the tab - line1 -->
+	<icontrol source="tab-name" name="name-status-message" visible="1">
+		<rect>
+			<left num="31" width="0"/>
+			<top num="6" height="0"/>
+			<right num="26 + (16*%window.has_hideAvailable%*%system.windows.vista.glass%) + (%this.count.hastext% * (5+%this.count.desired_width%+5))" width="1"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+
+	<background name="count" stretch="1" visible="%this.count.hastext%">
+		<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+		<slice left="71" top="6" right="75" bottom="7"/>
+		<rect>
+			<left num="24+5+%this.count.desired_width%+5" width="1"/>
+			<top num="7" height="0"/>
+			<right num="24" width="1"/>
+			<bottom num="22" height="0"/>
+		</rect>
+	</background>
+
+	<!-- The actual count amount -->
+	<icontrol source="tab-count" name="count" visible="%this.count.hastext%">
+		<rect>
+			<left num="24+5+%this.count.desired_width%" width="1"/> 
+			<top num="7" height="0"/>
+			<right num="29" width="1"/>
+			<bottom num="20" height="0"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="63" right="52" bottom="115"/>  <!-- theme -->
+		<slice left="2" top="65" right="50" bottom="113"/>
+		<rect>
+			<left num="5" width="0"/>
+			<top num="5" height="0"/>
+			<right num="25" width="0"/>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="avatar-switcher" name="buddy-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="7" height="0"/>
+			<right num="23" width="0"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+	
+	<icontrol source="tab-hide" name="hide" visible="%this.hover%*%window.has_hideAvailable%*%system.windows.vista.glass%">
+		<rect>
+			<left num="40" width="1"/>
+			<top num="7" height="0"/>
+			<right num="23" width="1"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="tab-close" name="close" visible="%this.hover%">
+		<rect>
+			<left num="22" width="1"/>
+			<top num="7" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="medium-status" name="status-icon" visible="!%this.hover%">
+		<rect>
+			<left num="22" width="1"/>
+			<top num="7" height="0"/>
+			<right num="6" width="1"/>
+			<bottom num="23" height="0"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="tab-name" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<forecolor red="255" green="255" blue="255"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/>
+	<color name="over-fore" red="255" green="255" blue="255"/>
+	<color name="push-fore" red="255" green="255" blue="255"/>
+	<color name="flash" red="255" green="255" blue="255"/>
+	<color name="typing" red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/> 
+</control>
+
+<control name="tab-count" type="topic">
+	<font source="segoeui" type="Segoe UI" size="7" bold="1"/>
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="flash" red="255" green="255" blue="255"/>
+	<color name="typing" red="255" green="255" blue="255"/>
+	<settings name="alignment" value="center"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/> 
+</control>
+
+
+<!-- Tab Close Button (containers) -->
+<control name="tab-close" type="button">
+	<background name="flat">
+		<source name="windowbuttons-asset" left="93" top="240" right="110" bottom="255"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="110" top="240" right="127" bottom="255"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="127" top="240" right="144" bottom="255"/> <!-- no theme -->
+	</background>
+	<tooltip text="Close Tab" />
+</control>
+
+<!-- Tab Hide Button (containers) -->
+<control name="tab-hide" type="button">
+	<background name="flat">
+		<source name="windowbuttons-asset" left="93" top="255" right="110" bottom="270"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="windowbuttons-asset" left="110" top="255" right="127" bottom="270"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="windowbuttons-asset" left="127" top="255" right="144" bottom="270"/> <!-- no theme -->
+	</background>
+	<tooltip text="Hide Tab" />
+		<event name="onClick"><action name="setVisible" value="0"/></event>
+</control>
+
+<control name="taskbar-medium" type="switcher">
+	&iclToolbarServicesMini;
+</control>
+
+<control name="taskbar-button-extra" type="resizeable-button">
+	<!-- Current tab -->
+	<background transparent="1" type="push" stretch="1">
+		<source name="tabs-theme" left="208" top="102" right="312" bottom="152"/> <!-- theme -->
+		<slice left="211" top="105" right="309" bottom="133"/>
+	</background>
+
+	<!-- Unselected tab -->
+	<background transparent="1" type="flat" stretch="1" visible="!%this.flash%*!%this.typing%*!%this.push%">
+		<source name="tabs-theme" left="0" top="102" right="104" bottom="153"/>
+		<slice left="3" top="105" right="101" bottom="150"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="flat-flash" stretch="1" visible="%this.flash%*!%this.typing%*%this.flat%*!%this.push%">
+		<source name="tabs" left="0" top="51" right="104" bottom="102"/>
+		<slice left="3" top="54" right="101" bottom="99"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="flat-typing" stretch="1" visible="%this.typing%*%this.flat%*!%this.push%">
+		<source name="tabs" left="0" top="0" right="104" bottom="51"/>
+		<slice left="3" top="3" right="101" bottom="48"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<!-- Unselected Hover tab -->
+	<background transparent="1" type="over" stretch="1" visible="!%this.flash%*!%this.typing%*!%this.push%">
+		<source name="tabs-theme" left="104" top="102" right="208" bottom="153"/>
+		<slice left="107" top="105" right="205" bottom="150"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="over-flash" stretch="1" visible="%this.flash%*!%this.typing%*%this.hover%*!%this.push%">
+		<source name="tabs" left="104" top="51" right="208" bottom="102"/>
+		<slice left="107" top="54" right="205" bottom="99"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<background transparent="1" name="over-typing" stretch="1" visible="%this.typing%*%this.hover%*!%this.push%">
+		<source name="tabs" left="104" top="0" right="208" bottom="51"/>
+		<slice left="107" top="3" right="205" bottom="48"/>
+		<rect>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="menubar-switcher" name="icon" visible="1">
+		<rect>
+			<left num="4" width="0"/>
+			<top num="9" height="0"/>
+			<right num="16" width="0"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+</control>
+

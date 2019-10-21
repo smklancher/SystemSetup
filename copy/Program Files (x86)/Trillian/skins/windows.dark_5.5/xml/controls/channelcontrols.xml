@@ -1,0 +1,919 @@
+<!-- Nicklist icons -->
+<control name="display-nicklist" type="list">
+
+	&PLUGstatusIcons;
+
+	<icon type="audio" state="all">
+		<source name="general16-asset" left="0" top="32" right="16" bottom="48"/>
+	</icon>
+	<icon type="invited" state="all">
+		<source name="general16-asset" left="64" top="64" right="80" bottom="80"/>
+	</icon>
+	<icon type="error" state="all">
+		<source name="general16-asset" left="64" top="48" right="80" bottom="64"/>
+	</icon>
+	<icon name="group" type="expanded" state="normal">
+		<source name="general16-asset" left="32" top="0" right="47" bottom="15"/>
+	</icon>
+	<icon name="group" type="expanded" state="hover">
+		<source name="general16-asset" left="32" top="15" right="47" bottom="30"/>
+	</icon>
+	<icon name="group" type="expanded" state="select">
+		<source name="general16-asset" left="32" top="30" right="47" bottom="45"/>
+	</icon>
+
+	<icon name="group" type="collapsed" state="normal">
+		<source name="general16-asset" left="47" top="0" right="62" bottom="15"/>
+	</icon>
+	<icon name="group" type="collapsed" state="hover">
+		<source name="general16-asset" left="47" top="15" right="62" bottom="30"/>
+	</icon>
+	<icon name="group" type="collapsed" state="select">
+		<source name="general16-asset" left="47" top="30" right="62" bottom="45"/>
+	</icon>
+
+	<color name="default-fore" red="255" green="255" blue="255"/>
+	<color name="group-fore" red="255" green="255" blue="255"/>
+	<color name="background" red="-1" green="-1" blue="-1"/>
+
+	<color name="invited-fore" red="200" green="200" blue="200"/>
+	<color name="normal-back" red="-1" green="-1" blue="-1"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/>
+	<color name="hover-back" red="240" green="246" blue="253"/>
+	<color name="hover-fore" red="255" green="255" blue="255"/>
+	<color name="hover-border" red="184" green="214" blue="251"/>
+	<color name="select-back" red="199" green="223" blue="252"/>
+	<color name="select-fore" red="255" green="255" blue="255"/>
+	<color name="select-border" red="125" green="162" blue="206"/>
+
+	<font name="default" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="group" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+
+	<size name="16"> 
+		<settings name="group0IndentLeft" type="simple" value="0"/>
+		<settings name="group0IndentRight" type="simple" value="0"/>
+		<settings name="group1IndentLeft" type="simple" value="0"/>
+		<settings name="group1IndentRight" type="simple" value="0"/>
+
+		<settings name="subitem0IndentLeft" type="simple" value="1"/>
+		<settings name="subitem0IndentRight" type="simple" value="13"/>
+		<settings name="listitemSpacingX" value="1"/>
+		<settings name="listitemSpacingY" value="1"/>
+
+		<!-- List View -->
+		<list-item name="normal" defaulty="20" type="simple">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/>
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left%+1" width="0"/>
+					<right num="-%this.indent.right%+1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left%+1" width="0"/>
+					<right num="-%this.indent.right%+1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="5 + %this.icon%*14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="4 + %this.helper-icon%*20" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="3" width="0"/>
+					<top num="2" height="0"/>
+					<right num="19" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon used for things like audio chat sound level -->
+			<icontrol name="helper-icon">
+				<rect>
+					<left num="20" width="1"/>
+					<top num="2" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<list-item name="group" defaulty="20" type="simple">
+			&groupheaderbackground;
+
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="6" width="0"/>
+					<top num="2" height="0"/>
+					<right num="22" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="19" width="0"/>
+					<top num="2" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="14" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+		</list-item>
+
+		<icon type="on" state="normal">	
+			<source name="general16-asset" left="32" top="48" right="48" bottom="64"/>
+		</icon>
+		<icon type="on" state="hover">
+			<source name="general16-asset" left="32" top="64" right="48" bottom="80"/>
+		</icon>
+		<icon type="on" state="select">
+			<source name="general16-asset" left="32" top="80" right="48" bottom="96"/>
+		</icon>
+
+		<icon type="off" state="normal">
+			<source name="general16-asset" left="48" top="48" right="64" bottom="64"/>
+		</icon>
+		<icon type="off" state="hover">
+			<source name="general16-asset" left="48" top="64" right="64" bottom="80"/>
+		</icon>
+		<icon type="off" state="select">
+			<source name="general16-asset" left="48" top="80" right="64" bottom="96"/>
+		</icon>
+	</size>
+
+	<size name="24">
+
+		<settings name="group0IndentLeft" type="list" value="0"/>
+		<settings name="group1IndentLeft" type="list" value="0"/>
+		<settings name="group2IndentLeft" type="list" value="0"/>
+		<settings name="group3IndentLeft" type="list" value="0"/>
+
+		<settings name="listitemSpacingX" value="1"/>
+		<settings name="listitemSpacingY" value="1"/>
+
+		<settings name="subitem0IndentLeft" type="list" value="18"/>
+		<settings name="subitemSpacingY" value="1"/>
+
+		<!-- Small Size List Items -->
+
+		<!-- list View -->
+
+		<list-item name="normal" defaulty="max(36,(2 + %this.line1.textHeight% + %this.line2.textHeight% + 2))" type="list">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/>
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="1" width="0"/>
+					<right num="1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="1" width="0"/>
+					<right num="1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="5" width="0"/>
+					<top num="4" height="0"/>
+					<right num="33" width="0"/>
+					<bottom num="32" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="7" width="0"/>
+					<top num="6" height="0"/>
+					<right num="31" width="0"/>
+					<bottom num="30" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="status-icon">
+				<rect>
+					<left num="20" width="1"/>
+					<top num="10" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="26" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="38" width="0"/>
+					<top num="max(2,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="19" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="38" width="0"/>
+					<top num="max(2+%this.line1.textHeight%,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)" height="0"/>
+					<right num="19" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)+12" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+
+		<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20 + (%this.line2%*16)" type="list">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2 + (%this.line2%*7)" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18 + (%this.line2%*7)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="2 + (%this.line2%*4)" height="0"/>
+					<right num="44" width="0"/>
+					<bottom num="26 + (%this.line2%*4)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18 + (%this.subicon%*35)" width="0"/>
+					<top num="2 + (%this.line2%)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<icontrol name="line2">
+				<rect>
+					<left num="18 + (%this.subicon%*35)" width="0"/>
+					<top num="18" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/>
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="10 + %this.helper-icon-overflow.textWidth% + 4" width="1"/>
+					<top num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="10" width="1"/>
+					<bottom num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)+12" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="10 + %this.helper-icon-overflow.textWidth% + 2" width="1"/> 
+					<top num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2) - 1" height="0"/>
+					<right num="10 + 2" width="1"/>
+					<bottom num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)+11" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="max(3,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)+12" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="0" top="151" right="28" bottom="179"/>
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head24" left="0" top="0" right="24" bottom="24"/>
+		</icon>
+
+	</size>
+
+	&iclListChatRooms;
+	&elmListPlusMinus6;
+
+	<!--  Expand/Contract -->
+
+	<iconmap col='2' row='3'> 
+		<grid width='15' height='15'>
+			<source name='general16-asset' left='32' top='0' right='62' bottom='45'/>
+		</grid>
+		<names type='expanded' state='normal'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='expanded' state='hover'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='expanded' state='select'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='normal'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='hover'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='select'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+	</iconmap>
+</control>
+
+<control name="invitelist" type="list">
+	&PLUGstatusIcons;
+
+	<settings name="horizontal-alignment" value="left"/>
+	<settings name="vertical-alignment" value="top"/>
+
+	<color name="background" red="-1" green="-1" blue="-1" />
+	<color name="hover-back" red="255" green="255" blue="255" />
+	<color name="hover-fore" red="49" green="115" blue="214" filter_source="hueshift"/>
+	<color name="hover-border" red="255" green="255" blue="255" />
+	<color name="select-back" red="217" green="232" blue="250" filter_source="hueshift"/>
+	<color name="select-fore" red="0" green="32" blue="64" filter_source="hueshift"/>
+	<color name="select-border" red="187" green="195" blue="215" filter_source="hueshift"/>
+	<color name="normal-back" red="-1" green="-1" blue="-1" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="subtitle-fore" red="192" green="192" blue="192" />
+	<color name="default-fore" red="255" green="255" blue="255" />
+	<color name="line2-fore" red="70" green="70" blue="70"/>
+	<color name="line2-select-fore" red="70" green="70" blue="70" />
+	<color name="line2-hover-fore" red="70" green="70" blue="70" />
+
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" />
+		<size name="16"> 
+			<settings name="group1IndentLeft" type="simple" value="&iniListTinyListGroupIndentLeft;"/>
+			<settings name="group1IndentRight" type="simple" value="&iniListTinyListGroupIndentRight;"/>
+			<settings name="subitem0IndentLeft" type="simple" value="&iniListTinyListGroupIndentLeft;"/>
+			<settings name="subitem0IndentRight" type="simple" value="&iniListTinyListGroupIndentRight;"/>
+			<settings name="listitemSpacingX" value="1"/>
+			<settings name="listitemSpacingY" value="1"/>
+
+			<!-- List View -->
+			<list-item name="normal" defaulty="20" type="simple">
+				<!-- Hover Background -->
+				<background transparent="1" type="hover" stretch="1" middle="1">
+					<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/>
+					<slice left="58" top="87" right="102" bottom="103"/>
+					<rect>
+						<left num="-%this.indent.left%" width="0"/>
+						<right num="-%this.indent.right%" width="1"/>
+					</rect>
+				</background>
+
+				<!-- Select Background -->
+				<background transparent="1" type="select" stretch="1" middle="1">
+					<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+					<slice left="58" top="109" right="102" bottom="125"/>
+					<rect>
+						<left num="-%this.indent.left%" width="0"/>
+						<right num="-%this.indent.right%" width="1"/>
+					</rect>
+				</background>
+
+				<icontrol name="icon">
+					<rect>
+						<left num="3" width="0"/>
+						<top num="2" height="0"/>
+						<right num="19" width="0"/>
+						<bottom num="18" height="0"/>
+					</rect>
+				</icontrol>
+				<icontrol name="subicon">
+					<rect>
+						<left num="25" width="0"/>
+						<top num="5" height="0"/>
+						<right num="25+(%this.subicon.width%*%this.subicon.amount%)" width="0"/>
+						<bottom num="15" height="0"/>
+					</rect>
+				</icontrol>
+				<icontrol name="helper-icon" visible="1">
+					<rect>
+						<left num="4+(%this.count%*(4+5+%this.count.textWidth%+5))+%this.helper-icon.width%" width="1"/>
+						<top num="1" height="0"/>
+						<right num="4+(%this.count%*(4+5+%this.count.textWidth%+5))" width="1"/>
+						<bottom num="13" height="0"/>
+					</rect>
+				</icontrol>
+
+				<!-- Background for the count -->
+				<background name="count" stretch="1" visible="%this.count%">
+					<source name="general16-asset" left="64" top="0" right="83" bottom="14"/>
+					<slice left="71" top="6" right="75" bottom="7"/>
+					<rect>
+						<left num="4+5+%this.count.textWidth%+5" width="1"/>
+						<top num="3" height="0"/>
+						<right num="4" width="1"/>
+						<bottom num="16" height="0"/>
+					</rect>
+				</background>
+
+				<!-- The actual count amount -->
+				<icontrol name="count">
+					<rect>
+						<left num="4+5+%this.count.textWidth%" width="1"/> 
+						<top num="3" height="0"/>
+						<right num="9" width="1"/>
+						<bottom num="16" height="0"/>
+					</rect>
+				</icontrol>
+
+				<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+				<icontrol name="line1">
+					<rect>
+						<left num="21+(%this.subicon.width%*%this.subicon.amount%)" width="0"/>
+						<top num="2" height="0"/>
+						<right num="4+(%this.count%*(4+5+%this.count.textWidth%+5))+%this.helper-icon.width%" width="1"/>
+						<bottom num="4" height="1"/>
+					</rect>
+					<settings name="text-wordwrap" value="0"/>
+					<settings name="text-alignment" value="left"/>
+					<settings name="text-vertical-alignment" value="middle"/>
+				</icontrol>
+
+				<icontrol name="line2">
+					<rect>
+						<left num="21+(%this.subicon.width%*%this.subicon.amount%)+%this.line1.textWidth%+5" width="0"/>
+						<top num="2" height="0"/>
+						<right num="4+(%this.count%*(4+5+%this.count.textWidth%+5))+%this.helper-icon.width%" width="1"/>
+						<bottom num="4" height="1"/>
+					</rect>
+					<settings name="text-wordwrap" value="0"/>
+					<settings name="text-alignment" value="left"/>
+					<settings name="text-vertical-alignment" value="middle"/>
+				</icontrol>
+			</list-item>
+			<list-item name="sub" defaulty="20" type="simple">
+				<!-- Hover Background -->
+				<background transparent="1" type="hover" stretch="1" middle="1">
+					<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/>
+					<slice left="58" top="87" right="102" bottom="103"/>
+					<rect>
+						<left num="-%this.indent.left%" width="0"/>
+						<right num="-%this.indent.right%" width="1"/>
+					</rect>
+				</background>
+
+				<!-- Select Background -->
+				<background transparent="1" type="select" stretch="1" middle="1">
+					<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+					<slice left="58" top="109" right="102" bottom="125"/>
+					<rect>
+						<left num="-%this.indent.left%" width="0"/>
+						<right num="-%this.indent.right%" width="1"/>
+					</rect>
+				</background>
+
+				<!-- The users avatar or icon -->
+				<icontrol name="icon">
+					<rect>
+						<left num="5" width="0"/>
+						<top num="4" height="0"/>
+						<right num="18" width="0"/>
+						<bottom num="17" height="0"/>
+					</rect>
+				</icontrol>
+	
+				<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+				<icontrol name="line1">
+					<rect>
+						<left num="25" width="0"/>
+						<top num="2" height="0"/>
+						<right num="2+%this.helper-icon.width%" width="1"/>
+						<bottom num="14+(13*(!%this.line2%))" height="0"/>
+					</rect>
+					<settings name="text-wordwrap" value="0"/>
+					<settings name="text-alignment" value="left"/>
+					<settings name="text-vertical-alignment" value="center"/>
+				</icontrol>
+
+				<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+				<icontrol name="helper-icon" visible="1">
+					<rect>
+						<left num="2+%this.helper-icon.width%" width="1"/>
+						<top num="0" height="0"/>
+						<right num="2" width="1"/>
+						<bottom num="16" height="1"/>
+					</rect>
+				</icontrol>
+			</list-item>
+
+			<list-item name="group" defaulty="19" type="simple">
+				&groupheaderbackground;
+
+				<!-- The hide/show icon -->
+				<icontrol name="icon">
+					<rect>
+						<left num="5" width="0"/>
+						<top num="4" height="0"/>
+						<right num="18" width="0"/>
+						<bottom num="17" height="0"/>
+					</rect>
+				</icontrol>
+
+				<!-- Group name -->
+				<icontrol name="line1">
+					<rect>
+						<left num="20" width="0"/>
+						<top num="2" height="0"/>
+						<right num="(%this.count%*(4+5+%this.count.textWidth%+5))" width="1"/>
+						<bottom num="14" height="0"/>
+					</rect>
+					<settings name="text-wordwrap" value="0"/>
+					<settings name="text-alignment" value="left"/>
+					<settings name="text-vertical-alignment" value="top"/>
+				</icontrol>
+
+				<!-- Background for the count -->
+				<background name="count" stretch="1" visible="%this.count%">
+					<source name="general16-asset" left="64" top="0" right="83" bottom="14"/>
+					<slice left="71" top="6" right="75" bottom="7"/>
+					<rect>
+						<left num="4+5+%this.count.textWidth%+5" width="1"/>
+						<top num="3" height="0"/>
+						<right num="4" width="1"/>
+						<bottom num="16" height="0"/>
+					</rect>
+				</background>
+
+				<!-- The actual count amount -->
+				<icontrol name="count">
+					<rect>
+						<left num="4+5+%this.count.textWidth%" width="1"/> 
+						<top num="3" height="0"/>
+						<right num="9" width="1"/>
+						<bottom num="16" height="0"/>
+					</rect>
+				</icontrol>
+			</list-item>
+
+			<icon type="on" state="normal">	
+				<source name="general16-asset" left="49" top="97" right="62" bottom="110"/> 
+			</icon>
+			<icon type="on" state="hover">
+				<source name="general16-asset" left="49" top="97" right="62" bottom="110"/>
+			</icon>
+			<icon type="on" state="select">
+				<source name="general16-asset" left="49" top="97" right="62" bottom="110"/>
+			</icon>
+
+			<icon type="off" state="normal">
+				<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+			</icon>
+			<icon type="off" state="hover">
+				<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+			</icon>
+			<icon type="off" state="select">
+				<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+			</icon>
+		</size>
+		&iclListChatRooms;
+		&elmListPlusMinus6;
+</control>
+
+<control name="editinvited" type="chat-edit">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/>
+</control>
+
+<control name="servertext" type="chat-edit"> 
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="1"/>
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> 
+	<color name="default-fore" red="116" green="119" blue="124" filter_source="hueshift"/> 
+	<color name="normal-fore" red="116" green="119" blue="124" filter_source="hueshift"/> 
+	<color name="select-fore" red="255" green="255" blue="255" />
+	<color name="select-back" red="51" green="153" blue="255" />
+	<cursor name="blur" type="ibeam"/>
+	<cursor name="focus" type="ibeam"/> 
+	<settings name="default-text" value="Server"/>
+</control>
+
+<control name="servermenubutton" type="button">
+	<background name="flat" transparent="1">
+		<source name="textboxes-asset" left="141" top="1" right="160" bottom="19"/> 
+	</background>
+	<background name="over" transparent="1">
+		<source name="textboxes-asset" left="141" top="21" right="160" bottom="39"/>
+	</background>
+	<background name="push" transparent="1">
+		<source name="textboxes-asset" left="141" top="41" right="160" bottom="59"/>
+	</background>
+	<tooltip text="Change Server"/> 
+		<settings name="menu-align" value="right"/>
+		<settings name="menu-direction" value="down"/>
+</control>
+
+<control name="chatroomlist" type="list">
+	<settings name="horizontal-alignment" value="left"/>
+	<settings name="vertical-alignment" value="top"/>
+
+	<color name="background" red="-1" green="-1" blue="-1" />
+	<color name="hover-back" red="255" green="255" blue="255" />
+	<color name="hover-fore" red="49" green="115" blue="214" filter_source="hueshift"/>
+	<color name="hover-border" red="255" green="255" blue="255" />
+	<color name="select-back" red="217" green="232" blue="250" filter_source="hueshift"/>
+	<color name="select-fore" red="0" green="32" blue="64" filter_source="hueshift"/>
+	<color name="select-border" red="187" green="195" blue="215" filter_source="hueshift"/>
+	<color name="normal-back" red="-1" green="-1" blue="-1" />
+	<color name="normal-fore" red="0" green="64" blue="128" filter_source="hueshift"/>
+	<color name="default-fore" red="255" green="255" blue="255" />
+
+	<font source="segoeui" type="Segoe UI" size="9" bold="0"/>
+
+	<size name="16"> 
+		<settings name="group1IndentLeft"	type="simple" value="&iniListTinyListGroupIndentLeft;"/>
+		<settings name="group1IndentRight"	type="simple" value="&iniListTinyListGroupIndentRight;"/>
+		<settings name="subitem0IndentLeft"	type="simple" value="&iniListTinyListGroupIndentLeft;"/>
+		<settings name="subitem0IndentRight"	type="simple" value="&iniListTinyListGroupIndentRight;"/>
+		<settings name="listitemSpacingX"		value="1"/>
+		<settings name="listitemSpacingY"		value="1"/>
+
+		<!-- List View -->
+		<list-item name="normal" defaulty="20" type="simple">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/>
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left%" width="0"/>
+					<right num="-%this.indent.right%" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left%" width="0"/>
+					<right num="-%this.indent.right%" width="1"/>
+				</rect>
+			</background>
+
+			<icontrol name="icon">
+				<rect>
+					<left num="7" width="0"/>
+					<top num="2" height="0"/>
+					<right num="23" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+			<icontrol name="subicon">
+				<rect>
+					<left num="25" width="0"/>
+					<top num="5" height="0"/>
+					<right num="25+(%this.subicon.width%*%this.subicon.amount%)" width="0"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="4+(%this.count%*(4+5+%this.count.textWidth%+5))+%this.helper-icon.width%" width="1"/>
+					<top num="1" height="0"/>
+					<right num="4+(%this.count%*(4+5+%this.count.textWidth%+5))" width="1"/>
+					<bottom num="13" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/>
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="4+5+%this.count.textWidth%+5" width="1"/>
+					<top num="3" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="4+5+%this.count.textWidth%" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="29+(%this.subicon.width%*%this.subicon.amount%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="4+(%this.count%*(4+5+%this.count.textWidth%+5))+%this.helper-icon.width%" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+		</list-item>
+		<list-item name="sub" defaulty="20" type="simple">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/>
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left%" width="0"/>
+					<right num="-%this.indent.right%" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left%" width="0"/>
+					<right num="-%this.indent.right%" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="5" width="0"/>
+					<top num="2" height="0"/>
+					<right num="21" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="25" width="0"/>
+					<top num="2" height="0"/>
+					<right num="2+%this.helper-icon.width%" width="1"/>
+					<bottom num="14+(13*(!%this.line2%))" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="center"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="2+%this.helper-icon.width%" width="1"/>
+					<top num="0" height="0"/>
+					<right num="2" width="1"/>
+					<bottom num="16" height="1"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<list-item name="group" defaulty="19" type="simple">
+			&groupheaderbackground;
+
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="3" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="19" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="2" height="0"/>
+					<right num="(%this.count%*(4+5+%this.count.textWidth%+5))" width="1"/>
+					<bottom num="14" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/>
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="4+5+%this.count.textWidth%+5" width="1"/>
+					<top num="3" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="4+5+%this.count.textWidth%" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon type="on" state="normal">	
+			<source name="general16-asset" left="49" top="97" right="62" bottom="110"/>
+		</icon>
+		<icon type="on" state="hover">
+			<source name="general16-asset" left="49" top="97" right="62" bottom="110"/>
+		</icon>
+		<icon type="on" state="select">
+			<source name="general16-asset" left="49" top="97" right="62" bottom="110"/>
+		</icon>
+
+		<icon type="off" state="normal">
+			<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+		</icon>
+		<icon type="off" state="hover">
+			<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+		</icon>
+		<icon type="off" state="select">
+			<source name="general16-asset" left="33" top="97" right="46" bottom="110"/>
+		</icon>
+	</size>
+	&iclListChatRooms;
+	&elmListPlusMinus6;
+<!--  Expand/Contract -->
+	<iconmap col='2' row='3'> 
+		<grid width='15' height='15'>
+			<source name='general16-asset' left='32' top='0' right='62' bottom='45'/>
+		</grid>
+		<names type='expanded' state='normal'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='expanded' state='hover'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='expanded' state='select'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='normal'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='hover'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='select'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+	</iconmap>
+</control>
+
+<control name="loadingtopic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/> 
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Loading..."/>
+</control>

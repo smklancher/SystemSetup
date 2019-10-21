@@ -1,0 +1,823 @@
+<control name="social-web" type="web">
+</control>
+
+<control name="social-medium" type="button">
+	<background name="flat">
+		<source name="general12-asset" left="12" top="0" right="24" bottom="12"/> <!-- no theme -->
+	</background>
+	<background name="over">
+		<source name="general12-asset" left="380" top="25" right="392" bottom="37"/> <!-- no theme -->
+	</background>
+	<background name="push">
+		<source name="general12-asset" left="380" top="25" right="392" bottom="37"/> <!-- no theme -->
+	</background>
+</control>
+
+<!-- Scroll Up button -->
+<control name="social-group-scrollup" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/> <!-- theme -->
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/> <!-- theme -->
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<icontrol source="uparrow-switcher" name="icon" visible="1">
+		<rect>
+			<left num="56" width="0"/>
+			<top num="0" height="0"/>
+			<right num="72" width="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="uparrow-switcher" type="switcher">
+	<background name="flat">
+		<source name="scrollbars-asset" left="113" top="0" right="128" bottom="16"/> <!-- theme -->
+	</background>
+	<background name="over">
+		<source name="scrollbars-asset" left="130" top="0" right="145" bottom="16"/> <!-- theme -->
+	</background>
+	<background name="push">
+		<source name="scrollbars-asset" left="147" top="0" right="162" bottom="16"/> <!-- theme -->
+	</background>
+</control>
+
+<!-- Scrolldown button -->
+<control name="social-group-scrolldown" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/> <!-- theme -->
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/> <!-- theme -->
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<icontrol source="downarrow-switcher" name="icon" visible="1">
+		<rect>
+			<left num="56" width="0"/>
+			<top num="0" height="0"/>
+			<right num="72" width="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+
+</control>
+
+<control name="downarrow-switcher" type="switcher">
+	<background name="flat">
+		<source name="scrollbars-asset" left="113" top="18" right="128" bottom="34"/> <!-- theme -->
+	</background>
+	<background name="over">
+		<source name="scrollbars-asset" left="130" top="18" right="145" bottom="34"/> <!-- theme -->
+	</background>
+	<background name="push">
+		<source name="scrollbars-asset" left="147" top="18" right="162" bottom="34"/> <!-- theme -->
+	</background>
+</control>
+
+<control name="social-item-list" type="list">
+	<color name="tooltip-border" red="118" green="118" blue="118"/>
+	<color name="tooltip-back" red="241" green="242" blue="247"/>
+	<color name="tooltip-fore" red="87" green="87" blue="87"/>
+
+	<color name="background" red="0" green="0" blue="0"/>
+	<color name="normal-back" red="-1" green="-1" blue="-1"/>
+
+	<color name="update-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	<color name="update-select-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	<color name="update-hover-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+
+	<color name="normal-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+	<color name="hover-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+	<color name="select-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+
+	<color name="edit-fore" red="90" green="90" blue="90"/>
+
+	<color name="comment-name-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+	<color name="comment-name-select-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+	<color name="comment-name-hover-fore" red="190" green="190" blue="190" filter_source="hueshift"/>
+
+	<color name="comment-fore" red="255" green="255" blue="255"/>
+	<color name="comment-select-fore" red="255" green="255" blue="255" />
+	<color name="comment-hover-fore" red="255" green="255" blue="255" />
+
+	<color name="subtitle-fore" red="255" green="255" blue="255"/>
+	<color name="subtitle-select-fore" red="255" green="255" blue="255" />
+	<color name="subtitle-hover-fore" red="255" green="255" blue="255" />
+
+	<color name="line3-fore" red="100" green="100" blue="100"/>
+	<color name="line3-select-fore" red="100" green="100" blue="100" />
+	<color name="line3-hover-fore" red="100" green="100" blue="100" />
+
+	<color name="real_name-fore" red="150" green="150" blue="150"/>
+	<color name="real_name-select-fore" red="150" green="150" blue="150" />
+	<color name="real_name-hover-fore" red="150" green="150" blue="150" />
+
+	<color name="time-fore" red="150" green="150" blue="150"/>
+	<color name="time-select-fore" red="150" green="150" blue="150" />
+	<color name="time-hover-fore" red="150" green="150" blue="150" />
+
+	<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="1"/>
+	<font name="subtitle" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="real_name" source="segoeui" type="Segoe UI" size="7"/>
+	<font name="time" source="segoeui" type="Segoe UI" size="7"/>
+	<font name="line3" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="comment-name" source="segoeui" type="Segoe UI" size="8" bold="1"/>
+	<font name="comment-url" source="segoeui" type="Segoe UI" size="8"/>
+	<font name="comment" source="segoeui" type="Segoe UI" size="8"/>
+	<font name="tooltip" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="edit" source="segoeui" type="Segoe UI" size="9" italics="1"/>
+
+	<size name="32">
+		<list-item name="normal" defaulty="(%this.line1.textHeight% + %this.line2.textHeight%) + 10 + (4*%this.item.top%) + (4*%this.item.bottom%)" type="list">
+			<background transparent="1" stretch="1" middle="1" visible="%this.item.top%">
+				<source name="skin-asset" left="0" top="179" right="52" bottom="197"/> <!-- theme -->
+				<slice left="9" top="197" right="49" bottom="197"/>
+				<rect>
+					<left num="-%this.indent.left%+12" width="0"/>
+					<right num="-%this.indent.right%+7" width="1"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</background>
+
+			<background transparent="1" stretch="1" middle="1">
+				<source name="skin-asset" left="0" top="197" right="52" bottom="225"/> <!-- theme -->
+				<slice left="9" top="197" right="49" bottom="225"/>
+				<rect>
+					<left num="-%this.indent.left%+12" width="0"/>
+					<top num="18 * %this.item.top%" height="0"/>
+					<right num="-%this.indent.right%+7" width="1"/>
+					<bottom num="7 * %this.item.bottom%" height="1"/>
+				</rect>
+			</background>
+
+			<background transparent="1" stretch="1" middle="1" visible="%this.item.bottom%">
+				<source name="skin-asset" left="0" top="225" right="52" bottom="232"/> <!-- theme -->
+				<slice left="9" top="225" right="49" bottom="225"/>
+				<rect>
+					<top num="7" height="1"/>
+					<left num="-%this.indent.left%+12" width="0"/>
+					<right num="-%this.indent.right%+7" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Separator -->
+			<background transparent="1" stretch="1" middle="1" visible="!%this.item.bottom%">
+				<source name="skin-asset" left="9" top="179" right="49" bottom="181"/> <!-- theme -->
+				<slice left="9" top="179" right="49" bottom="181"/>
+				<rect>
+					<top num="2" height="1"/>
+					<left num="-%this.indent.left%+21" width="0"/>
+					<right num="-%this.indent.right%+10" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="13" width="0"/>
+					<top num="5" height="0"/>
+					<right num="29" width="0"/>
+					<bottom num="21" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="40+7-10" width="0"/>
+					<top num="max(2,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)-1-%this.item.bottom%*2" height="0"/>
+					<right num="14" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="line2">
+				<rect>
+					<left num="40+(%this.subicon.width%*%this.subicon.amount%)+7-10" width="0"/>
+					<top num="max(2+%this.line1.textHeight%,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)-1-%this.item.bottom%*2" height="0"/>
+					<right num="14" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="99"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Time / Distance -->
+			<icontrol name="time">
+				<rect>
+					<left num="30" width="1"/>
+					<top num="4" height="0"/>
+					<right num="14" width="1"/>
+					<bottom num="20" height="0"/>
+				</rect>
+				<settings name="text-alignment" value="right"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol> 
+		</list-item>
+
+		<list-item name="editing" defaulty="(max(min(%this.editing%*%this.list-edit.desired_height% + 6,(7 * 15) + 6),30 + 6) + (29*%this.editing%)) + 11 + (4*%this.item.bottom%)" type="list">
+			<background transparent="1" stretch="1" middle="1" visible="%this.item.top%">
+				<source name="skin-asset" left="0" top="179" right="52" bottom="197"/> <!-- theme -->
+				<slice left="9" top="197" right="49" bottom="197"/>
+				<rect>
+					<left num="-%this.indent.left%+12" width="0"/>
+					<right num="-%this.indent.right%+7" width="1"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</background>
+
+			<background transparent="1" stretch="1" middle="1">
+				<source name="skin-asset" left="0" top="197" right="52" bottom="225"/> <!-- theme -->
+				<slice left="9" top="197" right="49" bottom="225"/>
+				<rect>
+					<left num="-%this.indent.left%+12" width="0"/>
+					<top num="18 * %this.item.top%" height="0"/>
+					<right num="-%this.indent.right%+7" width="1"/>
+					<bottom num="7 * %this.item.bottom%" height="1"/>
+				</rect>
+			</background>
+
+			<background transparent="1" stretch="1" middle="1" visible="%this.item.bottom%">
+				<source name="skin-asset" left="0" top="225" right="52" bottom="232"/> <!-- theme -->
+				<slice left="9" top="225" right="49" bottom="225"/>
+				<rect>
+					<top num="7" height="1"/>
+					<left num="-%this.indent.left%+12" width="0"/>
+					<right num="-%this.indent.right%+7" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Separator -->
+			<background transparent="1" stretch="1" middle="1" visible="!%this.item.bottom%">
+				<source name="skin-asset" left="9" top="179" right="49" bottom="181"/> <!-- theme -->
+				<slice left="9" top="179" right="49" bottom="181"/>
+				<rect>
+					<top num="2" height="1"/>
+					<left num="-%this.indent.left%+21" width="0"/>
+					<right num="-%this.indent.right%+10" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="13" width="0"/>
+					<top num="5" height="0"/>
+					<right num="29" width="0"/>
+					<bottom num="21" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Editing -->
+			<background transparent="1" stretch="1" middle="1" visible="1">
+				<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+				<slice left="3" top="63" right="157" bottom="79"/>
+				<rect>
+					<left num="39" width="0"/>
+					<top num="5" height="0"/>
+					<right num="13" width="1"/>
+					<bottom num="5 + max(min(%this.editing%*%this.list-edit.desired_height% + 6,(7 * 15) + 6),30 + 6)" height="0"/> 
+				</rect>
+			</background>
+
+			<icontrol name="list-edit-start">
+				<rect>
+					<left num="41" width="0"/>
+					<top num="7" height="0"/>
+					<right num="15" width="1"/>
+					<bottom num="7 + max(min(%this.editing%*%this.list-edit.desired_height%,(7 * 15)),30)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="list-edit-cancel" source="statuscancelbutton">
+				<rect>
+					<left num="39" width="0"/>
+					<top num="31 + %this.item.bottom%*4" height="1"/>
+					<right num="64" width="0"/>
+					<bottom num="6 + %this.item.bottom%*4" height="1"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="list-edit-ok" source="socialbutton">
+				<rect>
+					<left num="120" width="1"/>
+					<top num="31 + %this.item.bottom%*4" height="1"/>
+					<right num="13" width="1"/>
+					<bottom num="6 + %this.item.bottom%*4" height="1"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="list-edit" source="social-edit">
+				<rect>
+					<left num="41" width="0"/>
+					<top num="7" height="0"/>
+					<right num="15" width="1"/>
+					<bottom num="7 + max(min(%this.list-edit.desired_height%,(7 * 15)),30)" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<list-item name="group" defaulty="max(44,(2 + %this.line1.textHeight% + %this.line2.textHeight% + 2)) + (%this.image%*(%this.image.height%+18+%this.line2%*11)) + 5" type="list">
+			<color red="50" green="50" blue="54" visible="!%this.item.top%">
+				<rect>
+					<left num="-%this.indent.left%+5" width="0"/>
+					<right num="-%this.indent.right%+5" width="1"/>
+					<bottom num="1" height="0"/>
+				</rect>
+			</color>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+					<rect>
+						<left num="-%this.indent.left% + 1" width="0"/>
+						<right num="-%this.indent.right% + 1" width="1"/>
+					</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="6" height="0"/>
+					<right num="40" width="0"/>
+					<bottom num="43" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="6" width="0"/>
+					<top num="8" height="0"/>
+					<right num="38" width="0"/>
+					<bottom num="40" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon">
+				<rect>
+					<left num="6" width="0"/>
+					<top num="8" height="0"/>
+					<right num="38" width="0"/>
+					<bottom num="40" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="status-icon">
+				<rect>
+					<left num="40" width="0"/>
+					<top num="30" height="0"/>
+					<right num="56" width="0"/>
+					<bottom num="46" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="40+7" width="0"/>
+					<top num="1+max(2,(%this.height% - (%this.image%*(%this.image.height%+18+%this.line2%*11)) - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="2+%this.image%*(%this.image.height%+18+%this.line2%*11)" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="40+(%this.subicon.width%*%this.subicon.amount%)+7" width="0"/>
+					<top num="1+ max(2+%this.line1.textHeight%,(%this.height% - (%this.image%*(%this.image.height%+18+%this.line2%*11)) - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="2+ %this.image%*(%this.image.height%+18+%this.line2%*11)" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="99"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Extra display name for line1 -->
+			<icontrol name="real_name">
+				<rect>
+					<left num="%this.line1.textWidth%+40+7+5" width="0"/>
+					<top num="3+max(2,(%this.height% - (%this.image%*(%this.image.height%+18+%this.line2%*11)) - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="4+%this.time.textWidth%+5" width="1"/>
+					<bottom num="2+%this.image%*(%this.image.height%+18+%this.line2%*11)" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+				<settings name="text-overflow" value="hidden"/>
+			</icontrol>
+
+			<!-- Time / Distance -->
+			<icontrol name="time">
+				<rect>
+					<left num="20" width="1"/>
+					<top num="7" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="21" height="0"/>
+				</rect>
+				<settings name="text-alignment" value="right"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<background stretch="1" visible="%this.image%">
+				<source name="av-asset" left="101" top="22" right="157" bottom="77"/> <!-- theme -->
+				<slice left="110" top="28" right="148" bottom="66"/>
+				<rect>
+					<left num="44" width="0"/>
+					<top num="24+%this.image.height%" height="1"/>
+					<right num="62+%this.image.width%" width="0"/>
+					<bottom num="7" height="1"/>
+				</rect>
+			</background>
+
+			<icontrol name="image">
+				<rect>
+					<left num="53" width="0"/>
+					<top num="18 + %this.image.height%" height="1"/>
+					<right num="53 + %this.image.width%" width="0"/>
+					<bottom num="18" height="1"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="0" top="115" right="36" bottom="151"/> <!-- no theme -->
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head32" left="0" top="0" right="32" bottom="32"/>
+		</icon>
+	</size>
+
+	<size name="16">
+		<list-item name="normal" defaulty="max(44,(10 + %this.line1.textHeight% + %this.line2.textHeight% + %this.line3.textHeight%))" type="list">
+			<color red="50" green="50" blue="54" visible="!%this.item.top%">
+				<rect>
+					<left num="-%this.indent.left%+5" width="0"/>
+					<right num="-%this.indent.right%+5" width="1"/>
+					<bottom num="1" height="0"/>
+				</rect>
+			</color>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+					<rect>
+						<left num="-%this.indent.left% + 1" width="0"/>
+						<right num="-%this.indent.right% + 1" width="1"/>
+					</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="6" height="0"/>
+					<right num="24" width="0"/>
+					<bottom num="26" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="6" width="0"/>
+					<top num="8" height="0"/>
+					<right num="22" width="0"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="30" width="0"/>
+					<top num="5" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Subject -->
+			<icontrol name="line2">
+				<rect>
+					<left num="30" width="0"/>
+					<top num="5+%this.line1.textHeight%" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="line3">
+				<rect>
+					<left num="30" width="0"/>
+					<top num="5+%this.line1.textHeight%+%this.line2.textHeight%" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="3"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Time / Distance -->
+			<icontrol name="time">
+				<rect>
+					<left num="20" width="1"/>
+					<top num="5" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="21" height="0"/>
+				</rect>
+				<settings name="text-alignment" value="right"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+		</list-item>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="28" top="159" right="48" bottom="179"/> <!-- no theme -->
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head16" left="0" top="0" right="16" bottom="16"/>
+		</icon>
+	</size>
+</control>
+
+<control name="social-group-list" type="list">
+	<color name="background" red="-1" green="-1" blue="-1"/> <!-- Totally clear -->
+	<color name="normal-back" red="-1" green="-1" blue="-1"/> <!-- Totally clear -->
+	<color name="normal-fore" red="200" green="200" blue="200"/>
+	<color name="hover-fore" red="255" green="255" blue="255"/>
+	<color name="select-fore" red="255" green="255" blue="255"/>
+	<color name="count-fore" red="255" green="255" blue="255"/>
+	<color name="group-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="group-hover-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="group-select-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+
+	<font name="group" source="segoeui" type="Segoe UI" size="7" bold="0" italic="0"/> <!-- Group header -->
+	<font name="default" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="count" source="segoeui" type="Segoe UI"	size="7" bold="1"	allcaps="0"/>
+
+	<size name="16"> 
+
+		<settings type="list" name="group1IndentLeft" value="8"/>
+
+		<list-item name="group" defaulty="25" type="simple">
+			<icontrol name="line1">
+				<rect>
+					<left num="11" width="0"/>
+					<right num="4" width="1"/>
+					<top num="7" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+		</list-item>
+
+		<list-item name="normal" defaulty="max(28,(%this.line1.textHeight% + 12))" type="list">
+
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> <!-- a little trick to ignore the indents so the hover effect is the full width of the list -->
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="128" right="105" bottom="156"/> <!-- theme -->
+				<slice left="65" top="129" right="102" bottom="155"/>
+				<rect>
+					<left num="-%this.indent.left%" width="0"/>
+					<right num="-%this.indent.right%" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="0" width="0"/>
+					<top num="6" height="0"/>
+					<right num="16" width="0"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<top num="7" height="0"/>
+					<left num="23" width="0"/>
+					<right num="4+(%this.count%*(13+%this.count.textWidth%))" width="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+			</icontrol>
+
+			<!-- Background for the count - in 4.0 build this was for mail only. In 4.1 builds this has expanded -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="15+%this.count.textWidth%" width="1"/>
+					<top num="7" height="0"/>
+					<right num="5" width="1"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="10+%this.count.textWidth%" width="1"/> 
+					<top num="7" height="0"/>
+					<right num="10" width="1"/>
+					<bottom num="21" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+	</size>
+</control>
+
+<control name="social-title" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="1"/>
+	<color name="normal-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="over-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="push-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="disabled-fore" red="58" green="72" blue="85"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<control name="social-subtitle" type="tooltip">
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> <!-- normal mode -->
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> <!-- edit mode -->
+	<color name="default-fore" red="100" green="100" blue="100"/> 
+	<color name="normal-fore" red="100" green="100" blue="100"/> 
+	<color name="hover-fore" red="100" green="100" blue="100"/> 
+	<color name="link" red="100" green="100" blue="100"/> 
+	<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="max-lines" value="1"/>
+</control>
+
+<control name="social-loading" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/> 
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<control name="social-edit" type="chat-edit">
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="1"/> <!-- normal mode -->
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> <!-- edit mode -->
+	<color name="default-fore" red="100" green="100" blue="100" /> 
+	<color name="normal-fore" red="255" green="255" blue="255" /> 
+	<color name="normal-back" red="-1" green="-1" blue="-1" /> 
+	<color name="select-fore" red="255" green="255" blue="255" />
+	<color name="select-back" red="51" green="153" blue="255" />
+	<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<cursor name="blur" type="ibeam"/>
+	<cursor name="focus" type="ibeam"/> 
+
+	<message-item name="image">
+		<background stretch="1">
+			<source name="av-asset" left="101" top="22" right="157" bottom="77"/>
+			<slice left="110" top="28" right="148" bottom="66"/>
+		</background>
+		<icontrol name="image">
+			<rect>
+				<left num="9"/>
+				<top num="6"/>
+				<right num="9"/>
+				<bottom num="11"/>
+			</rect>
+		</icontrol>
+	</message-item>
+</control>
+
+<control name="socialmore" type="resizeable-button">
+	&standardbutton;
+
+	<icontrol source="morebutton-topic" name="text" visible="1">
+		<rect>
+			<left num="2" width="0"/>
+			<top num="1" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="uparrow" name="arrow" visible="1">
+		<rect>
+			<left num="19" width="1"/>
+			<top num="3" height="0"/>
+			<right num="6" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+	<settings name="menu-direction" value="up"/>
+</control>
+
+<control name="socialbutton" type="resizeable-button">
+	&defaultbutton;
+
+	<icontrol source="setbutton-topic" name="text" visible="1"/>
+</control>
+
+<control name="socialmorebutton" type="resizeable-button">
+	&standardbutton;
+
+	<icontrol source="setbutton-topic" name="text" visible="1"/>
+</control>
+
+<control name="socialmenu" type="menu">
+	<color name="separator-fore" red="160" green="160" blue="180"/>
+	<color name="normal-fore" red="205" green="205" blue="205" filter_source="hueshift"/>
+	<color name="hover-fore" red="205" green="205" blue="205" filter_source="hueshift"/>
+	<color name="hover-back" red="193" green="210" blue="228"/>
+	<color name="hover-border" red="167" green="184" blue="202"/>
+	<font type="Segoe UI" size="9"/>
+	<settings name="defaultLeftMargin" value="38"/>
+	<settings name="defaultRightMargin" value="5"/>
+	<settings name="defaultTextHeight" value="24"/>
+	<settings name="defaultLeftMarginIcon" value="2"/>
+	<settings name="max-lines" value="2"/>
+	<menu-item>
+		<background middle="1" stretch="1" type="hover">
+			<source name="buttons-asset" left="55" top="62" right="105" bottom="84"/> 
+			<slice left="60" top="67" right="100" bottom="79"/>
+		</background>
+		<background middle="1" stretch="1" type="push">
+			<source name="buttons-asset" left="55" top="40" right="105" bottom="62"/> 
+			<slice left="60" top="45" right="100" bottom="57"/>
+		</background>
+	</menu-item>
+</control>
+
+<control name="morebutton-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="More"/>
+</control>
+

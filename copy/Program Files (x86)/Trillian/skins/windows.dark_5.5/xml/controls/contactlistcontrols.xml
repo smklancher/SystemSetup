@@ -1,0 +1,867 @@
+<!-- Contact List Controls -->
+
+<!-- EVENT BUTTON -->
+<control name="eventswitcher" type="switcher">
+	<background name="flat">
+		<source name="general16-asset-notheme" left="16" top="16" right="32" bottom="32"/>
+	</background>
+	<settings name="default" value="flat"/>
+	<background name="disabled">
+	</background>
+</control>
+
+<control name="eventbutton" type="resizeable-button">
+	<!-- &elmToolbarButtonFrame; -->
+	<icontrol source="eventswitcher" name="icon">
+	</icontrol>
+	<settings name="menu-direction" value="down"/>
+</control>
+
+<control name="profilenameeditbutton" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<!-- Button Text -->
+	<icontrol source="profilenameeditbuttontext" name="text">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4" width="1"/>
+		</rect>
+	</icontrol>
+	<event name="onClick">
+		<action name="setFocus" icontrol="profile-name"/>
+		<action name="selectAll" icontrol="profile-name"/>
+	</event>
+	<cursor name="hover" type="link"/>
+</control>
+
+<!-- The actual label for the Add Button -->
+<control name="profilenameeditbuttontext" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="1" allcaps="0" />
+	<color name="normal-fore" red="220" green="220" blue="220" filter_source="hueshift"/> 
+	<color name="over-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="push-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="%profile-name.text%"/>
+</control>
+
+<control name="awayeditbutton" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<!-- Button Text -->
+	<icontrol source="awayeditbuttontext" name="text">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4" width="1"/>
+		</rect>
+	</icontrol>
+	<event name="onClick">
+		<action name="setFocus" icontrol="away-edit"/>
+		<action name="selectAll" icontrol="away-edit"/>
+	</event>
+	<settings name="status-message-only" value="yes"/>
+</control>
+
+<control name="awayeditbuttontext" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="100" green="100" blue="100" /> 
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="%away-edit.text%"/>
+	<settings name="status-message-only" value="yes"/>
+</control>
+
+<!-- The default search text and fonts for the Search Box -->
+<control name="searchtext" type="chat-edit"> 
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="1"/> <!-- Showing default text -->
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> 
+	<color name="default-fore" red="116" green="119" blue="124"/> 
+	<color name="normal-fore" red="116" green="119" blue="124"/> 
+	<color name="select-fore" red="255" green="255" blue="255" />
+	<color name="select-back" red="51" green="153" blue="255" />
+	<cursor name="blur" type="ibeam"/>
+	<cursor name="focus" type="ibeam"/> 
+	<settings name="default-text" value="Search Contact List"/>
+</control>
+
+<!-- Your name - editable -->
+<control name="yourname" type="chat-edit">
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+	<color name="default-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="normal-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="select-fore" red="255" green="255" blue="255" />
+	<color name="select-back" red="51" green="153" blue="255" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<cursor name="blur" type="ibeam"/>
+	<cursor name="focus" type="ibeam"/>
+</control>
+
+<control name="searchtitle" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="1" allcaps="0" />
+	<color name="normal-fore" red="220" green="220" blue="220" filter_source="hueshift"/> 
+	<color name="over-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="push-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Search Results"/>
+</control>
+
+<!-- Buddy list control - how everything looks in the contact list -->
+&listitemcontrol;
+
+<!-- The Icon Holder -->
+<control name="icon-holder" type="menubar">
+	<settings name="button-type" value="icon-holder-resize"/>
+	<settings name="button-extra-type" value="icon-holder-extra"/>
+	<settings name="button-minx" value="18"/>
+	<settings name="button-maxx" value="18"/>
+	<settings name="button-miny" value="20"/>
+	<settings name="button-maxy" value="20"/>
+	<settings name="button-spacing-x" value="0"/>
+	<settings name="button-spacing-y" value="0"/>
+	<settings name="vertical" value="0"/>
+	<settings name="menu-direction" value="down"/>
+	<settings name="alignment" value="!(%window.large%||%window.minimal%)*2"/>
+</control>
+
+<!-- The actual medium button -->
+<control name="icon-holder-resize" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<!-- the actual medium icon -->
+	<icontrol source="icon-holder-switcher" name="icon" visible="1"> 
+		<rect>
+			<left num="3" width="0"/>
+			<top num="4" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<!-- This is the thing that's shown when there's not enough room for all your medium icons -->
+<control name="icon-holder-extra" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="general12-asset" left="0" top="0" right="12" bottom="12"/>
+		<slice left="1" top="1" right="11" bottom="11"/>
+		<rect>
+			<left num="3" width="0"/>
+			<top num="4" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="iconholder-overflow" name="text" visible="1">
+		<rect>
+			<left num="5" width="0"/>
+			<top num="5" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="6" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="iconholder-overflow" type="topic">
+	<font source="segoeui" type="Segoe UI" size="7" bold="1" allcaps="0" />
+	<color name="normal-fore" red="30" green="30" blue="30" /> 
+	<color name="over-fore" red="30" green="30" blue="30" /> 
+	<color name="push-fore" red="30" green="30" blue="30" /> 
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="count-text" value="1"/>
+</control>
+
+
+<control name="menubar-extra" type="resizeable-button">
+	&hover-button-art;
+
+	<!-- the actual ... icon -->
+	<icontrol source="menubar-switcher" name="icon" visible="1">
+		<rect>
+			<left num="3+(%this.push%)" width="0"/>
+			<top num="6+(%this.push%)" height="0"/>
+			<right num="3-(%this.push%)" width="1"/>
+			<bottom num="2-(%this.push%)" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="menubar-switcher" type="switcher">
+	<!-- Defining the ... icons here -->
+	<background name="..." state="normal">
+		<source name="general12-asset" left="0" top="12" right="12" bottom="24"/>
+	</background>
+	<background name="..." state="over">
+		<source name="general12-asset" left="0" top="12" right="12" bottom="24"/>
+	</background>
+	<background name="..." state="push">
+		<source name="general12-asset" left="0" top="12" right="12" bottom="24"/>
+	</background>
+</control>
+
+<!-- All the Medium Icons - Hooking into Stixe here -->
+<control name="icon-holder-switcher" type="switcher">
+	&iclToolbarServicesMini;
+	<!-- Defining the ... icons here -->
+	<background name="..." state="normal">
+		<source name="general12-asset" left="0" top="0" right="12" bottom="12"/>
+	</background>
+	<background name="..." state="over">
+		<source name="general12-asset" left="0" top="0" right="12" bottom="12"/>
+	</background>
+	<background name="..." state="push">
+		<source name="general12-asset" left="0" top="0" right="12" bottom="12"/>
+	</background>
+</control>
+
+<!-- The Edit away message control -->
+<control name="editawaymessage" type="chat-edit">
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+	<color name="normal-fore" red="255" green="255" blue="255" /> 
+	<color name="select-fore" red="255" green="255" blue="255" />
+	<color name="select-back" red="51" green="153" blue="255" />
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<cursor name="blur" type="ibeam"/>
+	<cursor name="focus" type="ibeam"/> 
+	<settings name="status-message-only" value="yes"/>
+
+	<message-item name="image">
+		<background stretch="1">
+			<source name="av-asset" left="101" top="22" right="157" bottom="77"/>
+			<slice left="110" top="28" right="148" bottom="66"/>
+		</background>
+		<icontrol name="image">
+			<rect>
+				<left num="9"/>
+				<top num="6"/>
+				<right num="9"/>
+				<bottom num="11"/>
+			</rect>
+		</icontrol>
+	</message-item>
+</control>
+
+<control name="searchresults" type="topic">
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> 
+	<color name="normal-fore" red="120" green="120" blue="120" /> 
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<!-- Status Button Resizeable Button -->
+<control name="statusbutton2" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<icontrol source="status-switcher" name="icon">
+		<rect>
+			<left num="2" width="0"/>
+			<top num="2" height="0"/>
+			<right num="18" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<settings name="menu-direction" value="down"/>
+	<settings name="menu-align" value="left"/>
+</control>
+
+<!-- Status Button Resizeable Button -->
+<control name="statusbutton3" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<icontrol source="status2label" name="text">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4" width="1"/>
+		</rect>
+	</icontrol>
+
+	<settings name="menu-direction" value="down"/>
+	<settings name="menu-align" value="left"/>
+	<settings name="status-message" value="no"/>
+</control>
+
+<control name="status2label" type="topic">
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="1" italic="0"/> <!-- normal mode -->
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="1" italic="0"/> <!-- edit mode -->
+	<color name="default-fore" red="100" green="100" blue="100" /> 
+	<color name="normal-fore" red="100" green="100" blue="100" /> 
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<control name="msg-window-status" type="topic">
+	<font name="default" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> <!-- normal mode -->
+	<font name="normal" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> <!-- edit mode -->
+	<color name="default-fore" red="100" green="100" blue="100" /> 
+	<color name="normal-fore" red="100" green="100" blue="100" /> 
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+</control>
+
+<control name="status2label-small" type="tooltip">
+	<font name="default" source="segoeui" type="Segoe UI" size="7" bold="0" italic="0"/> <!-- normal mode -->
+	<font name="normal" source="segoeui" type="Segoe UI" size="7" bold="0" italic="0"/> <!-- edit mode -->
+	<color name="default-fore" red="100" green="100" blue="100" /> 
+	<color name="normal-fore" red="100" green="100" blue="100" /> 
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Away -"/>
+
+</control>
+
+<!-- Switcher for all the connection status -->
+<control name="status-switcher" type="switcher">
+	<background name="connected">
+		<source name="general16-asset-notheme" left="16" top="48" right="32" bottom="64"/>
+	</background>
+	<background name="connecting">
+		<source name="general16-asset-notheme" left="16" top="48" right="32" bottom="64"/>
+	</background>
+	<background name="disconnected">
+		<source name="general16-asset-notheme" left="16" top="64" right="32" bottom="80"/>
+	</background>
+	<background name="partially connected">
+		<source name="general16-asset-notheme" left="16" top="48" right="32" bottom="64"/>
+	</background>
+	<background name="away">
+		<source name="general16-asset-notheme" left="16" top="80" right="32" bottom="96"/>
+	</background>
+	<background name="mixed">
+		<source name="general16-asset-notheme" left="16" top="48" right="32" bottom="64"/>
+	</background>
+	<background name="do not disturb">
+		<source name="general16-asset-notheme" left="64" top="80" right="80" bottom="96"/>
+	</background>
+	<background name="invisible">
+		<source name="general16-asset-notheme" left="16" top="96" right="32" bottom="112"/>
+	</background>
+</control>
+
+<!-- Down arrow switcher -->
+<control name="downarrow" type="switcher">
+	<background name="flat" transparent="1">
+		<source name="general16-asset" left="0" top="128" right="13" bottom="143"/>
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+	<background name="over" transparent="1">
+		<source name="general16-asset" left="0" top="128" right="13" bottom="143"/>
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+	<background name="push" transparent="1">
+		<source name="general16-asset" left="0" top="128" right="13" bottom="143"/>
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+
+
+<!-- Up arrow switcher -->
+<control name="uparrow" type="switcher">
+	<background name="flat" transparent="1">
+		<source name="general16-asset" left="0" top="144" right="13" bottom="159"/>
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+	<background name="over" transparent="1">
+		<source name="general16-asset" left="0" top="144" right="13" bottom="159"/>
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+	<background name="push" transparent="1">
+		<source name="general16-asset" left="0" top="144" right="13" bottom="159"/>
+		<rect>
+			<left num="0" width="0"/>
+			<right num="0" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+
+<!-- Clear search button -->
+<control name="clearsearch" type="button">
+	<background name="flat" transparent="1">
+		<source name="textboxes-asset" left="0" top="84" right="18" bottom="102"/>
+	</background>
+	<background name="over" transparent="1">
+		<source name="textboxes-asset" left="18" top="84" right="36" bottom="102"/>
+	</background>
+	<background name="push" transparent="1">
+		<source name="textboxes-asset" left="36" top="84" right="54" bottom="102"/>
+	</background>
+	<event name="onClick">
+		<action name="cleartext" icontrol="search-edit"/>
+	</event>
+	<tooltip text="Clear Search"/> 
+</control>
+
+<!-- Clear search button -->
+<control name="small-search-icon" type="button">
+	<background name="flat" transparent="1">
+		<source name="general16-asset" left="16" top="0" right="32" bottom="16"/>
+	</background>
+	<background name="over" transparent="1">
+		<source name="general16-asset" left="16" top="0" right="32" bottom="16"/>
+	</background>
+	<background name="push" transparent="1">
+		<source name="general16-asset" left="16" top="0" right="32" bottom="16"/>
+	</background>
+	<tooltip text="Search"/> 
+</control>
+
+<!-- Scroll Up button -->
+<control name="scrollup" type="button">
+	<background name="flat">
+		<source name="scrollbars-asset" left="0" top="0" right="15" bottom="16"/>
+	</background>
+	<background name="over">
+		<source name="scrollbars-asset" left="15" top="0" right="30" bottom="16"/>
+	</background>
+	<background name="push">
+		<source name="scrollbars-asset" left="30" top="0" right="45" bottom="16"/>
+	</background>
+</control>
+
+<!-- Scrolldown button -->
+<control name="scrolldown" type="button">
+	<background name="flat">
+		<source name="scrollbars-asset" left="0" top="16" right="15" bottom="32"/>
+	</background>
+	<background name="over">
+		<source name="scrollbars-asset" left="15" top="16" right="30" bottom="32"/>
+	</background>
+	<background name="push">
+		<source name="scrollbars-asset" left="30" top="16" right="45" bottom="32"/>
+	</background>
+</control>
+
+<control name="notice-status-switcher" type="switcher">
+	<background name="default">&icoWarn;</background>
+	<background name="partial">&icoWarn;</background>
+	<background name="ssx-down">&icoWarn;</background>
+</control>
+
+<control name="status-text" type="tooltip">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<forecolor red="255" green="255" blue="255"	/>
+	<settings name="alignment" value="left"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<control name="reconnectbutton" type="resizeable-button">
+	&standardbutton;
+
+	<icontrol source="status-topic" name="text">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="1" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="status-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+</control>
+
+<control name="setbutton" type="resizeable-button">
+	&defaultbutton;
+
+	<icontrol source="setbutton-topic" name="away-edit-count-relative" visible="1" />
+</control>
+
+<control name="setbutton-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Set Status"/>
+</control>
+
+<control name="statuscancelbutton" type="resizeable-button">
+	<!-- Flat -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="flat">
+		<source name="buttons-asset" left="0" top="24" right="55" bottom="48"/>
+		<slice left="6" top="36" right="47" bottom="42"/>
+	</background>
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="0" top="48" right="55" bottom="72"/>
+		<slice left="6" top="60" right="47" bottom="66"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="0" top="72" right="55" bottom="96"/>
+		<slice left="6" top="84" right="47" bottom="90"/>
+	</background>
+
+	<icontrol source="statuscancelbutton-switcher" name="statuscancelbutton-switcher" visible="1">
+		<rect>
+			<left num="6" width="0"/>
+			<top num="6" height="0"/>
+			<right num="18" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<event name="onClick">
+		<action name="cleartext" icontrol="away-edit"/>
+	</event>
+</control>
+
+<control name="statuscancelbutton-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="255" green="255" blue="255" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="X"/>
+</control>
+
+<control name="statuscancelbutton-switcher" type="switcher">
+	<background name="flat">
+		<source name="general12-asset" left="0" top="24" right="12" bottom="36"/>
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+
+<control name="trillian-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="1" allcaps="0"/>
+	<color name="normal-fore" red="255" green="255" blue="255"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Trillian"/>
+	<tooltip text="Click here for more options"/> 
+</control>
+
+<control name="trillian-topic" type="topic" minimum_os="62">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0"/>
+	<color name="normal-fore" red="0" green="0" blue="0"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Trillian"/>
+	<tooltip text="Click here for more options"/> 
+</control>
+
+<control name="trillianbutton" type="resizeable-button">
+
+	<!-- Out of Focus -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="outoffocus">
+		<source name="windowbuttons-asset-theme" left="0" top="0" right="88" bottom="20"/>
+		<slice left="21" top="0" right="64" bottom="20"/>
+	</background>
+
+	<!-- Flat -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="flat">
+		<source name="windowbuttons-asset-theme" left="0" top="20" right="88" bottom="40"/>
+		<slice left="21" top="20" right="64" bottom="40"/>
+	</background>
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="windowbuttons-asset-theme" left="0" top="40" right="88" bottom="60"/>
+		<slice left="21" top="40" right="64" bottom="60"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="windowbuttons-asset-theme" left="0" top="60" right="88" bottom="80"/>
+		<slice left="21" top="60" right="64" bottom="80"/>
+	</background>
+
+	<settings name="menu-direction" value="down"/>
+</control>
+
+<control name="viewbutton-std" type="button">
+	<background name="outoffocus" transparent="1">
+		<source name="windowbuttons-asset" left="88" top="0" right="132" bottom="20"/>
+	</background>
+	<background name="flat" transparent="1">
+		<source name="windowbuttons-asset" left="88" top="20" right="132" bottom="40"/>
+	</background>
+	<background name="over" transparent="1">
+		<source name="windowbuttons-asset" left="88" top="40" right="132" bottom="60"/>
+	</background>
+	<background name="push" transparent="1">
+		<source name="windowbuttons-asset" left="88" top="60" right="132" bottom="80"/>
+	</background>
+	<settings name="menu-direction" value="down"/>
+	<settings name="menu-alignment" value="left"/>
+</control>
+
+<control name="welcometopic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="12"/>
+	<color name="normal-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="over-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<color name="push-fore" red="150" green="150" blue="150" filter_source="hueshift"/> 
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="top"/>
+	<settings name="default-text" value="Welcome to Trillian 5!"/>
+</control>
+
+<control name="introtooltip" type="tooltip">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<color name="normal-fore" red="255" green="255" blue="255" /> 
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="top"/> 
+	<settings name="default-text" value="Use the panel above to configure your basic information and control your IM, social networking, and mail accounts."/>
+</control>
+
+<control name="welcomeclose" type="resizeable-button">
+	&standardbutton;
+
+	<icontrol source="welcomeclosetext" name="text">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4" width="1"/>
+		</rect>
+	</icontrol>
+
+	<event name="onClick">
+		<action name="cleartext" icontrol="search-edit"/>
+		<action name="setVariable" variable="%window.wizard%" value="0"/>
+	</event>
+</control>
+
+<control name="welcomeclosetext" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9"/>
+	<color name="normal-fore" red="255" green="255" blue="255" /> 
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Start!"/>
+</control>
+
+<control name="setavatartooltip" type="tooltip">
+	<font source="segoeui" type="Segoe UI" size="7" italics="1"/>
+	<color name="normal-fore" red="100" green="100" blue="100" /> 
+	<settings name="alignment" value="center"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Set Icon"/>
+	<settings name="line-spacing" value="-2"/>
+</control>
+
+<control name="profilenameeditwizardbutton" type="resizeable-button">
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/>
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/>
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<!-- Button Text -->
+	<icontrol source="profilenameeditwizardbuttontext" name="text">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4" width="1"/>
+		</rect>
+	</icontrol>
+	<event name="onClick">
+		<action name="setFocus" icontrol="profile-name"/>
+		<action name="selectAll" icontrol="profile-name"/>
+		<action name="setVariable" variable="%window.wizard.displayname%" value="0"/>
+	</event>
+	<cursor name="hover" type="link"/>
+</control>
+
+<control name="profilenameeditwizardbuttontext" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" italics="1" />
+	<color name="normal-fore" red="100" green="100" blue="100"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value="Set display name"/>
+</control>
+
+<control name="awayeditinstructions" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="1" />
+	<color name="normal-fore" red="200" green="200" blue="200"/>
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="top"/>
+	<settings name="default-text" value="Set Status for"/>
+</control>
+
+<control name="awaysource" type="resizeable-button">
+	&standardbutton-noflat;
+
+	<icontrol source="awaysource-topic" name="text" visible="1">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="14" width="1"/>
+			<top num="1" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Button Arrow -->
+	<icontrol source="downarrow" name="arrow" visible="1">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="3" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+	<settings name="menu-align" value="left"/>
+	<settings name="menu-direction" value="down"/>
+</control>
+
+<control name="awaysource-topic" type="topic">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" allcaps="0" />
+	<color name="normal-fore" red="200" green="200" blue="200" />
+	<color name="over-fore" red="255" green="255" blue="255" />
+	<color name="push-fore" red="255" green="255" blue="255" />
+	<color name="disabled-fore" red="58" green="72" blue="85" />
+	<settings name="alignment" value="left"/>
+	<settings name="auto-scroll" value="no"/>
+	<settings name="vertical-alignment" value="center"/>
+	<settings name="default-text" value=""/>
+</control>

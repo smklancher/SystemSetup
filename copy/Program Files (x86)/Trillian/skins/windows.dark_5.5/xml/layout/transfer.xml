@@ -1,0 +1,330 @@
+
+<component name="filetransfer" minx="400 + ((!%system.windows.vista.glass%) * 16)" maxx="400 + ((!%system.windows.vista.glass%) * 16)" miny="(%ft.details%*100) + 221 + ((!%system.windows.vista.glass%) * 38)" defaulty="321 + ((!%system.windows.vista.glass%) * 38)" maxy="%ft.details%*500 + 221 + ((!%system.windows.vista.glass%) * 38)">
+	&resize;
+	&windowborder;
+	&minclose;
+
+	<frame source="transfer-body" name="transfer-body" visible="1">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="transfer-body" >
+	<color red="0" green="0" blue="0"/>
+
+	<!-- Blue gradient bit at the top of the trx window -->
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="0" top="0" right="59" bottom="62"/> <!-- theme -->
+		<slice left="0" top="0" right="59" bottom="62"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="40" height="0"/>
+		</rect>
+	</background>
+
+	<!-- More info border -->
+	<background transparent="1" middle="1" stretch="1" visible="%ft.details%">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- no theme -->
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="23" width="0"/>
+			<top num="187" height="0"/>
+			<right num="23" width="1"/>
+			<bottom num="65" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="display-bubbles" name="display" visible="%ft.details%">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="188" height="0"/>
+			<right num="27 + (%display.scrollbar_needed% * 20)" width="1"/>
+			<bottom num="69" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- Scroll bar background -->
+	<background transparent="1" middle="1" stretch="1" visible="%display.scrollbar_needed%*%ft.details%">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/> <!-- no theme -->
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="41" width="1"/>
+			<top num="188" height="0"/>
+			<right num="24" width="1"/>
+			<bottom num="66" height="1"/>
+		</rect>
+	</background>
+
+
+	<!-- The Scrollup Button -->
+	<icontrol source="scrollup" name="scrollup" visible="%display.scrollbar_needed%*%ft.details%">
+		<rect>
+			<left num="40" width="1"/>
+			<top num="189" height="0"/>
+			<right num="24" width="1"/>
+			<bottom num="205" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollbar -->
+	<icontrol source="scroll" name="scrollbar" visible="%display.scrollbar_needed%*%ft.details%">
+		<rect>
+			<left num="40" width="1"/>
+			<top num="206" height="0"/>
+			<right num="24" width="1"/>
+			<bottom num="84" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="scrolldown" name="scrolldown" visible="%display.scrollbar_needed%*%ft.details%">
+		<rect>
+			<left num="40" width="1"/>
+			<top num="83" height="1"/>
+			<right num="24" width="1"/>
+			<bottom num="67" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="progressbar" name="progress" visible="!(%transfer.aborted%||%transfer.error%)">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="150" height="0"/>
+			<right num="378" width="0"/>
+			<bottom num="167" height="0"/>
+		</rect>
+	</icontrol>
+
+	<background name="background" visible="%transfer.aborted%||%transfer.error%">
+		<source name="transfer-asset" left="0" top="30" right="356" bottom="45"/> <!-- no theme -->
+		<rect>
+			<left num="22" width="0"/>
+			<top num="150" height="0"/>
+			<right num="378" width="0"/>
+			<bottom num="165" height="0"/>
+		</rect>
+	</background>
+
+	<!-- Big status message up top -->
+	<icontrol source="statustext" name="status" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="0" height="0"/>
+			<right num="40" width="1"/>
+			<bottom num="40" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Filename -->
+	<icontrol source="label-transfer-name" name="label-transfer-name" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="50" height="0"/>
+			<right num="114" width="0"/>
+			<bottom num="65" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="status-transfer-text" name="filename" visible="1">
+		<rect>
+			<left num="122" width="0"/>
+			<top num="50" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="65" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Sender -->
+	<icontrol source="label-transfer-from" name="label-transfer-from" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="65" height="0"/>
+			<right num="114" width="0"/>
+			<bottom num="80" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="icon-holder-switcher" name="sender-medium" visible="1">
+		<rect>
+			<left num="122" width="0"/>
+			<top num="67" height="0"/>
+			<right num="134" width="0"/>
+			<bottom num="79" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="status-transfer-text" name="sender" visible="1">
+		<rect>
+			<left num="139" width="0"/>
+			<top num="65" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="80" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Recipient -->
+	<icontrol source="label-transfer-to" name="label-transfer-to" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="80" height="0"/>
+			<right num="114" width="0"/>
+			<bottom num="95" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="icon-holder-switcher" name="medium" visible="1">
+		<rect>
+			<left num="122" width="0"/>
+			<top num="82" height="0"/>
+			<right num="134" width="0"/>
+			<bottom num="94" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="status-transfer-text" name="recipient" visible="1">
+		<rect>
+			<left num="139" width="0"/>
+			<top num="80" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="95" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- endtime -->
+	<icontrol source="label-transfer-time" name="label-transfer-time" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="95" height="0"/>
+			<right num="114" width="0"/>
+			<bottom num="110" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="status-transfer-text" name="endtime" visible="1">
+		<rect>
+			<left num="122" width="0"/>
+			<top num="95" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="110" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- bytesprogress -->
+	<icontrol source="label-transfer-bytes" name="label-transfer-bytes" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="110" height="0"/>
+			<right num="114" width="0"/>
+			<bottom num="125" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="status-transfer-text" name="sentFileSizePercentage" visible="1">
+		<rect>
+			<left num="122" width="0"/>
+			<top num="110" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="125" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- kbytespersecond -->
+	<icontrol source="label-transfer-speed" name="label-transfer-speed" visible="1">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="125" height="0"/>
+			<right num="114" width="0"/>
+			<bottom num="140" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="status-transfer-text" name="kbytespersecond" visible="1">
+		<rect>
+			<left num="122" width="0"/>
+			<top num="125" height="0"/>
+			<right num="22" width="1"/>
+			<bottom num="140" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="thumbswitcher" name="thumbnail" visible="1">
+		<rect>
+			<left num="36" width="1"/>
+			<top num="4" height="0"/>
+			<right num="4" width="1"/>
+			<bottom num="36" height="0"/>
+		</rect>
+	</icontrol> 
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="skin-asset" left="216" top="0" right="247" bottom="39"/> <!-- no theme -->
+		<slice left="216" top="4" right="247" bottom="35"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="43" height="1"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="genericbutton" name="cancel" visible="(%transfer.pending%||%transfer.transferring%)*(!%transfer.cancel_pending%*!%transfer.error%)">
+		<rect>
+			<left num="109" width="1"/>
+			<top num="33" height="1"/>
+			<right num="23" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="genericbutton" name="filetransfer-close" visible="!((%transfer.pending%||%transfer.transferring%)*(!%transfer.cancel_pending%*!%transfer.error%))">
+		<rect>
+			<left num="109" width="1"/>
+			<top num="33" height="1"/>
+			<right num="23" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="genericdefaultbutton" name="execute" visible="%transfer.incoming%*%transfer.complete%"> <!-- should be the new open button -->
+		<rect>
+			<left num="199" width="1"/>
+			<top num="33" height="1"/>
+			<right num="113" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="genericdefaultbutton" name="resend" visible="%transfer.outgoing%*(%transfer.error%||%transfer.aborted%)">
+		<rect>
+			<left num="199" width="1"/>
+			<top num="33" height="1"/>
+			<right num="113" width="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="lessdetailsbutton" name="lessdetailsbutton" visible="%ft.details%">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="33" height="1"/>
+			<right num="150" width="0"/>
+			<bottom num="14" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="moredetailsbutton" name="moredetailsbutton" visible="!%ft.details%">
+		<rect>
+			<left num="22" width="0"/>
+			<top num="33" height="1"/>
+			<right num="150" width="0"/>
+			<bottom num="14" height="1"/>
+		</rect>
+	</icontrol>
+</component>

@@ -1,0 +1,355 @@
+<component name="genericpanel" minx="10" miny="25">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="102" top="35" right="204" bottom="60"/> <!-- theme -->
+		<slice left="103" top="36" right="203" bottom="59"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="%panel.hover%">
+		<source name="baralerts-asset" left="102" top="60" right="204" bottom="85"/> <!-- theme -->
+		<slice left="107" top="73" right="199" bottom="83"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="news-icon" name="news-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="6" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panel-menu" name="panel-menu" visible="%panel.hover%">
+		<rect>
+			<left num="16" width="1"/> 
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!--<icontrol source="dc-panel-rollup" name="clickrollup" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="6" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>-->
+
+	<icontrol source="panelheadfont" name="panel_title" visible="1">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="4" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panelcontent" name="section" visible="1">
+		<rect>
+			<left num="0" width="0"/> 
+			<top num="28" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+
+<component name="genericpanel-rolled" minx="10" miny="25" maxy="25">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="102" top="35" right="204" bottom="60"/> <!-- theme -->
+		<slice left="103" top="36" right="203" bottom="59"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="%panel.hover%">
+		<source name="baralerts-asset" left="102" top="60" right="204" bottom="85"/> <!-- theme -->
+		<slice left="107" top="73" right="199" bottom="83"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="news-icon" name="news-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="6" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panel-menu" name="panel-menu" visible="%panel.hover%">
+		<rect>
+			<left num="16" width="1"/> 
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!--<icontrol source="dc-panel-rolldown" name="clickrolldown" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="6" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>-->
+
+	<icontrol source="panelheadfont" name="panel_title" visible="1">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="4" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="mailpanel" minx="10" miny="25">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="102" top="35" right="204" bottom="60"/> <!-- theme -->
+		<slice left="103" top="36" right="203" bottom="59"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="%panel.hover%">
+		<source name="baralerts-asset" left="102" top="60" right="204" bottom="85"/> <!-- theme -->
+		<slice left="107" top="73" right="199" bottom="83"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="mail-icon" name="mail-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="6" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panel-menu" name="panel-menu" visible="%panel.hover%">
+		<rect>
+			<left num="16" width="1"/> 
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!--<icontrol source="dc-panel-rollup" name="clickrollup" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="6" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>-->
+
+	<icontrol source="panelheadfont" name="panel_title" visible="1">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="4" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panelcontent" name="section" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="28" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="mailpanel-rolled" minx="10" miny="25" maxy="25">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="102" top="35" right="204" bottom="60"/> <!-- theme -->
+		<slice left="103" top="36" right="203" bottom="59"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="%panel.hover%">
+		<source name="baralerts-asset" left="102" top="60" right="204" bottom="85"/> <!-- theme -->
+		<slice left="107" top="73" right="199" bottom="83"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="mail-icon" name="mail-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="6" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panel-menu" name="panel-menu" visible="%panel.hover%">
+		<rect>
+			<left num="16" width="1"/> 
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!--<icontrol source="dc-panel-rolldown" name="clickrolldown" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="6" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>-->
+
+	<icontrol source="panelheadfont" name="panel_title" visible="1">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="4" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="contactspanel" minx="10" miny="25">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="102" top="35" right="204" bottom="60"/> <!-- theme -->
+		<slice left="103" top="36" right="203" bottom="59"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="%panel.hover%">
+		<source name="baralerts-asset" left="102" top="60" right="204" bottom="85"/> <!-- theme -->
+		<slice left="107" top="73" right="199" bottom="83"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="contacts-icon" name="contacts-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="6" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panel-menu" name="panel-menu" visible="%panel.hover%">
+		<rect>
+			<left num="16" width="1"/> 
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!--<icontrol source="dc-panel-rollup" name="clickrollup" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="6" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>-->
+
+	<icontrol source="panelheadfont" name="panel_title" visible="1">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="4" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panelcontent" name="section" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="28" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="contactspanel-rolled" minx="10" miny="25" maxy="25">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="102" top="35" right="204" bottom="60"/> <!-- theme -->
+		<slice left="103" top="36" right="203" bottom="59"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="%panel.hover%">
+		<source name="baralerts-asset" left="102" top="60" right="204" bottom="85"/> <!-- theme -->
+		<slice left="107" top="73" right="199" bottom="83"/>
+		<rect>
+			<bottom num="25" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="contacts-icon" name="contacts-icon" visible="1">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="6" height="0"/>
+			<right num="19" width="0"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="panel-menu" name="panel-menu" visible="%panel.hover%">
+		<rect>
+			<left num="16" width="1"/> 
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!--<icontrol source="dc-panel-rolldown" name="clickrolldown" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="6" height="0"/>
+			<right num="17" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>-->
+
+	<icontrol source="panelheadfont" name="panel_title" visible="1">
+		<rect>
+			<left num="27" width="0"/>
+			<top num="4" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="19" height="0"/>
+		</rect>
+	</icontrol>
+</component>
+
+

@@ -1,0 +1,86 @@
+<component name="video-window">
+	&resize;
+	&windowborder;
+	&minclose;
+
+	<icontrol source="tab-name" name="title" visible="!%system.windows.vista.glass%">
+		<rect>
+			<left num="29" width="0"/>
+			<top num="6" height="0"/>
+			<right num="137" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="video-window-inside" name="video-window-inside" visible="1">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+
+</component>
+
+<component name="video-window-inside">
+	<color red="0" green="0" blue="0"/>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="baralerts-asset" left="0" top="35" right="102" bottom="75"/> <!-- theme -->
+		<slice left="2" top="60" right="100" bottom="73"/>
+		<rect>
+			<top num="34" height="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="videoNormal" name="video">
+		<rect>
+			<bottom num="34" height="1"/>
+		</rect>
+	</icontrol>
+	<icontrol source="video-framebar" name="video-framebar">
+		<rect>
+			<top num="28" height="1"/>
+			<bottom num="6" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+
+<component name="video-framebar-pause" defaultx="22" defaulty="22">
+	<icontrol source="btnTimeControls-Pause" name="video-pause" />
+</component>
+
+<component name="video-framebar-filter" defaultx="26" defaulty="22">
+	<frame source="video-framebar-separator" name="video-framebar-separator">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="2" height="0"/>
+			<right num="2" width="0"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</frame>
+
+	<icontrol source="btnVideoChat-Filter" name="video-filters">
+		<rect>
+			<left num="4" width="0"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="video-framebar-who" defaultx="22" defaulty="22">
+	<icontrol source="btnVideoChat-Broadcast-Who" name="video-broadcast-who">
+	</icontrol>
+</component>
+
+<component name="video-framebar-separator" defaultx="%iniToolbarSepWidth;"> <!-- blank??? - no theme -->
+	<!-- <background stretch="0">
+		<source name="" left="93" top="14" right="95" bottom="32"/> 
+		<slice left="93" top="14" right="95" bottom="32"/>
+	</background> -->
+</component>
+
+
+

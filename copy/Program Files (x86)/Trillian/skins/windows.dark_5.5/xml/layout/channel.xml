@@ -1,0 +1,427 @@
+<!-- The Channel Window - as used by IRC and any medium that supports more than 2 people chatting -->
+
+<component name="channel" minx="300" miny="200" defaultx="415" defaulty="520">
+	<color red="0" green="0" blue="0"/>
+
+	<background transparent="1" middle="1" stretch="0" visible="%message.actions.toolbar%">
+		<source name="baralerts-asset" left="0" top="75" right="102" bottom="113"/>
+		<slice left="2" top="100" right="100" bottom="104"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="37 + ((%message.topic.capable%)*26)" height="0"/>
+		</rect>
+	</background>
+
+	<background transparent="1" middle="1" stretch="0" visible="!%message.actions.toolbar%*%message.topic.capable%">
+		<source name="baralerts-asset" left="0" top="75" right="102" bottom="113"/>
+		<slice left="2" top="100" right="100" bottom="104"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="((%message.topic.capable%)*37)" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="toolframebar" name="toolframebar" visible="%message.actions.toolbar%">
+		<rect>
+			<left num="5" width="0"/>
+			<top num="5 + ((%message.topic.capable%)*26)" height="0"/>
+			<right num="60 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<bottom num="29 + ((%message.topic.capable%)*26)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="userlistshowbutton" name="userlistshow" visible="%message.actions.toolbar%*%userlist.visible%">
+		<rect>
+			<left num="45 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<top num="5 + ((%message.topic.capable%)*26)" height="0"/>
+			<right num="17 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<bottom num="29 + ((%message.topic.capable%)*26)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="userlisthidebutton" name="userlisthide" visible="%message.actions.toolbar%*!%userlist.visible%">
+		<rect>
+			<left num="45 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<top num="5 + ((%message.topic.capable%)*26)" height="0"/>
+			<right num="17 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<bottom num="29 + ((%message.topic.capable%)*26)" height="0"/>
+		</rect>
+	</icontrol>
+
+
+	<icontrol source="morebutton" name="view-menu" visible="!%message.multiple%*%message.actions.toolbar%">
+		<rect>
+			<left num="58 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<top num="5 + ((%message.topic.capable%)*26)" height="0"/>
+			<right num="45 - ((!%window.has_hideAvailable%||%window.tabbed%)*17)" width="1"/>
+			<bottom num="29 + ((%message.topic.capable%)*26)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="hidebutton" name="hide" visible="%message.actions.toolbar%*%window.has_hideAvailable%*!%window.tabbed%">
+		<rect>
+			<left num="15" width="1"/>
+			<top num="5 + ((%message.topic.capable%)*26)" height="0"/>
+			<right num="2" width="1"/>
+			<bottom num="29 + ((%message.topic.capable%)*26)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="mediumbuttonchannel" name="medium-button" visible="%message.topic.capable%*!%topic-edit.focus%">
+		<rect>
+			<left num="33" width="1"/>
+			<top num="4" height="0"/>
+			<right num="9" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="topic-topic" name="channel" visible="%message.topic.capable%">
+		<rect>
+			<left num="14" width="0"/>
+			<top num="7" height="0"/>
+			<right num="(%channel.desired_width%&gt;%window.width%-100)*(%window.width%-100)+
+				    (%channel.desired_width%&lt;=%window.width%-100)*(14 + %channel.desired_width%)" width="0"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" stretch="1" middle="1" visible="(%channel-edit.focus%)">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/>
+		<slice left="3" top="63" right="157" bottom="79"/>
+		<rect>
+			<left num="5" width="0"/>
+			<top num="5" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="27" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="yourname" name="channel-edit" visible="(%channel-edit.focus%)">
+		<rect>
+			<left num="14" width="0"/>
+			<top num="8" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+	<icontrol source="msg-window-status" name="topic" visible="%message.topic.capable%*!%topic-edit.focus%*!%channel-edit.focus%">
+		<rect>
+			<left num="(%channel.desired_width%&gt;%window.width%-100)*(%window.width%-95)+
+				    (%channel.desired_width%&lt;=%window.width%-100)*(14 + %channel.desired_width% + 5)" width="0"/>
+			<top num="7" height="0"/>
+			<right num="40" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<background transparent="1" stretch="1" middle="1" visible="(%topic-edit.focus%)">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/>
+		<slice left="3" top="63" right="157" bottom="79"/>
+		<rect>
+			<left num="(%channel.desired_width%&gt;%window.width%-100)*(%window.width%-95)+
+				    (%channel.desired_width%&lt;=%window.width%-100)*(13 + %channel.desired_width% + 5) - 3" width="0"/>
+			<top num="5" height="0"/>
+			<right num="5" width="1"/>
+			<bottom num="27" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="yourname" name="topic-edit" visible="(%topic-edit.focus%)">
+		<rect>
+			<left num="(%channel.desired_width%&gt;%window.width%-100)*(%window.width%-95)+
+				    (%channel.desired_width%&lt;=%window.width%-100)*(13 + %channel.desired_width% + 6)" width="0"/>
+			<top num="8" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="24" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="alertbar" name="alertbar" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="%message.actions.toolbar% * 32 + ((%message.topic.capable%)*26)" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="%message.actions.toolbar% * 32 + ((%message.topic.capable%)*26) + %alertbar.desired_height%" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="message-audiochat" name="message-audiochat" visible="%message.audio.connected% * %message.audio%">  
+		<rect>
+			<left num="0" width="0"/> 
+			<top num="30*%message.actions.toolbar% + ((%message.topic.capable%)*26) + %alertbar.desired_height%" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="30*%message.actions.toolbar% + ((%message.topic.capable%)*26) + %alertbar.desired_height% + 34" height="0"/>
+		</rect>
+	</frame>
+
+	<frame source="frame1-main" name="frame1-main">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="32*%message.actions.toolbar% + (7*!%message.actions.toolbar%*%message.topic.capable%) + ((%message.topic.capable%)*26) + %alertbar.desired_height% + (%message.audio.connected% * (%message.audio%) * 31)" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" orientation="above" source="join1-4"/>
+		</rect>
+	</frame>
+
+	<anchor name="join1-4" type="northsouth" saveable="yes">
+		<location type="default" num="51+%edit.desired_height%-28" height="1"/>
+		<location type="min" num="70" height="0"/>
+		<location type="max" num="51+%edit.desired_height%-28" height="1"/>
+		<resize type="northsouth">
+			<rtype type="northsouth">
+				<region type="rectangle" combinetype="or">
+					<rect>
+						<left num="0" width="0"/>
+						<top num="10" orientation="above" source="join1-4"/>
+						<right num="0" width="1"/>
+						<bottom num="10" orientation="below" source="join1-4"/>
+					</rect>
+				</region>
+			</rtype>
+		</resize>
+	</anchor>
+
+	<frame source="frame4-edittext" name="frame4-edittext">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" orientation="below" source="join1-4"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="frame1-main">
+
+	<frame source="frame3-chattext" name="frame3-chattext">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" orientation="left" source="join3-2"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame> 
+
+<!-- East-West Anchor -->
+	<anchor name="join3-2" type="westeast" saveable="yes">
+		<location type="default" num="110*(%userlist.visible% || !%message.actions.toolbar%)" width="1"/>
+		<location type="min" num="100+(%window.width%*(!%userlist.visible% &amp;&amp; %message.actions.toolbar%))" width="0"/>
+		<location type="max" num="100*(%userlist.visible% || !%message.actions.toolbar%)" width="1"/>
+		<resize type="westeast">
+			<rtype type="westeast">
+				<region type="rectangle" combinetype="or">
+					<rect>
+						<left num="10" orientation="left" source="join3-2"/>
+						<top num="30" height="0"/>
+						<right num="10" orientation="right" source="join3-2"/>
+						<bottom num="0" height="1"/>
+					</rect>
+				</region>
+			</rtype>
+		</resize>
+	</anchor>
+
+<!-- FRAME 2 - Holds Userlist -->
+	<frame source="frame2-userlist" name="frame2-userlist" visible="%userlist.visible% || !%message.actions.toolbar%">
+		<rect>
+			<left num="0" orientation="right" source="join3-2"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</frame>
+
+
+
+
+</component>
+
+
+<component name="frame2-userlist">
+	<background transparent="1" middle="1">
+		<source name="skin-asset" left="247" top="0" right="314" bottom="13"/>
+		<slice left="248" top="1" right="313" bottom="12"/>
+	</background>
+
+	<icontrol source="loading-switcher" name="nicklist-loading" visible="%nicklist.loading%">
+		<rect>
+			<left num="2" width="0"/>
+			<top num="2" height="0"/>
+			<right num="2" width="1"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</icontrol>
+	
+	<!-- Nicklist -->
+	<icontrol source="display-nicklist" name="nicklist" visible="!%nicklist.loading%">
+		<rect>
+			<left num="1" width="0"/>
+			<top num="1" height="0"/>
+			<right num="0+(%nicklist.scrollbar_needed%*16)" width="1"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</icontrol>
+
+
+	<!-- Scroll bar background -->
+	<background transparent="1" middle="1" stretch="1" visible="%nicklist.scrollbar_needed%">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/>
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="17" width="1"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="scrollup" name="nick_scrollup" visible="1">
+		<rect>
+			<left num="1+(%nicklist.scrollbar_needed%*15)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="17" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Msg Scroll Bar -->
+	<icontrol source="scroll" name="nick_scrollbar" visible="1">
+		<rect>
+			<left num="%nicklist.scrollbar_needed%*16" width="1"/>
+			<top num="18" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="18" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="scrolldown" name="nick_scrolldown" visible="1">
+		<rect>
+			<left num="%nicklist.scrollbar_needed%*16" width="1"/>
+			<top num="17" height="1"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="frame3-chattext">
+
+
+	<!-- Chat text -->
+	<icontrol source="display-bubbles" name="display" visible="1">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="1+%display.scrollbar_needed%*16" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+
+
+	<!-- Scroll bar background -->
+	<background transparent="1" middle="1" stretch="1" visible="%display.scrollbar_needed%">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/>
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="17" width="1"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="scrollup" name="scrollup" visible="1">
+		<rect>
+			<left num="1+(%display.scrollbar_needed%*15)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="17" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Msg Scroll Bar -->
+	<icontrol source="scroll" name="scrollbar" visible="1">
+		<rect>
+			<left num="%display.scrollbar_needed%*16" width="1"/>
+			<top num="18" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="18" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="scrolldown" name="scrolldown" visible="1">
+		<rect>
+			<left num="%display.scrollbar_needed%*16" width="1"/>
+			<top num="17" height="1"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+
+</component>
+
+<component name="frame4-edittext">
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="0" top="35" right="102" bottom="75"/>
+		<slice left="2" top="60" right="100" bottom="73"/>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/>
+		<slice left="3" top="63" right="157" bottom="79"/>
+		<rect>
+			<left num="6" width="0"/>
+			<top num="35-28" height="0"/>
+			<right num="6+(%edit.sendbutton.needed%*96*!%edit.disabled%)" width="1"/>
+			<bottom num="6" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="editframebar" name="editframebar" visible="%message.edit.toolbar%">
+		<rect>
+			<left num="59+((%edit.sendbutton.needed%||%message.draw%)*%message.edit.capable%*96)" width="1"/>
+			<top num="40-(!%message.draw%*28)-4" height="0"/>
+			<right num="1+((%edit.sendbutton.needed%||%message.draw%)*%message.edit.capable%*96)" width="1"/>
+			<bottom num="7" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- Edit Text bit where you type -->
+	<icontrol source="edit-console" name="edit" visible="%message.edit.capable%">
+		<rect>
+			<left num="11" width="0"/>
+			<top num="40-28" height="0"/>
+			<right num="12+((%edit.sendbutton.needed%||%message.draw%)*%message.edit.capable%*96)+(%message.edit.toolbar%*58)" width="1"/>
+			<bottom num="7" height="1"/>
+		</rect>
+	</icontrol>
+	
+	<frame source="message-edit-disabled" name="message-edit-disabled" visible="!%message.edit.capable% || %edit.disabled%">
+		<rect>
+			<left num="7" width="0"/>
+			<top num="36-28" height="0"/>
+			<right num="7" width="1"/>
+			<bottom num="7" height="1"/>
+		</rect>
+	</frame>
+
+	<!-- send button - resizes with the edit console -->
+	<icontrol source="sendbutton" name="send_message" visible="%edit.sendbutton.needed% * %message.edit.capable%">
+		<rect>
+			<left num="94" width="1"/>
+			<top num="35-28" height="0"/>
+			<right num="8" width="1"/>
+			<bottom num="6" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+

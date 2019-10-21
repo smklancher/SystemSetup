@@ -1,0 +1,41 @@
+<!-- Astra Fix -->
+
+<!ENTITY PLUGmenuiconholderIcons "&iclToolbarServicesMini;">
+<!ENTITY PLUGstatusIcons ' 
+	&iclListServices;
+	&iclListServicesEvents;
+	&iclListServicesExtra;
+	&iclListServicesHelper;
+	&iclListShortcuts;
+	&iclListTasks;
+	&iclListIRCNick;
+'>
+<!ENTITY PLUGtaskbarIcons "&iclSwitcherServices16;">
+<!ENTITY PLUGmediumIcons "&iclSwitcherServices16;">
+<!ENTITY PLUGmenuIcons '
+	&iclMenuIconsTiny;
+	&iclMenuServicesTiny;
+'>
+
+<!-- define default stixe entities for things we won't be needing -->
+<!ENTITY % StyleMain ''>
+<!ENTITY % ISt ''>
+<!ENTITY % InterfaceMain ''>
+
+<!ENTITY % TrillianDTD SYSTEM "../../stixe/trillian.dtd">
+%TrillianDTD;
+
+<!-- if loading the iconpack failed -->
+<!ENTITY ICONS SYSTEM "../../stixe/icons/Default/main.xml">
+
+<!-- 
+	PLUGstatusIcons: Contact List's Status icons
+	PLUGmenuiconholderIcons: New iconholder icons (switcher backgrounds)
+	PLUGmediumIcons: Medium switcher icons
+	PLUGtaskbarIcons: Container Taskbar icons
+	PLUGmenuIcons: Icons for the context menu
+-->			
+
+
+
+

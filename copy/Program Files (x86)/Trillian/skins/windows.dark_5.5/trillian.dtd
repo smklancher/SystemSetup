@@ -1,0 +1,520 @@
+<?xml encoding="US-ASCII"?>
+
+<!-- @version:  -->
+
+<!ELEMENT trillian (skindesc,bitmap*,font*,component+)>
+
+<!ELEMENT bitmap EMPTY>
+<!ATTLIST bitmap
+  name CDATA #IMPLIED
+  file CDATA #IMPLIED>
+
+<!ELEMENT font EMPTY>
+<!ATTLIST font 
+  name CDATA #IMPLIED
+  file CDATA #IMPLIED
+  face CDATA #IMPLIED>
+
+<!ELEMENT component (icontrol*,mainregion,resize,backcolor,background)>
+
+<!ELEMENT icontrol (rect)>
+<!ATTLIST icontrol
+  source  CDATA #IMPLIED
+  name    CDATA #IMPLIED
+  visible CDATA #IMPLIED>
+
+<!ELEMENT rect (left,right,top,bottom)>
+
+<!ELEMENT left EMPTY>
+<!ATTLIST left
+  num   CDATA #IMPLIED
+  width CDATA #IMPLIED>
+<!ELEMENT right EMPTY>
+<!ATTLIST right
+  num   CDATA #IMPLIED
+  width CDATA #IMPLIED>
+<!ELEMENT top EMPTY>
+<!ATTLIST top
+  num    CDATA #IMPLIED
+  height CDATA #IMPLIED>
+<!ELEMENT bottom EMPTY>
+<!ATTLIST bottom
+  num    CDATA #IMPLIED
+  height CDATA #IMPLIED>
+
+<!ELEMENT mainregion (region*)>
+
+<!ELEMENT region (rect*,pt*,extra*)>
+<!ATTLIST region
+  type CDATA #IMPLIED
+  combinetype CDATA #IMPLIED>
+
+<!ELEMENT pt EMPTY>
+<!ATTLIST pt 
+  x CDATA #IMPLIED
+  y CDATA #IMPLIED
+  width CDATA #IMPLIED
+  height CDATA #IMPLIED>
+
+<!ELEMENT extra EMPTY>
+<!ATTLIST extra
+  name CDATA #IMPLIED
+  value CDATA #IMPLIED>
+
+<!ELEMENT resize (rtype*)>
+<!ATTLIST resize
+  type CDATA #IMPLIED>
+
+<!ELEMENT rtype (region*,rect*)>
+<!ATTLIST rtype 
+  type CDATA #IMPLIED>
+
+<!ELEMENT backcolor EMPTY>
+<!ATTLIST backcolor
+  red CDATA #IMPLIED
+  green CDATA #IMPLIED
+  blue CDATA #IMPLIED>
+
+<!ELEMENT background (source,pt)>
+<!ATTLIST background
+  name CDATA #IMPLIED>
+
+<!ELEMENT source EMPTY>
+<!ATTLIST source
+  name CDATA #IMPLIED
+  left CDATA #IMPLIED
+  right CDATA #IMPLIED
+  top CDATA #IMPLIED
+  bottom CDATA #IMPLIED>
+
+<!-- Defines all the images loaded -->
+<!ENTITY files SYSTEM "xml/files.xml">
+
+<!-- Layout XML Files -->
+
+<!ENTITY social SYSTEM "xml/layout/social.xml">
+<!ENTITY channel SYSTEM "xml/layout/channel.xml">
+<!ENTITY channeluntabbed SYSTEM "xml/layout/channel-untabbed.xml">
+<!ENTITY console SYSTEM "xml/layout/console.xml">
+<!ENTITY consoleuntabbed SYSTEM "xml/layout/console-untabbed.xml">
+<!ENTITY console-irc SYSTEM "xml/layout/console-irc.xml">
+<!ENTITY console-irc-untabbed SYSTEM "xml/layout/console-irc-untabbed.xml">
+<!ENTITY contactlist SYSTEM "xml/layout/contactlist.xml">
+<!ENTITY container SYSTEM "xml/layout/container.xml">
+<!ENTITY groupinvite SYSTEM "xml/layout/groupinvite.xml">
+<!ENTITY menus SYSTEM "xml/layout/menus.xml">
+<!ENTITY messagewindow SYSTEM "xml/layout/messagewindow.xml">
+<!ENTITY messagewindowuntabbed SYSTEM "xml/layout/messagewindow-untabbed.xml">
+<!ENTITY panels SYSTEM "xml/layout/panels.xml">
+<!ENTITY alerts SYSTEM "xml/layout/alerts.xml">
+<!ENTITY template SYSTEM "xml/layout/template.xml">
+<!ENTITY transfer SYSTEM "xml/layout/transfer.xml">
+<!ENTITY transfermore SYSTEM "xml/layout/transfer-more.xml">
+<!ENTITY add SYSTEM "xml/layout/add.xml">
+<!ENTITY tooltips SYSTEM "xml/layout/tooltips.xml">
+<!ENTITY windowborder SYSTEM "xml/layout/windowborder.xml">
+<!ENTITY video SYSTEM "xml/layout/video.xml">
+
+<!-- Commonly called xml -->
+<!ENTITY groupheaderbackground SYSTEM "xml/common/groupheaderbg.xml">
+<!ENTITY resize SYSTEM "xml/common/resize.xml">
+
+<!-- Controls/Prefs -->
+<!ENTITY channelcontrols SYSTEM "xml/controls/channelcontrols.xml">
+<!ENTITY clistcontrols SYSTEM "xml/controls/contactlistcontrols.xml">
+<!ENTITY containercontrols SYSTEM "xml/controls/containercontrols.xml">
+<!ENTITY fontcontrols SYSTEM "xml/controls/fontcontrols.xml">
+<!ENTITY globalcontrols SYSTEM "xml/controls/globalcontrols.xml">
+<!ENTITY listitemcontrol SYSTEM "xml/controls/listitemcontrol.xml">
+<!ENTITY menucontrols SYSTEM "xml/controls/menucontrols.xml">
+<!ENTITY messagecontrols SYSTEM "xml/controls/messagecontrols.xml">
+<!ENTITY panelcontrols SYSTEM "xml/controls/panelcontrols.xml">
+<!ENTITY addcontrols SYSTEM "xml/controls/addcontrols.xml">
+<!ENTITY alertscontrols SYSTEM "xml/controls/alertscontrols.xml">
+<!ENTITY templatecontrols SYSTEM "xml/controls/templatecontrols.xml">
+<!ENTITY transfercontrols SYSTEM "xml/controls/transfercontrols.xml">
+<!ENTITY tooltipcontrols SYSTEM "xml/controls/tooltipcontrols.xml">
+<!ENTITY socialcontrols SYSTEM "xml/controls/socialcontrols.xml">
+<!ENTITY videocontrols SYSTEM "xml/controls/videocontrols.xml">
+
+<!-- Variables -->
+<!ENTITY windowedge '8'>
+<!ENTITY avatarwidthtiny '39'>
+<!ENTITY avatarwidthsmall '59'>
+<!ENTITY avatarwidthmedium '69'>
+<!ENTITY avatarwidthlarge '85'>
+<!ENTITY profilenamewidth '75'>
+<!ENTITY statusbuttonwidth '37'>
+<!ENTITY awaymessagewidth '100'>
+
+<!ENTITY standardbutton '
+	<!-- Flat -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="flat">
+		<source name="buttons-asset" left="0" top="24" right="55" bottom="48"/>
+		<slice left="6" top="36" right="47" bottom="42"/>
+	</background>
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="0" top="48" right="55" bottom="72"/>
+		<slice left="6" top="60" right="47" bottom="66"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="0" top="72" right="55" bottom="96"/>
+		<slice left="6" top="84" right="47" bottom="90"/>
+	</background>
+	  
+	<!-- Disabled -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="disabled">
+		<source name="buttons-asset" left="0" top="144" right="55" bottom="168"/>
+		<slice left="6" top="146" right="49" bottom="165"/>
+	</background>
+'>
+
+<!ENTITY standardbutton-noflat '
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="0" top="48" right="55" bottom="72"/>
+		<slice left="6" top="60" right="47" bottom="66"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="0" top="72" right="55" bottom="96"/>
+		<slice left="6" top="84" right="47" bottom="90"/>
+	</background>
+	  
+	<!-- Disabled -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="disabled">
+		<source name="buttons-asset" left="0" top="144" right="55" bottom="168"/>
+		<slice left="6" top="146" right="49" bottom="165"/>
+	</background>
+'>
+
+<!ENTITY defaultbutton '
+	<!-- Flat -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="flat">
+		<source name="buttons-asset" left="0" top="0" right="55" bottom="24"/>
+		<slice left="6" top="12" right="47" bottom="18"/>
+	</background>
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="0" top="48" right="55" bottom="72"/>
+		<slice left="6" top="60" right="47" bottom="66"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="0" top="72" right="55" bottom="96"/>
+		<slice left="6" top="84" right="47" bottom="90"/>
+	</background>
+	  
+	<!-- Disabled -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="disabled">
+		<source name="buttons-asset" left="0" top="144" right="55" bottom="168"/>
+		<slice left="6" top="146" right="49" bottom="165"/>
+	</background>
+'>
+
+<!ENTITY minmaxclosehide '
+	<icontrol source="hidebutton-combined-left" name="hide" visible="&#37;window.has_hideAvailable&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="137 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="106 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="minimizebutton-combined" name="minimize" visible="!&#37;window.has_hideAvailable&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="108 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="minimizebutton-combined-middle" name="minimize" visible="&#37;window.has_hideAvailable&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="106 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="maximizebutton-combined" name="maximize" visible="!&#37;window.maximized&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="maximizedbutton-combined" name="maximize" visible="&#37;window.maximized&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="closebutton-combined" name="close" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+'>
+
+<!ENTITY minmaxclosehideaero '
+	<icontrol source="hidebutton-combined-left" name="hide" visible="&#37;window.has_hideAvailable&#37;">
+		<rect>
+			<left num="137 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="106 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="minimizebutton-combined" name="minimize" visible="!&#37;window.has_hideAvailable&#37;">
+		<rect>
+			<left num="108 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="minimizebutton-combined-middle" name="minimize" visible="&#37;window.has_hideAvailable&#37;">
+		<rect>
+			<left num="106 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="maximizebutton-combined" name="maximize" visible="!&#37;window.maximized&#37;">
+		<rect>
+			<left num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="maximizedbutton-combined" name="maximize" visible="&#37;window.maximized&#37;">
+		<rect>
+			<left num="77 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="closebutton-combined" name="close" visible="1">
+		<rect>
+			<left num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+'>
+<!ENTITY minclose '
+	<icontrol source="minimizebutton-combined" name="minimize" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="79 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="closebutton-combined" name="close" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+'>
+
+<!ENTITY minmaxhide '
+	<icontrol source="minimizebutton-combined" name="minimize" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="107 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="76 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="maximizebutton-combined" name="maximize" visible="!&#37;window.maximized&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="76 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="47 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="maximizedbutton-combined" name="maximize" visible="&#37;window.maximized&#37;*!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="76 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="47 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="hidebutton-combined" name="hide" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="47 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+'>
+
+<!ENTITY hidemindetachaero '
+	<icontrol source="minimizebutton-combined" name="minimize" visible="&#37;window.has_taskbarEntry&#37;">
+		<rect>
+			<left num="78 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="47 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="hidebutton-combined" name="hide" visible="&#37;window.has_taskbarEntry&#37;*&#37;window.has_hideAvailable&#37;">
+		<rect>
+			<left num="47 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="detachbutton-standalone" name="detach" visible="&#37;window.has_detachAvailable&#37;">
+		<rect>
+			<left num="32 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="hidebutton-standalone" name="hide" visible="!&#37;window.has_taskbarEntry&#37;*&#37;window.has_hideAvailable&#37;">
+		<rect>
+			<left num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+'>
+
+<!ENTITY minclose '
+	<icontrol source="minimizebutton-combined" name="minimize" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="79 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="closebutton-combined" name="close" visible="!&#37;system.windows.vista.glass&#37;">
+		<rect>
+			<left num="48 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<top num="1" height="0"/>
+			<right num="0 + ((!&#37;system.windows.vista.glass&#37;) * 6)" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+'>
+
+<!ENTITY hover-button-art '
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="0" top="96" right="55" bottom="120"/> <!-- theme -->
+		<slice left="3" top="108" right="52" bottom="115"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="0" top="120" right="55" bottom="144"/> <!-- theme -->
+		<slice left="3" top="132" right="52" bottom="139"/>
+	</background>
+'>
+
+<!ENTITY hover-button-art-inset '
+	<!-- Flat -->
+		<!-- No flat images needed -->
+
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="0" top="96" right="55" bottom="120"/> <!-- theme -->
+		<slice left="3" top="108" right="52" bottom="115"/>
+		<rect>
+			<left num="1" width="0"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="0" top="120" right="55" bottom="144"/> <!-- theme -->
+		<slice left="3" top="132" right="52" bottom="139"/>
+		<rect>
+			<left num="1" width="0"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+'>
+
+<!ENTITY button-dark-blue '
+red="29" green="58" blue="87"
+'>
+
+
+<!ENTITY Emoticon-Extensions '
+<color name="normal-back" red="0" green="0" blue="0"/>		
+<color name="section-fore" red="200" green="200" blue="200"/>		
+<color 	name="group-back" 		red="0" 	green="17" blue="37"	 filter_source="hueshift"/>
+<color 	name="group-fore" 		red="200" 	green="200" blue="200"/>
+<color 	name="hover-border"  	red="50"  	green="50" blue="50"/>
+<color 	name="hover-back"  		red="22"  	green="22" blue="22"/>
+<font name="group" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+<settings name="titleHeight" value="20"/>
+<settings name="titleLeftMargin" value="5"/>
+<settings name="iconSpacingX" value="0"/>
+<settings name="iconSpacingY" value="0"/>
+<settings name="sectionLeftMargin" value="5"/>
+<settings name="sectionTopMargin" value="5"/>
+<settings name="sectionRightMargin" value="5"/>
+<settings name="sectionBottomMargin" value="5"/>
+<settings name="iconMargin" value="4"/>
+'>
+
+<!ENTITY % IconpackEntitiesDTD SYSTEM "IconpackEntities.dtd" >
+%IconpackEntitiesDTD;

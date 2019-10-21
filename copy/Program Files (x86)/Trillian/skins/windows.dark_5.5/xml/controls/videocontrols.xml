@@ -1,0 +1,115 @@
+
+<control name="videoNormal" type="video">
+	<font source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+	<forecolor red="255" green="255" blue="255" /> 
+	<color name="chat-fore" red="200" green="200" blue="200" /> 
+
+	<icon name="record"><source name="bmpIconVideoOverlay" left="0" right="32" top="0" bottom="32"/></icon>
+	<icon name="play"><source name="bmpIconVideoOverlay" left="0" right="32" top="32" bottom="64"/></icon>
+	<icon name="pause"><source name="bmpIconVideoOverlay" left="0" right="32" top="64" bottom="96"/></icon>
+	<icon name="stop"><source name="bmpIconVideoOverlay" left="0" right="32" top="96" bottom="128"/></icon>
+	<icon name="rewind"><source name="bmpIconVideoOverlay" left="0" right="32" top="128" bottom="160"/></icon>
+	<icon name="fastforward"><source name="bmpIconVideoOverlay" left="0" right="32" top="160" bottom="192"/></icon>
+	<icon name="mute"><source name="bmpIconVideoOverlay" left="0" right="32" top="192" bottom="224"/></icon>
+
+	<icon name="pip-background"><source name="bmpVideoThumbnail" left="0" right="82" top="0" bottom="62"/></icon>
+	<icontrol source="videoPIP" name="videoPIP"/> <!-- Picture-in-Picture overlay -->
+</control>
+
+<control name="videoPIP" type="videoPIP">
+	<!-- elmThumbnailFrame -->
+	<icontrol source="videoNormal" name="video"></icontrol>
+</control>
+
+<control name="video-framebar" type="framebar">
+	<include-frame source="video-framebar-pause"/>
+	<include-frame source="video-framebar-filter"/>
+	<include-frame source="video-framebar-who"/>
+</control>
+
+<control name="swcTimeControls-Pause" type="switcher">
+	<background name="flat">
+		&icoPause;
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+<control name="btnTimeControls-Pause" type="resizeable-button">
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/> <!-- theme -->
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/> <!-- theme -->
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+	
+	<icontrol source="swcTimeControls-Pause" name="icon">
+		<rect>
+			<left num="3" width="0"/>
+			<top num="3" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="3" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="swcVideoChat-Filter" type="switcher">
+	<background name="flat">
+		&icoVideo-Filters;
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+<control name="btnVideoChat-Filter" type="resizeable-button">
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/> <!-- theme -->
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/> <!-- theme -->
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<icontrol source="swcVideoChat-Filter" name="icon">
+		<rect>
+			<left num="3" width="0"/>
+			<top num="3" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="3" height="1"/>
+		</rect>
+	</icontrol>
+</control>
+
+<control name="swcVideoChat-Broadcast-Who" type="switcher">
+	<background name="flat">
+		&icoVideo-Broadcast-Who;
+	</background>
+	<settings name="default" value="flat"/>
+</control>
+<control name="btnVideoChat-Broadcast-Who" type="resizeable-button">
+	<!-- Hover -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="over">
+		<source name="buttons-asset" left="55" top="0" right="105" bottom="20"/> <!-- theme -->
+		<slice left="59" top="10" right="99" bottom="17"/>
+	</background>
+
+	<!-- Push -->
+	<background transparent="1" middle="1" stretch="1" visible="1" type="push">
+		<source name="buttons-asset" left="55" top="20" right="105" bottom="40"/> <!-- theme -->
+		<slice left="59" top="30" right="99" bottom="37"/>
+	</background>
+
+	<icontrol source="swcVideoChat-Broadcast-Who" name="icon">
+		<rect>
+			<left num="3" width="0"/>
+			<top num="3" height="0"/>
+			<right num="3" width="1"/>
+			<bottom num="3" height="1"/>
+		</rect>
+	</icontrol>
+</control>

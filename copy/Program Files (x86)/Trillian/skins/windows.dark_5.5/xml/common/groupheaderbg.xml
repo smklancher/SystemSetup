@@ -1,0 +1,18 @@
+
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+					<rect>
+						<left num="-%this.indent.left% + 1" width="0"/>
+						<right num="-%this.indent.right% + 1" width="1"/>
+					</rect>
+			</background>
+
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+					<rect>
+						<left num="-%this.indent.left% + 1" width="0"/>
+						<right num="-%this.indent.right% + 1" width="1"/>
+					</rect>
+			</background>

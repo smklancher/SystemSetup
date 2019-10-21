@@ -1,0 +1,281 @@
+<!-- Bitmaps -->
+	<bitmap name="bitmap-window" file="images/window.png" filter_source="hueshift"/>
+	<bitmap name="bitmap-window-notifier" file="images/notifier-window@6.2os.png" minimum_os="62"/>
+	<bitmap name="bitmap-window-notifier-non-alpha" file="images/notifier-window-non-alpha@6.2os.png" minimum_os="62"/>
+	<bitmap name="bitmap-window-notifier" file="images/notifier-window.png" />
+	<bitmap name="bitmap-window-notifier-blur" file="images/notifier-window-blur.png" />
+	<bitmap name="bitmap-window-notifier-non-alpha" file="images/notifier-window-non-alpha.png" />
+	<bitmap name="bitmap-typing" file="images/typing.png"/>
+	<bitmap name="bitmap-text-typing" file="images/typing-animated.gif"/>
+	<bitmap name="tabs" file="images/tabs@6.2os.png" minimum_os="62"/>
+	<bitmap name="tabs-theme" file="images/tabs@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="tabs" file="images/tabs.png"/>
+	<bitmap name="tabs-theme" file="images/tabs.png" filter_source="hueshift"/>
+	<bitmap name="sectionbutton" file="images/sectionbutton.png" filter_source="hueshift"/>
+	
+	<bitmap name="scrollbars-asset" file="images/scrollbars@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="scrollbars-asset" file="images/scrollbars.png" filter_source="hueshift"/>
+	<bitmap name="general16-asset" file="images/general16@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="general16-asset-notheme" file="images/general16@6.2os.png" minimum_os="62"/>
+	<bitmap name="general16-asset" file="images/general16.png" filter_source="hueshift"/>
+	<bitmap name="general16-asset-notheme" file="images/general16.png"/>
+	<bitmap name="general12-asset" file="images/general12.png"/>
+	<bitmap name="general12-asset-theme" file="images/general12.png" filter_source="hueshift"/>
+	<bitmap name="windowbuttons-asset" file="images/windowbuttons@6.2os.png" minimum_os="62"/>
+	<bitmap name="windowbuttons-asset-theme" file="images/windowbuttons@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="windowbuttons-asset" file="images/windowbuttons.png"/>
+	<bitmap name="windowbuttons-asset-theme" file="images/windowbuttons.png" filter_source="hueshift"/>
+	<bitmap name="av-asset" file="images/av.png" filter_source="hueshift"/>
+	<bitmap name="buttons-asset" file="images/buttons@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="buttons-asset" file="images/buttons.png" filter_source="hueshift"/>
+	<bitmap name="textboxes-asset" file="images/textboxes@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="textboxes-asset" file="images/textboxes.png" filter_source="hueshift"/>
+	<bitmap name="transfer-asset" file="images/filetransfer@6.2os.png" minimum_os="62"/>
+	<bitmap name="transfer-asset" file="images/filetransfer.png"/>
+	<bitmap name="skin-asset" file="images/skin-assets@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="skin-asset" file="images/skin-assets.png" filter_source="hueshift"/>
+	<bitmap name="baralerts-asset" file="images/bar-alerts@6.2os.png" filter_source="hueshift" minimum_os="62"/>
+	<bitmap name="baralerts-asset-notheme" file="images/bar-alerts@6.2os.png" minimum_os="62"/>
+	<bitmap name="baralerts-asset" file="images/bar-alerts.png" filter_source="hueshift"/>
+	<bitmap name="baralerts-asset-notheme" file="images/bar-alerts.png"/>
+	<bitmap name="container-asset" file="images/container-assets.png" filter_source="hueshift"/>
+	<bitmap name="bubbles" file="images/bubbles.png" filter_source="hueshift"/>
+
+<!-- Files from default skin -->
+	<bitmap name="icoAdd" file="../windows/images/add.ico"/>
+	<bitmap name="head16" file="../windows/images/head-16.png"/>
+	<bitmap name="head24" file="../windows/images/head-24.png"/>
+	<bitmap name="head32" file="../windows/images/head-32.png"/>
+	<bitmap name="head48" file="../windows/images/head-48.png"/>
+	<bitmap name="groupchat16" file="../windows/images/groupchat-16.png"/>
+	<bitmap name="groupchat24" file="../windows/images/groupchat-24.png"/>
+	<bitmap name="groupchat32" file="../windows/images/groupchat-32.png"/>
+	<bitmap name="groupchat48" file="../windows/images/groupchat-48.png"/>
+	<bitmap name="news16" file="../windows/images/news16.png"/>
+	<bitmap name="news24" file="../windows/images/news24.png"/>
+	<bitmap name="news32" file="../windows/images/news32.png"/>
+	<bitmap name="news48" file="../windows/images/news48.png"/>
+	<bitmap name="mail16" file="../windows/images/mail16.png"/>
+	<bitmap name="mail24" file="../windows/images/mail24.png"/>
+	<bitmap name="mail32" file="../windows/images/mail32.png"/>
+	<bitmap name="mail48" file="../windows/images/mail48.png"/>
+	<bitmap name="maps16" file="../windows/images/maps16.png"/>
+	<bitmap name="maps24" file="../windows/images/maps24.png"/>
+	<bitmap name="maps32" file="../windows/images/maps32.png"/>
+	<bitmap name="maps48" file="../windows/images/maps48.png"/>
+	<bitmap name="loading" 			file="../windows/images/loading.png"/>
+	<bitmap name="error" 			file="../windows/images/error.png"/>
+
+<!-- Chatviews -->
+	<bitmap name="chatview-preview" 				file="images/chatview.png" />
+	<bitmap	name="bmpDisplayViewPreview-Avion"		file="images/Chatviews/Avion/preview-Avion.png"/>
+	<bitmap name="bmpChatAvionRemote"				file="images/Chatviews/Avion/ChatAvionRemote.png"/>
+	<bitmap name="bmpChatAvionLocal"				file="images/Chatviews/Avion/ChatAvionLocal.png"/>
+	<bitmap name="bmp-Avion:Nameback"				file="images/Chatviews/Avion/Nameback.png"	/>
+	<bitmap name="bmptypingindicator"				file="images/Chatviews/Avion/typing.png"	/>
+	<bitmap	name="bmpDisplayViewPreview-bigbubbles"	file="images/Chatviews/BigBubbles/preview-bigbubbles.png"/>
+	<bitmap	name="bmpChatViewLocal"					file="images/Chatviews/BigBubbles/ChatViewLocal.png" 			filter_source="hueshift"/>
+	<bitmap	name="bmpChatViewRemote"				file="images/Chatviews/BigBubbles/ChatViewRemote.png"			filter_source="hueshift"/>
+	<bitmap name="bmpDisplayTypingRemote"			file="images/Chatviews/BigBubbles/DisplayTypingRemote.png"		filter_source="hueshift"/>
+	<bitmap	name="bmpDisplayViewPreview-compact"	file="images/Chatviews/Compact/compact-preview.png"/>
+	<bitmap name="Incoming-bg"						file="images/Chatviews/Compact/incoming-bg.png"			/>
+	<bitmap	name="bmpDisplayViewPreview-playscript"	file="images/Chatviews/Playscript/playscript-preview.png"/>
+	<bitmap name="bmpDisplayNameLocal"				file="images/Chatviews/Playscript/DisplayNameLocal.png"			filter_source="hueshift"/>
+	<bitmap name="bmpDisplayNameRemote"				file="images/Chatviews/Playscript/DisplayNameRemote.png"		filter_source="hueshift"/>
+	<bitmap	name="bmpDisplayViewPreview-easyview"	file="images/Chatviews/Playscript/preview-easyview.png"/>
+	<bitmap	name="bmpDisplayViewPreview-macbubbles"	file="images/Chatviews/MacView/preview-macbubbles.png"/>
+	<bitmap	name="bmpbubblelocal"					file="images/Chatviews/MacView/bubble-local.png"  filter_source="hueshift"/>
+	<bitmap	name="bmpbubbleremote"					file="images/Chatviews/MacView/bubble-remote.png" filter_source="hueshift"/>
+	<bitmap	name="bmpSeparator-Local"				file="images/Chatviews/MacView/Separator_Local.png"	/>
+	<bitmap	name="bmpSeparator-Remote"				file="images/Chatviews/MacView/Separator_Remote.png"	/>
+	<bitmap	name="bmpInfoBack"						file="images/Chatviews/MacView/InfoBack.png"	/>
+	<bitmap	name="AvatarThumb"						file="images/Chatviews/MacView/AvatarThumb.png"	/>
+	<bitmap	name="bmptyping-local"					file="images/Chatviews/MacView/typing-local.png"	/>
+	<bitmap	name="bmptyping-remote"					file="images/Chatviews/MacView/typing-remote.png"	filter_source="hueshift"/>
+	<bitmap	name="bmpDisplayViewPreview-matte"		file="images/Chatviews/Trillian Matte/preview-Matte.png"/>
+	<bitmap	name="bmpbubble_left"					file="images/Chatviews/Trillian Matte/left_bubble.png" />
+	<bitmap	name="bmpcolor_left"					file="images/Chatviews/Trillian Matte/left_color.png"	 filter_source="hueshift"/>
+	<bitmap name="bmpbubble_right"					file="images/Chatviews/Trillian Matte/right_bubble.png"		/>
+	<bitmap name="bmpcolor_right"					file="images/Chatviews/Trillian Matte/right_color.png"	 filter_source="hueshift"/>
+	<bitmap	name="bmpDisplayViewPreview-Sticker"	file="images/Chatviews/Sticker/preview-Sticker.png"/>
+	<bitmap	name="bmpStickerLocal"					file="images/Chatviews/Sticker/Sticker-Local.png" 			filter_source="hueshift"/>
+	<bitmap	name="bmpStickerRemote"					file="images/Chatviews/Sticker/Sticker-Remote.png" 		filter_source="hueshift"/>
+	<bitmap name="bmpStickerSep"					file="images/Chatviews/Sticker/Separator_Sticker.png"		filter_source="hueshift"/>
+	<bitmap name="bmpStickerTypingRemote"			file="images/Chatviews/Sticker/Sticker-TypingRemote.png"		 filter_source="hueshift"	/>
+	<bitmap	name="bmpDisplayViewPreview-satin"		file="images/Chatviews/Satin/preview-satin.png"/>
+	<bitmap	name="bmpmessage"						file="images/Chatviews/Satin/message.png" />
+	<bitmap	name="bmpsender_left"					file="images/Chatviews/Satin/sender_left.png"	filter_source="hueshift"/>
+	<bitmap name="bmpsender_right"					file="images/Chatviews/Satin/sender_right.png"		filter_source="hueshift"/>
+	<bitmap name="bmpstatus"						file="images/Chatviews/Satin/status_purple.png"				filter_source="hueshift"/>
+	<bitmap	name="bmptypingcolor"					file="images/Chatviews/Satin/typingcolor.png" filter_source="hueshift"/>
+	<bitmap	name="bmpDisplayViewPreview-win8bubbles" file="images/Chatviews/Win8/preview-win8bubbles.png"/>
+	<bitmap	name="bmpDisplayViewPreview-win8chat" 	file="images/Chatviews/Win8/preview-win8chat.png"/>
+	<bitmap	name="win8local"						file="images/Chatviews/Win8/win8local.png"  filter_source="hueshift"/>
+	<bitmap	name="win8bubbles"						file="images/Chatviews/Win8/win8bubbles.png" filter_source="hueshift"/>
+	<bitmap	name="win8stylelocal"					file="images/Chatviews/Win8/win8stylelocal.png"  filter_source="hueshift"/>
+	<bitmap	name="win8stylebubbles"					file="images/Chatviews/Win8/win8stylebubbles.png" filter_source="hueshift"/>
+
+	<!-- Fonts -->
+	<font name="segoeui" file="segoeui.ttf"/>
+	
+	<theme name="default" description="Blue">
+		<filter name="hueshift">
+			<hue num="0"/>
+			<saturation num="0"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>	
+	</theme>
+
+	<theme name="follow" description="Follow Windows">
+		<filter name="hueshift">
+			<hue num="%system.windows.hue%"/>
+			<saturation num="%system.windows.saturation%"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>	
+	</theme>
+
+	<theme name="red" description="Red">
+		<filter name="hueshift">
+			<hue num="150"/>
+			<saturation num="0"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>	
+		</theme>
+
+	<theme name="pink" description="Pink">
+		<filter name="hueshift">
+			<hue num="115"/>
+			<saturation num="0"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+
+	<theme name="orange" description="Orange">
+		<filter name="hueshift">
+			<hue num="180"/>
+			<saturation num="0"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+		</theme>
+		
+	<theme name="yellow" description="Yellow">
+		<filter name="hueshift">
+			<hue num="-150"/>
+			<saturation num="-50"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+	<theme name="olive" description="Olive">
+		<filter name="hueshift">
+			<hue num="-135"/>
+			<saturation num="-50"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+	<theme name="lime" description="Lime">
+		<filter name="hueshift">
+			<hue num="-120"/>
+			<saturation num="-50"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+	<theme name="green" description="Green">
+		<filter name="hueshift">
+			<hue num="-90"/>
+			<saturation num="-50"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+	<theme name="teal" description="Teal">
+		<filter name="hueshift">
+			<hue num="-45"/>
+			<saturation num="-50"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+	<theme name="purple" description="Purple">
+		<filter name="hueshift">
+			<hue num="60"/>
+			<saturation num="0"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+	<theme name="platinum" description="Platinum">
+		<filter name="hueshift">
+			<hue num="0"/>
+			<saturation num="-100"/>
+			<brightness num="0"/>
+		</filter>
+		<filter name="helpershift">
+			<hue num="0"/>
+			<saturation num="-150"/>
+			<brightness num="200"/>
+		</filter>		
+	</theme>
+		
+NO-PSC
+NO-TM
+NO-AVI
+NO-BB
+NO-CO

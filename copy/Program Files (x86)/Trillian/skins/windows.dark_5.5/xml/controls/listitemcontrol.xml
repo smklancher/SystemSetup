@@ -1,0 +1,2726 @@
+<control name="buddy-list" type="list" onetime="yes">
+	&PLUGstatusIcons;
+
+	<!-- Settings -->
+	<settings name="horizontal-alignment" value="left"/>
+	<settings name="vertical-alignment" value="top"/>
+	<settings name="sectionSpacing" value="-1"/>
+	<settings name="quickPanels" value="1"/>
+
+	<!-- TooltipItemSettings -->
+	<settings name="tooltipLeftMargin" value="4"/>
+	<settings name="tooltipRightMargin" value="4"/>
+	<settings name="tooltipTopMargin" value="4"/>
+	<settings name="tooltipBottomMargin" value="4"/>
+	<settings name="tooltipMiddleRightMargin" value="4"/>
+	<settings name="tooltipMiddleLeftMargin" value="4"/>
+
+	<!-- Colors -->
+	<!-- List Item Colours -->		
+	<color name="background" red="0" green="0" blue="0"/> 
+	<color name="hover-back"  	red="80"  	green="80" blue="80" />
+	<color name="hover-fore"  	red="180"  	green="180" blue="180" />
+	<color name="hover-border"	red="-1" 	green="-1" blue="-1"/>
+	<color name="select-back"  	red="-1" 	green="-1" blue="-1"/>
+	<color name="select-fore" 	red="255"  	green="255" blue="255" />
+	<color name="select-border"	red="-1" 	green="-1" blue="-1"/>
+	<color name="normal-back" 	red="-1" 	green="-1" blue="-1"/>
+	<color name="normal-fore" 	red="255"  	green="255" blue="255"   />
+	<color name="update-fore" red="255" green="128" blue="0"/>
+	<color name="group-fore" red="100"  	green="100" blue="100" filter_source="hueshift"/>
+	<color name="group1-fore" red="100"  	green="100" blue="100" filter_source="hueshift"/>
+	<color name="default-fore" red="80"  	green="80" blue="80" opacity="200"  />
+	<color name="count-fore" red="255" green="255" blue="255"/>
+	<color name="helper-icon-overflow-fore" red="30" green="30" blue="30"/>
+
+	<!-- Contact List Item COlours -->
+	<color name="idle-fore" 			red="150" 	green="150" blue="150"  />
+	<color name="recent-online-fore" 	red="180" 	green="180" blue="180"  />
+	<color name="recent-offline-fore" 	red="180" 	green="180" blue="180"  />
+	<color name="online-fore" 			red="180" 	green="180" 	blue="180"  />
+	<color name="offline-fore" 			red="100" 	green="100" 	blue="100"   />
+	<color name="away-fore"  			red="150" 	green="150" blue="150"    />
+	<color name="maybe-fore" 			red="130" 	green="130" 	blue="130"  />
+	<color name="many-fore" 			red="130" 	green="130" blue="130"  />
+	<color name="blocked-fore" 			red="50" 	green="50" blue="50"  />
+	<color name="auth-fore" 			red="130" 	green="130" 	blue="130"  />
+	<color name="activebuddy-fore" 		red="130" 	green="130" 	blue="130"  />
+	<color name="notinlist-fore" 		red="76" 	green="76" 	blue="76"  />
+	<color name="invisible-fore" 		red="110" 	green="110" blue="110"  />
+	<color name="mobile-fore" 			red="180" 	green="180" 	blue="180"  />
+
+	<!-- Metacontact Colours -->
+	<color name="metacontact-online-fore" 			red="190" 	green="190" 	blue="190"  />
+	<color name="metacontact-offline-fore" 			red="110" 	green="110" 	blue="110"  />
+	<color name="metacontact-recent-online-fore" 	red="190" 	green="190" blue="190"  />
+	<color name="metacontact-recent-offline-fore" 	red="110" 	green="110" blue="110"  />
+	<color name="metacontact-away-fore" 			red="160" 	green="160" 	blue="160"  />
+	<color name="metacontact-idle-fore" 			red="160" 	green="160" 	blue="160"  />
+	<color name="metacontact-mobile-fore" 			red="140" 	green="140" 	blue="140"  />
+
+	<color name="url-fore" red="79" green="129" blue="189" filter_source="hueshift"/>
+	<color name="url-line" red="79" green="129" blue="189" filter_source="hueshift"/>
+
+	<!-- Subtitle Colours -->
+	<color name="subtitle-select-fore" 	red="200" 	green="200" 	blue="200"  />
+	<color name="subtitle-hover-fore" 	red="190" 	green="190" 	blue="190"  />
+	<color name="subtitle-fore" red="180" green="180" blue="180" opacity="180"    />
+
+	<!-- Tooltip Item Colours -->
+	<color name="tooltip-border"  	red="0"  	green="0" blue="0"/>
+	<color name="tooltip-edge"  	red="80"  	green="80" blue="80" />
+	<color name="tooltip-back" 	red="200" 	green="200" blue="200" />
+	<color name="tooltip-fore" 	red="0" 	green="0" 	blue="0"/>
+	<color name="tooltip-title" 	red="0" 	green="0" 	blue="0"/>
+	<color name="tooltip-subtitle" red="0" 	green="0" 	blue="0"/>
+	<color name="tooltip-group" 	red="255" 	green="255" 	blue="255"/>
+
+	<!-- Fonts -->
+	<font name="group" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/> <!-- Group header -->
+	<font name="group1" source="segoeui" type="Segoe UI" size="9" bold="0" italic="0"/>
+	<font name="subtitle" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="default" source="segoeui" type="Segoe UI" size="9"/>
+	<font name="online" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="offline" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="away" source="segoeui" type="Segoe UI" size="9" italic="0" bold="0"/>
+	<font name="idle" source="segoeui" type="Segoe UI" size="9" italic="0" bold="0"/>
+	<font name="recent-online" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="recent-offline" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="blocked" source="segoeui" type="Segoe UI" size="9" italic="1" bold="0"/>
+	<font name="invisible" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="mobile" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+
+	<font name="count" source="segoeui" type="Segoe UI" size="7" bold="1" allcaps="0"/>
+	<font name="helper-icon-overflow" source="segoeui" type="Segoe UI" size="8" bold="1" allcaps="0"/>
+
+	<font name="metacontact-online" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="metacontact-offline" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="metacontact-recent-online" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="metacontact-recent-offline" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+	<font name="metacontact-away" source="segoeui" type="Segoe UI" size="9" italic="0" bold="0"/>
+	<font name="metacontact-mobile" source="segoeui" type="Segoe UI" size="9" italic="0" bold="0"/>
+	<font name="metacontact-idle" source="segoeui" type="Segoe UI" size="9" bold="0"/>
+
+	<font name="tooltip-title" source="segoeui" type="Segoe UI" size="7" bold="1" italic="1"/>
+	<font name="tooltip-subtitle" source="segoeui" type="Segoe UI" size="7" bold="1"/>
+	<font name="tooltip-group" source="segoeui" type="Segoe UI" size="7" bold="1" italic="1"/>
+	<font name="tooltip" source="segoeui" type="Segoe UI" size="7"/>
+
+<!-- *********** Tiny Size 16x16 *****************-->
+<!-- *********** Tiny Size 16x16 *****************-->
+<!-- *********** Tiny Size 16x16 *****************-->
+<!-- *********** Tiny Size 16x16 *****************-->
+
+	<size name="16"> 
+
+		<settings name="group0IndentLeft" type="tile" value="1"/>
+		<settings name="group0IndentLeft" type="list" value="1"/>
+		<settings name="group0IndentLeft" type="simple" value="1"/> 
+
+		<settings name="group1IndentLeft" type="tile" value="1"/>
+		<settings name="group1IndentLeft" type="list" value="1"/>
+		<settings name="group1IndentLeft" type="simple" value="1"/> 
+
+		<settings name="group2IndentLeft" type="tile" value="6"/>
+		<settings name="group2IndentLeft" type="list" value="6"/>
+		<settings name="group2IndentLeft" type="simple" value="6"/> 
+
+		<settings name="group3IndentLeft" type="tile" value="11"/>
+		<settings name="group3IndentLeft" type="list" value="11"/>
+		<settings name="group3IndentLeft" type="simple" value="11"/> 
+
+		<settings name="listitemSpacingX" value="1"/>
+		<settings name="listitemSpacingY" value="1"/>
+
+		<settings name="subitem0IndentLeft" type="list" value="13"/> <!-- sub contact indent - relative to grp1indentleft -->
+		<settings name="subitem0IndentLeft" type="simple" value="13"/> <!-- sub contact indent - relative to grp1indentleft -->
+		<settings name="subitemSpacingY" value="1"/>
+
+<!-- Tiny Size List Items -->
+<!-- List View -->
+
+		<list-item name="normal" defaulty="max(28,(2 + %this.line1.textHeight% + %this.line2.textHeight% + 2))" type="list">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="4" height="0"/>
+					<right num="38" width="0"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="40" width="0"/>
+					<top num="9" height="0"/>
+					<right num="40+(%this.subicon.width%)" width="0"/>
+					<bottom num="19" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="6" height="0"/>
+					<right num="36" width="0"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="6" height="0"/>
+					<right num="36" width="0"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="45+(%this.subicon.width%)" width="0"/>
+					<top num="max(2,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="45+(%this.subicon.width%)" width="0"/>
+					<top num="max(2+%this.line1.textHeight%,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="status-icon" visible="%this.status-icon%">
+				<rect>
+					<left num="22" width="1"/>
+					<top num="6" height="0"/>
+					<right num="10" width="1"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="8" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="20" height="0"/>
+				</rect>
+			</icontrol>
+
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="8" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 2" width="1"/>
+					<bottom num="20" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="7" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 4" width="1"/>
+					<bottom num="19" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="18 + 16*%this.status-icon% + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="6" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="21" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="13 + 16*%this.status-icon% + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="7" height="0"/>
+					<right num="13 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="20" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Tile View -->
+
+		<list-item name="normal" defaultx="54" defaulty="60" type="tile">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="16" width="0"/>
+					<top num="4" height="0"/>
+					<right num="38" width="0"/>
+					<bottom num="26" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="6" height="0"/>
+					<right num="34" width="0"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="6" height="0"/>
+					<right num="34" width="0"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Icon that is overlayed to show if someone is away or busy etc -->
+			<icontrol name="status-icon">
+				<rect>
+					<left num="24" width="0"/>
+					<top num="12" height="0"/>
+					<right num="40" width="0"/>
+					<bottom num="28" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="19" width="0"/>
+					<top num="13" height="0"/>
+					<right num="19+(%this.subicon.width%)" width="0"/>
+					<bottom num="23" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="2" width="0"/>
+					<top num="26" height="0"/>
+					<right num="2" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-alignment" value="center"/>
+				<settings name="text-vertical-alignment" value="top"/>
+				<settings name="text-maxlines" value="2"/>
+			</icontrol>
+
+		</list-item>
+
+<!-- Simple View -->
+
+		<list-item name="normal" defaulty="20" type="simple">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> 
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> 
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="22" width="0"/>
+					<top num="4" height="0"/>
+					<right num="25+(%this.subicon.width%)" width="0"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="25+(%this.subicon.width%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="29+(%this.subicon.width%)+%this.line1.textwidth%" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + 2" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="8 + 4" width="1"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+
+		<list-item name="sub" type="list" defaulty="20">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> 
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> 
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="29" width="0"/>
+					<top num="4" height="0"/>
+					<right num="32+(%this.subicon.width%)" width="0"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="11" width="0"/>
+					<top num="2" height="0"/>
+					<right num="27" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="11" width="0"/>
+					<top num="2" height="0"/>
+					<right num="27" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="32+(%this.subicon.width%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="36+(%this.subicon.width%)+%this.line1.textwidth%" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + 2" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="8 + 4" width="1"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<!-- Sub List - Simple -->
+		<list-item name="sub" type="simple" defaulty="20">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> 
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> 
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="22" width="0"/>
+					<top num="4" height="0"/>
+					<right num="25+(%this.subicon.width%)" width="0"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="8" width="0"/>
+					<top num="2" height="0"/>
+					<right num="24" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="8" width="0"/>
+					<top num="2" height="0"/>
+					<right num="24" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="29+(%this.subicon.width%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="33+(%this.subicon.width%)+%this.line1.textwidth%" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + 2" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="8 + 4" width="1"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20 + (%this.line2%*14)" type="list">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2 + (%this.line2%*6)" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18 + (%this.line2%*6)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="2 + (%this.line2%*7)" height="0"/>
+					<right num="36" width="0"/>
+					<bottom num="18 + (%this.line2%*7)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18 + (%this.subicon%*27)" width="0"/>
+					<top num="2 + %this.line2%" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<icontrol name="line2">
+				<rect>
+					<left num="18 + (%this.subicon%*27)" width="0"/>
+					<top num="17" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="12" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + %this.count.textWidth% + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="10" height="0"/>
+					<right num="9 + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="25" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="11" height="0"/>
+					<right num="14 + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20" type="tile">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20" type="simple">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="7" width="0"/>
+					<top num="2" height="0"/>
+					<right num="23" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon" visible="!%this.icon%">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="25" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon name="foursquare" type="social">
+			<source name="maps16" left="0" top="0" right="16" bottom="16"/>
+		</icon>
+
+		<icon name="facebook" type="social">
+			<source name="news16" left="0" top="0" right="16" bottom="16"/>
+		</icon>
+
+		<icon name="twitter" type="social">
+			<source name="news16" left="0" top="16" right="16" bottom="32"/>
+		</icon>
+
+		<icon name="linkedin" type="social">
+			<source name="news16" left="0" top="48" right="16" bottom="64"/>
+		</icon>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="28" top="159" right="48" bottom="179"/> <!-- no theme -->
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head16" left="0" top="0" right="16" bottom="16"/>
+		</icon>
+
+		<icon name="all" type="icon-groupchat-none">
+			<source name="groupchat16" left="0" top="0" right="16" bottom="16"/>
+		</icon>
+	</size>
+
+<!-- *********** Small Size 24x24 *****************-->
+<!-- *********** Small Size 24x24 *****************-->
+<!-- *********** Small Size 24x24 *****************-->
+<!-- *********** Small Size 24x24 *****************-->
+
+
+	<size name="24">
+
+		<settings name="group0IndentLeft" type="tile" value="1"/>
+		<settings name="group0IndentLeft" type="list" value="1"/>
+
+		<settings name="group1IndentLeft" type="tile" value="1"/>
+		<settings name="group1IndentLeft" type="list" value="1"/>
+
+		<settings name="group2IndentLeft" type="tile" value="6"/>
+		<settings name="group2IndentLeft" type="list" value="6"/>
+
+		<settings name="group3IndentLeft" type="tile" value="11"/>
+		<settings name="group3IndentLeft" type="list" value="11"/>
+
+		<settings name="listitemSpacingX" value="1"/>
+		<settings name="listitemSpacingY" value="1"/>
+
+		<settings name="subitem0IndentLeft" type="list" value="18"/> <!-- sub contact indent - relative to grp1indentleft -->
+		<settings name="subitemSpacingY" value="1"/>
+
+<!-- Small Size List Items -->
+
+<!-- list View -->
+
+		<list-item name="normal" defaulty="max(36,(2 + %this.line1.textHeight% + %this.line2.textHeight% + 2))" type="list">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> <!-- a little trick to ignore the indents so the hover effect is the full width of the list -->
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="4" height="0"/>
+					<right num="46" width="0"/>
+					<bottom num="32" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="43+7" width="0"/>
+					<top num="13" height="0"/>
+					<right num="43+(%this.subicon.width%)+7" width="0"/>
+					<bottom num="23" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="6" height="0"/>
+					<right num="44" width="0"/>
+					<bottom num="30" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="28" width="0"/>
+					<top num="14" height="0"/>
+					<right num="44" width="0"/>
+					<bottom num="30" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="46+(%this.subicon.width%)+7" width="0"/>
+					<top num="max(2,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="46+(%this.subicon.width%)+7" width="0"/>
+					<top num="max(2+%this.line1.textHeight%,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="status-icon" visible="%this.status-icon%">
+				<rect>
+					<left num="22" width="1"/>
+					<top num="10" height="0"/>
+					<right num="10" width="1"/>
+					<bottom num="22" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="12" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</icontrol>
+
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/>
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="12" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 2" width="1"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="11" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 4" width="1"/>
+					<bottom num="23" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> 
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="18 + 16*%this.status-icon% + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="10" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="25" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="13 + 16*%this.status-icon% + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="11" height="0"/>
+					<right num="13 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Tile View -->
+
+		<list-item name="normal" defaultx="64" defaulty="71" type="tile">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="17" width="0"/>
+					<top num="4" height="0"/>
+					<right num="47" width="0"/>
+					<bottom num="34" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="19" width="0"/>
+					<top num="6" height="0"/>
+					<right num="43" width="0"/>
+					<bottom num="30" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="27" width="0"/>
+					<top num="14" height="0"/>
+					<right num="43" width="0"/>
+					<bottom num="30" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Icon that is overlayed to show if someone is away or busy etc -->
+			<icontrol name="status-icon">
+				<rect>
+					<left num="33" width="0"/>
+					<top num="18" height="0"/>
+					<right num="49" width="0"/>
+					<bottom num="34" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="21" height="0"/>
+					<right num="20+(%this.subicon.width%)" width="0"/>
+					<bottom num="31" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="2" width="0"/>
+					<top num="36" height="0"/>
+					<right num="2" width="1"/>
+					<bottom num="4+(%this.line2%*11)" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-alignment" value="center"/>
+				<settings name="text-vertical-alignment" value="top"/>
+				<settings name="text-maxlines" value="2"/>
+			</icontrol>
+		</list-item>
+
+<!-- Sub List -->
+
+		<list-item name="sub" type="list" defaulty="20">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> 
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> 
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="32" width="0"/>
+					<top num="4" height="0"/>
+					<right num="35+(%this.subicon.width%)" width="0"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="30" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="30" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="35+(%this.subicon.width%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="39+(%this.subicon.width%)+%this.line1.textwidth%" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + 2" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="8 + 4" width="1"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20 + (%this.line2%*16)" type="list">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2 + (%this.line2%*7)" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18 + (%this.line2%*7)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="2 + (%this.line2%*4)" height="0"/>
+					<right num="44" width="0"/>
+					<bottom num="26 + (%this.line2%*4)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18 + (%this.subicon%*35)" width="0"/>
+					<top num="2 + (%this.line2%)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<icontrol name="line2">
+				<rect>
+					<left num="18 + (%this.subicon%*35)" width="0"/>
+					<top num="18" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="11" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="23" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="9" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="24" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="10" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="23" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20" type="tile">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon name="foursquare" type="social">
+			<source name="maps24" left="0" top="0" right="24" bottom="24"/>
+		</icon>
+
+		<icon name="facebook" type="social">
+			<source name="news24" left="0" top="0" right="24" bottom="24"/>
+		</icon>
+
+		<icon name="twitter" type="social">
+			<source name="news24" left="0" top="24" right="24" bottom="48"/>
+		</icon>
+
+		<icon name="linkedin" type="social">
+			<source name="news24" left="0" top="72" right="24" bottom="96"/>
+		</icon>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="0" top="151" right="28" bottom="179"/> <!-- no theme -->
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head24" left="0" top="0" right="24" bottom="24"/>
+		</icon>
+
+		<icon name="all" type="icon-groupchat-none">
+			<source name="groupchat24" left="0" top="0" right="24" bottom="24"/>
+		</icon>
+	</size>
+
+<!-- *********** Medium Size 32x32 *****************-->
+<!-- *********** Medium Size 32x32 *****************-->
+<!-- *********** Medium Size 32x32 *****************-->
+<!-- *********** Medium Size 32x32 *****************-->
+
+	<size name="32">
+		<settings name="group0IndentLeft" type="tile" value="1"/>
+		<settings name="group0IndentLeft" type="list" value="1"/>
+
+		<settings name="group1IndentLeft" type="tile" value="1"/>
+		<settings name="group1IndentLeft" type="list" value="1"/>
+
+		<settings name="group2IndentLeft" type="tile" value="6"/>
+		<settings name="group2IndentLeft" type="list" value="6"/>
+
+		<settings name="group3IndentLeft" type="tile" value="11"/>
+		<settings name="group3IndentLeft" type="list" value="11"/>
+
+		<settings name="listitemSpacingX" value="1"/>
+		<settings name="listitemSpacingY" value="1"/>
+
+		<settings name="subitem0IndentLeft" type="list" value="26"/> <!-- sub contact indent - relative to grp1indentleft -->
+		<settings name="subitemSpacingY" value="1"/>
+
+<!-- Medium Size List Items -->
+
+<!-- List View -->
+
+		<list-item name="normal" defaulty="max(44,(2 + %this.line1.textHeight% + %this.line2.textHeight% + 2))" type="list">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> <!-- a little trick to ignore the indents so the hover effect is the full width of the list -->
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="4" height="0"/>
+					<right num="54" width="0"/>
+					<bottom num="40" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="51+7" width="0"/>
+					<top num="17" height="0"/>
+					<right num="51+(%this.subicon.width%)+7" width="0"/>
+					<bottom num="27" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="6" height="0"/>
+					<right num="52" width="0"/>
+					<bottom num="38" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="36" width="0"/>
+					<top num="22" height="0"/>
+					<right num="52" width="0"/>
+					<bottom num="38" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="54+(%this.subicon.width%)+7" width="0"/>
+					<top num="max(2,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="54+(%this.subicon.width%)+7" width="0"/>
+					<top num="max(2+%this.line1.textHeight%,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="status-icon" visible="%this.status-icon%">
+				<rect>
+					<left num="22" width="1"/>
+					<top num="14" height="0"/>
+					<right num="10" width="1"/>
+					<bottom num="26" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="16" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="28" height="0"/>
+				</rect>
+			</icontrol>
+
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="16" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 2" width="1"/>
+					<bottom num="28" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="15" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 4" width="1"/>
+					<bottom num="27" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="18 + 16*%this.status-icon% +%this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="14" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="29" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="13 + 16*%this.status-icon% + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="15" height="0"/>
+					<right num="13 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="28" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+
+<!-- Tile View -->
+
+		<list-item name="normal" defaultx="70" defaulty="79" type="tile">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="17" width="0"/>
+					<top num="4" height="0"/>
+					<right num="55" width="0"/>
+					<bottom num="42" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="29" height="0"/>
+					<right num="20+(%this.subicon.width%)" width="0"/>
+					<bottom num="39" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Icon that is overlayed to show if someone is away or busy etc -->
+			<icontrol name="status-icon">
+				<rect>
+					<left num="41" width="0"/>
+					<top num="26" height="0"/>
+					<right num="57" width="0"/>
+					<bottom num="42" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="19" width="0"/>
+					<top num="6" height="0"/>
+					<right num="51" width="0"/>
+					<bottom num="38" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="35" width="0"/>
+					<top num="22" height="0"/>
+					<right num="51" width="0"/>
+					<bottom num="38" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="45" height="0"/>
+					<right num="3" width="1"/>
+					<bottom num="3"	height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-alignment" value="center"/>
+				<settings name="text-vertical-alignment" value="top"/>
+				<settings name="text-maxlines" value="2"/>
+			</icontrol>
+		</list-item>
+
+<!-- Sub List -->
+
+		<list-item name="sub" type="list" defaulty="20">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> 
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> 
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="32" width="0"/>
+					<top num="4" height="0"/>
+					<right num="35+(%this.subicon.width%)" width="0"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="30" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="30" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="35+(%this.subicon.width%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="39+(%this.subicon.width%)+%this.line1.textwidth%" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + 2" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="8 + 4" width="1"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20 + (%this.line2%*24)" type="list">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2 + (%this.line2%*11)" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18 + (%this.line2%*11)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="2 + (%this.line2%*4)" height="0"/>
+					<right num="52" width="0"/>
+					<bottom num="34 + (%this.line2%*4)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18 + (%this.subicon%*43)" width="0"/>
+					<top num="2 + (%this.line2%*5)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<icontrol name="line2">
+				<rect>
+					<left num="18 + (%this.subicon%*43)" width="0"/>
+					<top num="23" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="16" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="28" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="14" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="29" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="15" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="28" height="0"/>
+				</rect>
+			</icontrol>
+	
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20" type="tile">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon name="foursquare" type="social">
+			<source name="maps32" left="0" top="0" right="32" bottom="32"/>
+		</icon>
+
+		<icon name="facebook" type="social">
+			<source name="news32" left="0" top="0" right="32" bottom="32"/>
+		</icon>
+
+		<icon name="twitter" type="social">
+			<source name="news32" left="0" top="32" right="32" bottom="64"/>
+		</icon>
+
+		<icon name="linkedin" type="social">
+			<source name="news32" left="0" top="96" right="32" bottom="128"/>
+		</icon>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="0" top="115" right="36" bottom="151"/> <!-- no theme -->
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head32" left="0" top="0" right="32" bottom="32"/>
+		</icon>
+
+		<icon name="all" type="icon-groupchat-none">
+			<source name="groupchat32" left="0" top="0" right="32" bottom="32"/>
+		</icon>
+	</size>
+
+<!-- *********** Large Size 48x48 *****************-->
+<!-- *********** Large Size 48x48 *****************-->
+<!-- *********** Large Size 48x48 *****************-->
+<!-- *********** Large Size 48x48 *****************-->
+
+	<size name="48">
+		<settings name="group0IndentLeft" type="tile" value="1"/>
+		<settings name="group0IndentLeft" type="list" value="1"/>
+
+		<settings name="group1IndentLeft" type="tile" value="1"/>
+		<settings name="group1IndentLeft" type="list" value="1"/>
+
+		<settings name="group2IndentLeft" type="tile" value="6"/>
+		<settings name="group2IndentLeft" type="list" value="6"/>
+
+		<settings name="group3IndentLeft" type="tile" value="11"/>
+		<settings name="group3IndentLeft" type="list" value="11"/>
+
+		<settings name="listitemSpacingX" value="1"/>
+		<settings name="listitemSpacingY" value="1"/>
+
+		<settings name="subitem0IndentLeft" type="list" value="42"/> <!-- sub contact indent - relative to grp1indentleft -->
+		<settings name="subitemSpacingY" value="1"/>
+
+<!-- Large Size List Items -->
+
+<!-- List View -->
+
+		<list-item name="normal" defaulty="max(60,(2 + %this.line1.textHeight% + %this.line2.textHeight% + 2))" type="list">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> <!-- a little trick to ignore the indents so the hover effect is the full width of the list -->
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="4" height="0"/>
+					<right num="70" width="0"/>
+					<bottom num="56" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="68+7" width="0"/>
+					<top num="25" height="0"/>
+					<right num="68+(%this.subicon.width%)+7" width="0"/>
+					<bottom num="35" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="6" height="0"/>
+					<right num="68" width="0"/>
+					<bottom num="54" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="52" width="0"/>
+					<top num="38" height="0"/>
+					<right num="68" width="0"/>
+					<bottom num="54" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="70+(%this.subicon.width%)+7" width="0"/>
+					<top num="max(2,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + %this.status-icon%*16 + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="70+(%this.subicon.width%)+7" width="0"/>
+					<top num="max(2+%this.line1.textHeight%,(%this.height% - (%this.line2.textHeight% + %this.line1.textHeight%)) / 2 + %this.line1.textHeight%)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + 16*%this.status-icon% + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="2"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<icontrol name="status-icon" visible="%this.status-icon%">
+				<rect>
+					<left num="22" width="1"/>
+					<top num="22" height="0"/>
+					<right num="10" width="1"/>
+					<bottom num="34" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="24" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="36" height="0"/>
+				</rect>
+			</icontrol>
+
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="24" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 2" width="1"/>
+					<bottom num="36" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + 16*%this.status-icon% + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="23" height="0"/>
+					<right num="8 + 16*%this.status-icon% + 4" width="1"/>
+					<bottom num="35" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="18 + 16*%this.status-icon% + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="22" height="0"/>
+					<right num="8 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="37" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="13 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth% + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="23" height="0"/>
+					<right num="13 + 16*%this.status-icon% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="36" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+
+<!-- Tile View -->
+
+		<list-item name="normal" defaultx="86" defaulty="109" type="tile"> 
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> <!-- theme -->
+				<slice left="58" top="87" right="102" bottom="103"/>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/> <!-- theme -->
+				<slice left="58" top="109" right="102" bottom="125"/>
+			</background>
+
+			<!-- Background for the Avatar or icon -->
+			<icontrol name="icon-background">
+				<rect>
+					<left num="16" width="0"/>
+					<top num="4" height="0"/>
+					<right num="70" width="0"/>
+					<bottom num="58" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="19" width="0"/>
+					<top num="45" height="0"/>
+					<right num="19+(%this.subicon.width%)" width="0"/>
+					<bottom num="55" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Icon that is overlayed to show if someone is away or busy etc -->
+			<icontrol name="status-icon">
+				<rect>
+					<left num="56" width="0"/>
+					<top num="42" height="0"/>
+					<right num="72" width="0"/>
+					<bottom num="58" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="6" height="0"/>
+					<right num="66" width="0"/>
+					<bottom num="54" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="50" width="0"/>
+					<top num="38" height="0"/>
+					<right num="66" width="0"/>
+					<bottom num="54" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="62" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="62+(12*%this.line1.lines%)" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-alignment" value="center"/>
+				<settings name="text-vertical-alignment" value="top"/>
+				<settings name="text-maxlines" value="2"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="66+(12*%this.line1.lines%)" height="0"/>
+					<right num="4" width="1"/>
+					<bottom num="4"	height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="center"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+		</list-item>
+
+<!-- Sub List -->
+
+		<list-item name="sub" type="list" defaulty="20">
+			<!-- Hover Background -->
+			<background transparent="1" type="hover" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="84" right="105" bottom="106"/> 
+				<slice left="58" top="87" right="102" bottom="103"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/> 
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- Select Background -->
+			<background transparent="1" type="select" stretch="1" middle="1">
+				<source name="buttons-asset" left="55" top="106" right="105" bottom="128"/>
+				<slice left="58" top="109" right="102" bottom="125"/>
+				<rect>
+					<left num="-%this.indent.left% + 1" width="0"/>
+					<right num="-%this.indent.right% + 1" width="1"/>
+				</rect>
+			</background>
+
+			<!-- The icon for when you have a notification, or someone is blocked -->
+			<icontrol name="subicon">
+				<rect>
+					<left num="32" width="0"/>
+					<top num="4" height="0"/>
+					<right num="35+(%this.subicon.width%)" width="0"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The users avatar or icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="30" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="event">
+				<rect>
+					<left num="14" width="0"/>
+					<top num="2" height="0"/>
+					<right num="30" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- The contacts name (or in other lists, an identifier for your mail accounts etc etc -->
+			<icontrol name="line1">
+				<rect>
+					<left num="35+(%this.subicon.width%)" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/> 
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Status message -->
+			<icontrol name="line2">
+				<rect>
+					<left num="39+(%this.subicon.width%)+%this.line1.textwidth%" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4)) + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="4" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="middle"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="%this.helper-icon%">
+				<rect>
+					<left num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+			
+			<background name="helper-icon-overflow" stretch="1" visible="%this.helper-icon-overflow%">
+				<source name="general12-asset" left="0" top="0" right="12" bottom="12"/> 
+				<slice left="1" top="2" right="10" bottom="10"/>
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4 + 2" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8 + 2" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</background>
+
+			<icontrol name="helper-icon-overflow">
+				<rect>
+					<left num="8 + %this.helper-icon-overflow.textWidth% + 4" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="8 + 4" width="1"/>
+					<bottom num="15" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + %this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14 + %this.count.textWidth% + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14 + (%this.helper-icon-overflow% * (%this.helper-icon-overflow.textWidth% + 6)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20 + (%this.line2%*40)" type="list">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="4" width="0"/>
+					<top num="2 + (%this.line2%*19)" height="0"/>
+					<right num="20" width="0"/>
+					<bottom num="18 + (%this.line2%*19)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<icontrol name="subicon">
+				<rect>
+					<left num="20" width="0"/>
+					<top num="2 + (%this.line2%*4)" height="0"/>
+					<right num="68" width="0"/>
+					<bottom num="50 + (%this.line2%*4)" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18 + (%this.subicon%*59)" width="0"/>
+					<top num="2 + (%this.line2%*13)" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<icontrol name="line2">
+				<rect>
+					<left num="18 + (%this.subicon%*59)" width="0"/>
+					<top num="31" height="0"/>
+					<right num="9" width="1"/>
+					<bottom num="0" height="1"/>
+				</rect>
+				<settings name="text-wordwrap" value="1"/>
+				<settings name="text-maxlines" value="1"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="0"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="24" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="36" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="22" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="37" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="23" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="36" height="0"/>
+				</rect>
+			</icontrol>
+
+		</list-item>
+
+<!-- Group Header -->
+
+		<list-item name="group1" defaulty="20" type="tile">
+			&groupheaderbackground;
+			<!-- The hide/show icon -->
+			<icontrol name="icon">
+				<rect>
+					<left num="1" width="0"/>
+					<top num="2" height="0"/>
+					<right num="17" width="0"/>
+					<bottom num="18" height="0"/>
+				</rect>
+			</icontrol>
+			<!-- Group name -->
+			<icontrol name="line1">
+				<rect>
+					<left num="18" width="0"/>
+					<top num="2" height="0"/>
+					<right num="9 + (%this.count% * (15 + %this.count.textWidth%)) + (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<bottom num="16" height="0"/>
+				</rect>
+				<settings name="text-wordwrap" value="0"/>
+				<settings name="text-alignment" value="left"/>
+				<settings name="text-vertical-alignment" value="top"/>
+			</icontrol>
+
+			<!-- Shows the medium that the user is connected through - can be toggled on/off via preferences -->
+			<icontrol name="helper-icon" visible="1">
+				<rect>
+					<left num="8 + (%this.helper-icon.width%)" width="1"/>
+					<top num="4" height="0"/>
+					<right num="8" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+
+			<!-- Background for the count -->
+			<background name="count" stretch="1" visible="%this.count%">
+				<source name="general16-asset" left="64" top="0" right="83" bottom="14"/> <!-- theme -->
+				<slice left="71" top="6" right="75" bottom="7"/>
+				<rect>
+					<left num="19+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<top num="2" height="0"/>
+					<right num="9+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="17" height="0"/>
+				</rect>
+			</background>
+
+			<!-- The actual count amount -->
+			<icontrol name="count">
+				<rect>
+					<left num="14+%this.count.textWidth%+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/> 
+					<top num="3" height="0"/>
+					<right num="14+ (%this.helper-icon% * (%this.helper-icon.width% + 4))" width="1"/>
+					<bottom num="16" height="0"/>
+				</rect>
+			</icontrol>
+		</list-item>
+
+		<icon name="foursquare" type="social">
+			<source name="maps48" left="0" top="0" right="48" bottom="48"/>
+		</icon>
+
+		<icon name="facebook" type="social">
+			<source name="news48" left="0" top="0" right="48" bottom="48"/>
+		</icon>
+
+		<icon name="twitter" type="social">
+			<source name="news48" left="0" top="48" right="48" bottom="96"/>
+		</icon>
+
+		<icon name="linkedin" type="social">
+			<source name="news48" left="0" top="144" right="48" bottom="192"/>
+		</icon>
+
+		<icon name="all" type="icon-background">
+			<source name="skin-asset" left="0" top="63" right="52" bottom="115"/> <!-- no theme -->
+		</icon>
+
+		<icon name="all" type="icon-none">
+			<source name="head48" left="0" top="0" right="48" bottom="48"/>
+		</icon>
+
+		<icon name="all" type="icon-groupchat-none">
+			<source name="groupchat48" left="0" top="0" right="48" bottom="48"/>
+		</icon>
+	</size>
+
+	<!--  Expand/Contract -->
+
+	<iconmap col='2' row='3'> 
+		<grid width='15' height='15'>
+			<source name='skin-asset' left='310' top='26' right='340' bottom='71'/> <!-- theme -->
+		</grid>
+		<names type='expanded' state='normal'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='expanded' state='hover'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='expanded' state='select'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='normal'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='hover'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+		<names type='collapsed' state='select'>'group' 'group0' 'group1' 'group2' 'group3' 'group4' 'group5' 'group6'</names>
+	</iconmap>
+
+
+	<!-- Should be moved into an icon pack -->
+
+	<iconmap col='1' row='8'> 
+		<grid width='16' height='16'>
+			<source name='mail16' left='0' top='0' right='16' bottom='128'/>
+		</grid>
+		<grid width='24' height='24'>
+			<source name='mail24' left='0' top='0' right='24' bottom='192'/>
+		</grid>
+		<grid width='32' height='32'>
+			<source name='mail32' left='0' top='0' right='32' bottom='256'/>
+		</grid>
+		<grid width='48' height='48'>
+			<source name='mail48' left='0' top='0' right='48' bottom='384'/>
+		</grid>
+		<names type='mail' state='all'>'pop3','aim','msn','yahoo','google','facebook','myspace','imap'</names>
+	</iconmap>
+
+</control>

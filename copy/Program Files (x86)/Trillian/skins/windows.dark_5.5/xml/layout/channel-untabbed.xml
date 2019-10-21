@@ -1,0 +1,17 @@
+
+<component name="channel-untabbed" minx="301" miny="240" defaultx="415" defaulty="520">
+	&resize;
+	&windowborder;
+	&minmaxclosehide;
+
+	<frame source="channel" name="channel" visible="1">
+		<rect>
+			<left num="8*(!%system.windows.vista.glass%)" width="0"/>
+			<top num="29*(!%system.windows.vista.glass%)" height="0"/>
+			<right num="8*(!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8*(!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+

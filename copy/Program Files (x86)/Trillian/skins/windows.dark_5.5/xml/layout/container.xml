@@ -1,0 +1,98 @@
+
+<!-- Container window -->
+<component name="container" minx="100" miny="100" defaultx="415" defaulty="520">
+
+	&resize;
+
+	<borderregion>
+		<region type="rectangle">
+			<rect>
+				<top num="28" height="0"/>
+			</rect>
+		</region>
+	</borderregion>
+
+	<mainregion usebitmap="1" usedefaultcolors="1"/>
+
+	<background transparent="1" middle="1" stretch="1" visible="(!%window.docked%) * (!%system.windows.vista.glass%) * (%window.active%)">
+		<source name="bitmap-window" left="434" top="0" right="651" bottom="127"/>
+		<slice left="443" top="82" right="641" bottom="118"/>
+	</background>
+
+	<background transparent="1" middle="1" stretch="1" visible="(!%window.docked%) * (!%system.windows.vista.glass%) * (!%window.active%)">
+		<source name="bitmap-window" left="434" top="127" right="651" bottom="254"/>
+		<slice left="443" top="210" right="641" bottom="245"/>
+	</background>
+
+	&minmaxclosehide;
+
+	<frame source="container-body" name="container-body" visible="1">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="(%system.windows.vista.glass%*%system.windows.border.top%) + (!%system.windows.vista.glass%*28)" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="container-body" minx="312" miny="330" defaultx="373" defaulty="376">
+	<color red="0" green="0" blue="0">
+		<rect>
+			<left num="0" width="0"/>
+			<top num="28" height="0"/> 
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/> 
+		</rect>
+	</color>
+
+	<!-- Place the taskbar in the window -->
+	<icontrol source="taskbar" name="taskbar" visible="1"> 
+		<rect>
+			<left num="4" width="0"/>
+			<top num="0" height="0"/> 
+			<right num="4" width="1"/>
+			<bottom num="28" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- Define the area where a tabbed window is located in the container -->
+	<icontrol source="boundary" name="boundary" visible="1" > 
+		<rect>
+			<left num="0" width="0"/>
+			<top num="28" height="0"/> 
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/> 
+		</rect>
+	</icontrol>
+</component>
+
+
+<!-- Container window -->
+<component name="container-t" minx="312" miny="330" defaultx="373" defaulty="376">
+
+	&resize;
+	&windowborder;
+	&minmaxclosehide;
+
+	<frame source="container-body-t" name="container-body" visible="1">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="29 * %system.windows.border.top%" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="container-body-t" minx="312" miny="330" defaultx="373" defaulty="376">
+	<icontrol source="boundary" name="boundary" visible="1" > 
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/> 
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/> 
+		</rect>
+	</icontrol>
+
+</component>

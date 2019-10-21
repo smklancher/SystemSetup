@@ -1,0 +1,77 @@
+<!-- Console Window -->
+
+<component name="console-body" minx="300" miny="180" defaultx="400" defaulty="300">
+	<color red="0" green="0" blue="0"/>
+
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="baralerts-asset" left="0" top="75" right="102" bottom="113"/> <!-- theme -->
+		<slice left="2" top="92" right="100" bottom="104"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="37" height="0"/>
+		</rect>
+	</background>
+
+	<icontrol source="consoletext-right" name="timer" visible="1">
+		<rect>
+			<left num="200" width="1"/>
+			<top num="0" height="0"/>
+			<right num="10" width="1"/>
+			<bottom num="32" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="display-bubbles" name="display" visible="1"> 
+		<rect> 
+			<left num="0" width="0"/>
+			<top num="32" height="0"/> 
+			<right num="17" width="1"/>
+			<bottom num="0" height="1"/> 
+		</rect>
+	</icontrol>
+
+	<!-- Scroll bar background -->
+	<background transparent="1" middle="1" stretch="1" visible="%display.scrollbar_needed%">
+		<source name="scrollbars-asset" left="45" top="0" right="62" bottom="32"/> <!-- no theme -->
+		<slice left="49" top="0" right="58" bottom="32"/>
+		<rect>
+			<left num="17" width="1"/>
+			<top num="32" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<!-- The Scrollup Button -->
+	<icontrol source="scrollup" name="scrollup" visible="%display.scrollbar_needed%">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="34" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="50" height="0"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrollbar -->
+	<icontrol source="scroll" name="scrollbar" visible="%display.scrollbar_needed%">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="51" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="18" height="1"/>
+		</rect>
+	</icontrol>
+
+	<!-- The Scrolldown Button -->
+	<icontrol source="scrolldown" name="scrolldown" visible="%display.scrollbar_needed%">
+		<rect>
+			<left num="16" width="1"/>
+			<top num="17" height="1"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+

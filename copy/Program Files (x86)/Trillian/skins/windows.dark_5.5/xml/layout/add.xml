@@ -1,0 +1,270 @@
+
+<!-- ADD CARD -->
+<component name="add-card" minx="397+(!%system.windows.vista.glass%*16)" maxx="397+(!%system.windows.vista.glass%*16)" miny="431+(!%system.windows.vista.glass%*35) - (142-19)" maxy="431+(!%system.windows.vista.glass%*35) - (142-19)">
+	&resize;
+	&windowborder;
+	&minclose;
+
+	<!-- CONTROLS -->
+	<frame source="add-card-body" name="add-card-body">
+		<rect>
+			<left num="8 * (!%system.windows.vista.glass%)" width="0"/>
+			<top num="29 * (!%system.windows.vista.glass%)" height="0"/>
+			<right num="8 * (!%system.windows.vista.glass%)" width="1"/>
+			<bottom num="8 * (!%system.windows.vista.glass%)" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<!-- Main body of the Add Card -->
+<component name="add-card-body"> 
+	<color red="0" green="0" blue="0" visible="1" />
+
+<!-- Title -->
+	<frame source="add-fields" name="add-fields" visible="1">
+		<rect>
+			<top num="18" height="0"/>
+			<bottom num="46" height="1"/>
+		</rect>
+	</frame>
+
+	<background transparent="1" middle="1" stretch="0" visible="1">
+		<source name="skin-asset" left="216" top="0" right="247" bottom="39"/> <!-- no theme -->
+		<slice left="216" top="2" right="247" bottom="39"/>
+		<rect>
+			<top num="40" height="1"/>
+		</rect>
+	</background>
+
+	<frame source="ok-cancel-buttons" name="ok-cancel-buttons">
+		<rect>
+			<top num="32" height="1"/>
+			<bottom num="9" height="1"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="ok-cancel-buttons">
+
+	<icontrol source="genericdefaultbutton" name="add-button" visible="1">
+		<rect>
+			<left num="183" width="1"/>
+			<right num="99" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+	<icontrol source="genericbutton" name="cancel">
+		<rect>
+			<left num="95" width="1"/>
+			<right num="11" width="1"/>
+			<top num="0" height="0"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="add-fields">
+
+	<icontrol source="add-service-label" name="add-service-label">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="0" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="22" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="add-service-button" name="add-service">
+		<rect>
+			<left num="100" width="0"/>
+			<top num="0" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="21" height="0"/>
+		</rect>
+	</icontrol>
+
+
+	<icontrol source="add-name-label" name="add-name">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="38" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="60" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="add-contact-frame" name="add-contact-frame">
+		<rect>
+			<left num="100" width="0"/>
+			<top num="38" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="60" height="0"/>
+		</rect>
+	</frame>
+
+	<icontrol source="add-display-label" name="add-display-label">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="76" height="0"/>
+			<right num="16" width="1"/>
+			<bottom num="98" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="add-display-frame" name="add-display-frame">
+		<rect>
+			<left num="100" width="0"/>
+			<top num="76" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="98" height="0"/>
+		</rect>
+	</frame>
+
+	<icontrol source="add-group-txt" name="add-group-txt">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="114" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="136" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="add-group-button" name="add-group">
+		<rect>
+			<left num="100" width="0"/>
+			<top num="114" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="135" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="add-type-label" name="add-type-label" visible="%add-service.type.capable%">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="152" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="174" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="add-type-button" name="add-type" visible="%add-service.type.capable%">
+		<rect>
+			<left num="100" width="0"/>
+			<top num="152" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="173" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="reason-label" name="reason-label" visible="%add-service.reason.capable%">
+		<rect>
+			<left num="15" width="0"/>
+			<top num="152+(%add-service.type.capable% * 38)" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="174+(%add-service.type.capable% * 38)" height="0"/>
+		</rect>
+	</icontrol>
+
+	<frame source="reason-edit-frame" name="reason-edit-frame" visible="%add-service.reason.capable%">
+		<rect>
+			<left num="100" width="0"/>
+			<top num="152+(%add-service.type.capable% * 38)" height="0"/>
+			<right num="15" width="1"/>
+			<bottom num="194+(%add-service.type.capable% * 38)" height="0"/>
+		</rect>
+	</frame>
+</component>
+
+<component name="add-contact-frame">
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="1" width="0"/>
+			<top num="1" height="0"/>
+			<right num="1" width="1"/>
+			<bottom num="1" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="example-text" name="add-example" visible="!%add-edit.hasText%">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4+20" width="1"/>
+			<top num="2" height="0"/>
+			<bottom num="2" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="editNormal" name="add-edit">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4+20" width="1"/>
+			<top num="4" height="0"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="add-display-frame">
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="optional-text" name="add-display-helper" visible="!%add-display.hasText%">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4+20" width="1"/>
+			<top num="4" height="0"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="editNormal" name="add-display">
+		<rect>
+			<left num="4" width="0"/>
+			<right num="4+20" width="1"/>
+			<top num="4" height="0"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+</component>
+
+<component name="reason-edit-frame">
+	<background transparent="1" middle="1" stretch="1" visible="1">
+		<source name="textboxes-asset" left="0" top="60" right="161" bottom="84"/> <!-- theme -->
+		<slice left="3" top="63" right="157" bottom="80"/>
+		<rect>
+			<left num="0" width="0"/>
+			<top num="0" height="0"/>
+			<right num="0" width="1"/>
+			<bottom num="0" height="1"/>
+		</rect>
+	</background>
+
+	<icontrol source="optional-text" name="add-reason-helper" visible="!%add-reason.hasText%">
+		<rect>
+			<left num="4" width="0"/>
+			<top num="4" height="0"/>
+			<right num="4" width="1"/>
+			<bottom num="18" height="0"/>
+		</rect>
+	</icontrol>
+
+	<icontrol source="editNormal" name="add-reason">
+		<rect>
+			<left num="4" width="0"/>
+			<top num="4" height="0"/>
+			<right num="4" width="1"/>
+			<bottom num="4" height="1"/>
+		</rect>
+	</icontrol>
+</component>
