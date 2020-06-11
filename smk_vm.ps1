@@ -92,6 +92,7 @@ choco install filezilla -y --cacheLocation $ChocoCachePath
 choco install rescuetime -y --cacheLocation $ChocoCachePath
 choco install winhue -y --cacheLocation $ChocoCachePath
 choco install mpc-hc-clsid2 -y --cacheLocation $ChocoCachePath
+choco install devcon.portable -y --cacheLocation $ChocoCachePath
 
 
 

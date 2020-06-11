@@ -1,0 +1,54 @@
+Windows Registry Editor Version 5.00
+
+; Open Notepad, copy and paste all the text of this comment and save it as: DisableZipFolders.reg
+
+;---------------------------------------------
+; Disable ZIP/CAB folders in Windows 7/8/10
+;---------------------------------------------
+; By DragonRUJ - 2018
+
+;---------------------------------------------
+; Acknowledgment
+;---------------------------------------------
+
+; I have to thank to:
+
+; - Anand Khanse for his very informative and useful article:
+; How to disable Windows built-in Zip support
+; Google: thewindowsclub disable-windows-built-in-zip
+
+; - NickHunter for his alternative and simple method (there's NO NEED to TAKE OWNERSHIP of these registry keys).
+
+; - Tessa Moore for her request for a script to implement this method.
+
+; IMPORTANT: Always create a system restore point before dealing with the Windows registry.
+
+;---------------------------------------------
+; Disable .ZIP folders
+;---------------------------------------------
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\CLSID]
+
+[-HKEY_CLASSES_ROOT\CompressedFolder\ShellEx\StorageHandler]
+
+[-HKEY_CLASSES_ROOT\CompressedFolder\CLSID]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.zip\CLSID]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CompressedFolder\ShellEx\StorageHandler]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CompressedFolder\CLSID]
+
+;---------------------------------------------
+; Disable .CAB folders
+;---------------------------------------------
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.cab\CLSID]
+
+[-HKEY_CLASSES_ROOT\CABFolder\CLSID]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.cab\CLSID]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CABFolder\CLSID]
+
+; End of DisableZipFolders.reg

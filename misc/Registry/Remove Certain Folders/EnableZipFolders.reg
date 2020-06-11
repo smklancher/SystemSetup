@@ -1,0 +1,64 @@
+Windows Registry Editor Version 5.00
+
+; Open Notepad, copy and paste all the text of this comment and save it as: EnableZipFolders.reg
+
+;---------------------------------------------
+; Enable ZIP/CAB folders in Windows 7/8/10
+;---------------------------------------------
+; By DragonRUJ - 2018
+
+;---------------------------------------------
+; Acknowledgment
+;---------------------------------------------
+
+; I have to thank to:
+
+; - Anand Khanse for his very informative and useful article:
+; How to disable Windows built-in Zip support
+; Google: thewindowsclub disable-windows-built-in-zip
+
+; - NickHunter for his alternative and simple method (there's NO NEED to TAKE OWNERSHIP of these registry keys).
+
+; - Tessa Moore for her request for a script to implement this method.
+
+; IMPORTANT: Always create a system restore point before dealing with the Windows registry.
+
+;---------------------------------------------
+; Enable .ZIP folders
+;---------------------------------------------
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\CLSID]
+@="{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}"
+
+[HKEY_CLASSES_ROOT\CompressedFolder\ShellEx\StorageHandler]
+@="{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}"
+
+[HKEY_CLASSES_ROOT\CompressedFolder\CLSID]
+@="{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.zip\CLSID]
+@="{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CompressedFolder\ShellEx\StorageHandler]
+@="{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CompressedFolder\CLSID]
+@="{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}"
+
+;---------------------------------------------
+; Enable .CAB folders
+;---------------------------------------------
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.cab\CLSID]
+@="{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}"
+
+[HKEY_CLASSES_ROOT\CABFolder\CLSID]
+@="{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.cab\CLSID]
+@="{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CABFolder\CLSID]
+@="{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}"
+
+; End of EnableZipFolders.reg
