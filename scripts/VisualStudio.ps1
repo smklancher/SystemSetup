@@ -13,3 +13,14 @@ choco install visualstudio2019-workload-manageddesktop --package-parameters="'--
 
 # dependent on parent script cloning repo to temp
 choco install CodeMaidVsix -source "$localPackages\CodeMaidVsix" -y --cacheLocation $ChocoCachePath
+
+
+choco pin remove --name visualstudio2019professional
+choco pin remove --name visualstudio2019-workload-manageddesktop
+choco pin remove --name visualstudio-installer
+choco pin remove --name netfx-4.7.2-devpack
+
+choco uninstall visualstudio2019professional -n --skipautouninstaller
+choco uninstall visualstudio2019-workload-manageddesktop -n --skipautouninstaller
+choco uninstall visualstudio-installer -n --skipautouninstaller
+choco uninstall netfx-4.7.2-devpack -n --skipautouninstaller
