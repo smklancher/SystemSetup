@@ -7,6 +7,7 @@ Windows Registry Editor Version 5.00
 ;---------------------------------------------
 ; By DragonRUJ - 2018
 
+
 ;---------------------------------------------
 ; Acknowledgment
 ;---------------------------------------------
@@ -60,5 +61,64 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CABFolder\CLSID]
 @="{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}"
+
+
+;---------------------------------------------
+; Enable 7Z/RAR/Etc folders in Windows 11
+;---------------------------------------------
+; By Stephen Klancher - 2025
+
+[HKEY_CLASSES_ROOT\ArchiveFolder\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.7z\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.bz2\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.gz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.rar\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.tar\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.tbz2\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.tgz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.txz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.tzst\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.xz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.zst\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ArchiveFolder\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.7z\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.bz2\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.gz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.rar\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tar\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tbz2\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tgz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.txz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tzst\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.xz\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.zst\CLSID]
+@="{0C1FD748-B888-443D-9EC3-AD7E22D48808}"
+
 
 ; End of EnableZipFolders.reg

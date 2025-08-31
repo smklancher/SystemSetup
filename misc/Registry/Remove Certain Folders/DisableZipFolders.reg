@@ -51,4 +51,40 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CABFolder\CLSID]
 
+
+
+;---------------------------------------------
+; Disable 7Z/RAR/Etc folders in Windows 11
+;---------------------------------------------
+; By Stephen Klancher - 2025
+
+[-HKEY_CLASSES_ROOT\ArchiveFolder\CLSID]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.7z\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bz2\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.gz\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.rar\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tar\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tbz2\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tgz\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.txz\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tzst\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.xz\CLSID]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.zst\CLSID]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\ArchiveFolder\CLSID]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.7z\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.bz2\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.gz\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.rar\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tar\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tbz2\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tgz\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.txz\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.tzst\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.xz\CLSID]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\.zst\CLSID]
+
+
 ; End of DisableZipFolders.reg
